@@ -1,0 +1,76 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en" id="home">
+
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <title>Zain Khoja</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
+    <link href="css/hover-min.css" rel="stylesheet">  
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var images = ['cambridge1.jpg', 'cambridge2.jpg', 'chicago2.jpg', 'dallas1.jpg', 'florence1.jpg', 'london2.jpg', 'milan2.jpg', 'orlando1.jpg', 'sendai1.jpg', 'sendai3.jpg', 'venice1.jpg', 'venice2.jpg'];
+            $('header').css({'background-image': 'url(photos/' + images[Math.floor(Math.random() * images.length)] + ')'});
+        });
+    </script>
+    
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="zklogo.ico"/>
+    <link rel="icon" type="image/png" href="zklogo.png"/>
+</head>
+
+<!-- WEBPAGE -->
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <div>
+                    <img src="zklogo.png" id="zklogo"/>
+                    <h1 class="title">Zain Khoja</h1>
+                </div>
+            </a>
+        </div>
+        <div class="optionList">
+            <h2 class="option"><a href="index.html">WORK</a></h2>
+            <h2 class="option" style="opacity: 1">ABOUT</h2>
+            <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">RESUME</a></h2>
+        </div>
+  </header>
+
+    <body>
+        <div class="content">
+            <div class="c6" id="bio">
+                <p>Hey there!</p>
+
+                <p>I’m Zain, a student (on the right) at the <a href="http://tams.unt.edu" target="_blank" style="color: #007a33">Texas Academy of Math and Science</a> studying to be a product designer. I once wanted to be a programmer, but  decided that I preferred not coding.</p>
+
+                <p>I entered design when I went to a hacakthon and liked the free stuff, but not the code. Instead, I kept thinking of ideas and new ways to improve the lives of people around me.</p>
+
+                <p>I’ve previously worked with the UNT College of Engineering to create an accessible auditory display to enhance programming for visually impaired users.</p>
+
+                <p>I currently work with the <a href="http://xrezlab.com" target="_blank" style="color: #D75C49">xREZ Art + Science Lab</a> at the University of North Texas, studying virtual presence. I'm also lucky to get the opportunity to visit many different places and write about my experiences on <a href="http://medium.com/@zainkho" style="color: #28E175">Medium</a>.</p>
+                
+                <p>Let me know if you’d like to <a href="http://m.me/zainkho7" target="_blank" style="border-bottom: 1px dotted">talk</a> or <a href="mailto: zainkhoja7@gmail.com?subject=Yo" style="border-bottom: 1px dotted">work</a> with me!</p>
+
+                <br>
+                <p>Also, I’m pretty funny on <a href="http://twitter.com/@zainkho" target="_blank" style="color: #55ACEE">Twitter</a>.</p>
+
+            </div>
+            <div class="c6">
+                <img width="75%" height="auto" src="zkavi.jpg">
+            </div>
+        </div>
+    </body>
+</html>

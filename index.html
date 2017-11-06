@@ -1,0 +1,74 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en" id="home">
+
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <title>Zain Khoja</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
+    <link href="css/hover-min.css" rel="stylesheet"> 
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var images = ['cambridge1.jpg', 'cambridge2.jpg', 'chicago2.jpg', 'dallas1.jpg', 'florence1.jpg', 'london2.jpg', 'milan2.jpg', 'orlando1.jpg', 'sendai1.jpg', 'sendai3.jpg', 'venice1.jpg', 'venice2.jpg'];
+            $('header').css({'background-image': 'url(photos/' + images[Math.floor(Math.random() * images.length)] + ')'});
+        });
+    </script>
+    
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="zklogo.ico"/>
+    <link rel="icon" type="image/png" href="zklogo.png"/>
+</head>
+
+<!-- WEBPAGE -->
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <div>
+                    <img src="zklogo.png" id="zklogo"/>
+                    <h1 class="title">Zain Khoja</h1>
+                </div>
+            </a>
+        </div>
+        <div class="optionList">
+            <h2 class="option" style="opacity: 1">WORK</h2>
+            <h2 class="option"><a href="about.html">ABOUT</a></h2>
+            <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">RESUME</a></h2>
+        </div>
+  </header>
+
+    <body>
+        <div class="content">
+            <!-- Research -->
+            <div class="work">
+                <a href="http://xrezlab.com" target="_blank"><div id="research"></div></a>
+                <h3>Research</h3>
+                <h4>Studying presence in virtual reality at the University of North Texas.</h4>
+            </div>
+            <!-- Design -->
+            <div class="work">
+                <a href="design.html"><div id="design"></div></a>
+                <h3>Design</h3>
+                <h4>A collection of illustrations I've created for clients and personal use.</h4>
+            </div>
+            <!-- Travel -->
+            <div class="work">
+                <a href="travel.html"><div id="travel"></div></a>
+                <h3>Travel</h3>
+                <h4>My favorite photos from my favorite places around the world.</h4>
+            </div>
+        </div>
+    </body>
+</html>

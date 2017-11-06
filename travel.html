@@ -1,0 +1,201 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en" id="home">
+
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <title>Zain Khoja</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
+    <link href="css/hover-min.css" rel="stylesheet">  
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var images = ['cambridge1.jpg', 'cambridge2.jpg', 'chicago2.jpg', 'dallas1.jpg', 'florence1.jpg', 'london2.jpg', 'milan2.jpg', 'orlando1.jpg', 'sendai1.jpg', 'sendai3.jpg', 'venice1.jpg', 'venice2.jpg'];
+            $('header').css({'background-image': 'url(photos/' + images[Math.floor(Math.random() * images.length)] + ')'});
+        });
+    </script>
+    <script>
+        /* Button appears on scroll */
+        $(window).scroll(function(){
+		  if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+		  } else {
+              $('#scrollTop').addClass('no-display');
+		  }
+	   });
+        
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+    </script>
+    
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="zklogo.ico"/>
+    <link rel="icon" type="image/png" href="zklogo.png"/>
+    
+    <!-- Stop right-clicking on my website to steal pics ya dumb shits-->
+    <body oncontextmenu="return false"/>
+</head>
+
+<!-- WEBPAGE -->
+    <!-- Header -->
+    <header id="top">
+        <div class="container">
+            <a href="index.html">
+                <div>
+                    <img src="zklogo.png" id="zklogo"/>
+                    <h1 class="title">Travel</h1>
+                </div>
+            </a>
+        </div>
+        <div class="optionList">
+            <h2 class="option"><a href="index.html">HOME</a></h2>
+        </div>
+    </header>
+
+    <body>
+        <div class="content">
+            <p>I love to travel and just thought I'd share a tiny part of the wonderful experiences I've been fortunate enough to have. Photos are all taken on iPhone 5s and 6 without any additional filters, lenses, or mods. Read about my travels on <a href="http://medium.com/@zainkho" style="color: #28E175">Medium</a>.</p>
+            <br>
+            
+            <div class="row">
+                <!-- Austin -->
+                <div class="c3">
+                    <h2>austin, usa</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/austin1.jpg">
+                </div>
+                
+                <!-- Chicago -->
+                <div class="c3">
+                    <h2>chicago, usa</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/chicago1.jpg">
+                    <img src="photos/chicago2.jpg">
+                </div>
+
+                <!-- Cambridge -->
+                <div class="c3">
+                    <h2>cambridge, usa</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/cambridge1.jpg">
+                    <img src="photos/cambridge2.jpg">
+                </div>
+                
+                <!-- Dallas -->
+                <div class="c3">
+                    <h2>dallas, usa</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/dallas1.jpg">
+                    <img src="photos/dallas2.jpg">
+                </div>
+
+                <!-- Florence -->
+                <div class="c3">
+                    <h2>florence, italy</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/florence1.jpg">
+                </div>
+
+                <!-- London -->
+                <div class="c3">
+                    <h2>london, uk</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/london1.jpg">
+                    <img src="photos/london2.jpg">
+                    <img src="photos/london3.jpg">
+                </div>
+
+                <!-- Madrid -->
+                <div class="c3">
+                    <h2>madrid, uk</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/madrid1.jpg">
+                </div>
+
+                <!-- Milan -->
+                <div class="c3">
+                    <h2>milan, italy</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/milan1.jpg">
+                    <img src="photos/milan2.jpg">
+                </div>
+
+                <!-- Orlando -->
+                <div class="c3">
+                    <h2>orlando, usa</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/orlando1.jpg">
+                    <img src="photos/orlando2.jpg">
+                    <img src="photos/orlando3.jpg">
+                </div>
+
+                <!-- Sendai -->
+                <div class="c3">
+                    <h2>sendai, japan</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/sendai1.jpg">
+                    <img src="photos/sendai2.jpg">
+                    <img src="photos/sendai3.jpg">
+                </div>
+
+                <!-- Sydney -->
+                <div class="c3">
+                    <h2>sydney, australia</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/sydney1.jpg">
+                    <img src="photos/sydney2.jpg">
+                    <img src="photos/sydney3.jpg">
+                    <img src="photos/sydney4.jpg">
+                    <img src="photos/sydney5.jpg">
+                </div>
+
+                <!-- Venice -->
+                <div class="c3">
+                    <h2>venice, italy</h2>
+                </div>
+                <div class="c9">
+                    <img src="photos/venice1.jpg">
+                    <img src="photos/venice2.jpg">
+                    <img src="photos/venice3.jpg">
+                </div>
+                <div class="c1">
+                <a href="#top"><button onclick="topFunction()" id="scrollTop" class="no-display">top</button></a>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
