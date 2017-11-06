@@ -19,10 +19,6 @@ body {
     font-family: 'Lato', 'Roboto';
     color: #414040;
 }
-.work:hover {
-    transform: scale(1.02);
-    transition: 0.28s;
-}
 div {
     transition: 0.28s;
 }
@@ -139,8 +135,8 @@ header h1 {
 
 .content {
     animation: 1.0s ease-in fadeIn;
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-left: 10vw;
+    padding-right: 10vw;
     padding-top: 2em;
     padding-bottom: 2em;
     margin: 0 auto;
@@ -150,18 +146,21 @@ header h1 {
     display: inline-block;
     width: 19em;
     height: auto;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
     padding-top: 1.25em;
 }
 .work div {
     height: 12.5vw;
     width: 12.5vw;
     margin: 0 auto;
-    margin-bottom: -5%;
     border-radius: 100%;
     background-repeat: no-repeat;
     background-size: contain;
+}
+.work:hover {
+    transform: scale(1.02);
+    transition: 0.28s;
 }
 
 #scrollTop {
