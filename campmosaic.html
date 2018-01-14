@@ -1,0 +1,138 @@
+<!-- campmosaic.html -->
+
+<!DOCTYPE html>
+<html lang="en" id="home">
+
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <title>Zain Khoja</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
+    <link href="css/hover-min.css" rel="stylesheet"> 
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        /* Button appears on scroll */
+        $(window).scroll(function(){
+		  if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+		  } else {
+              $('#scrollTop').addClass('no-display');
+		  }
+	   });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+    </script>
+    
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="zklogo.ico"/>
+    <link rel="icon" type="image/png" href="zklogo.png"/>
+</head>
+
+<!-- WEBPAGE -->
+    <!-- Header -->
+    <header id="top">
+        <div class="row">
+        <div class="c2"></div>
+        <div class="c8">
+            <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
+            <div id="title">
+                <h1 id="campmosaic">Camp Mosaic</h1>
+                <h1 class="period">.</h1>
+                <h2 id="blurb">Designing a cohesive system for a volunteer youth skill-building camp.</h2>
+            </div>
+            <div class="optionList" style="float: right">
+                <h2 class="option"><a href="index.html">work</a></h2>
+                <h2 class="option"><a href="about.html">about</a></h2>
+                <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+            </div>    
+        </div>
+        <div class="c2"></div>
+        </div>
+  </header>
+
+    <body>
+        <div class="content">        
+            <div class="summary row">
+                <div class="c1"></div>
+                <div class="c5">
+                    <h3>Overview</h3>
+                        <p>In addition to creating graphic assets, I created a badge system to make identification and attendance easier in daily use.</p>
+                    <h3>Roles</h3>
+                        <p>
+                            Information Coordinator<br>
+                            Graphic Designer<br>
+                            Interaction Designer<br>
+                        </p>
+                    <h3>Timeline</h3>
+                        <p>June 2017 - July 2017</p>
+                    <h3>Results</h3>
+                        <p>System implemented and managed a camp of over 100 youth participants’ attendance for a 5-day summer camp.</p>
+                </div>
+                <div class="c5"><img src="work/campmosaic/campmosaic.png" class="sumimage"></div>
+                <div class="c1"></div>
+            </div>
+            
+            <div class="row">
+                <div class="c2"></div>
+                <div class="c8">
+                    <h4>The problem.</h4>
+                        <p>As the Information Coordinator for Camp Mosaic, my responsibilities spanned from taking attendance to managing our database. Despite these tasks, I felt my skills were not all being put to use. Furthermore, the camp's processes were dated, and lacked a cohesive design system across the multitude of media in the camp.</p>
+                    
+                    <h4>First, think vocabulary.</h4>
+                        <p>What does having a "cohesive design" really mean? To me at camp, that meant figuring out an easier way than taking attendance on paper for over a hundred youth participants. My solution was to reduce the process to minutes in accessbility and completion.</p>
+                    
+                    <h4>Second, the backend.</h4>
+                        <p>With phones resting in each and every counselor’s pockets, QR codes were an accessible tool that I felt could best be utilized in this situation. I created Google Forms for each counselor’s group of participants as well as attendance for our staff to be taken each morning.</p>
+                        
+                    <h4>Third, making thousands of badges.</h4>
+                        <p>The badges were difficult to make. Without any previous experience in editorial or printed design, my goal was to simply make sure everything was legible. I used colors to designate positions among staff and a numbering system for children (yes—the staff made lots of jokes about labelling kids with numbers). </p>
+                        <img src="work/campmosaic/cmobadges.png">
+                    
+                    <h4>Fourth, implementation.</h4>
+                        <p>The badges were printed and distributed to counselors on the first day. Initially, we had some issues adjusting to the exact interfaces that the users (counselors) would access. However, by the second day of camp, the manual 15 minute attendance time was cut in half. By the last day of camp, attendance was completed within 2 minutes. Only one badge was harmed in the project due to water damage.</p>
+                </div>
+                <div class="c2"></div>
+            </div>
+        </div>
+        
+    <!-- Scroll To Top -->
+        <div class="c1">
+            <a href="#top"><button id="scrollTop" class="no-display">top</button></a>
+        </div>
+        
+        <div class="footer">
+            <div class="row">
+                <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
+            </div>
+            <div class="row">
+                <div class="optionList" style="padding: 1em">
+                    <h2 class="option"><a href="index.html">work</a></h2>
+                    <h2 class="option"><a href="about.html">about</a></h2>
+                    <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

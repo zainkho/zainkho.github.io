@@ -1,0 +1,114 @@
+<!-- designs.html -->
+
+<!DOCTYPE html>
+<html lang="en" id="home">
+
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <title>Zain Khoja</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
+    <link href="css/hover-min.css" rel="stylesheet"> 
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        /* Button appears on scroll */
+        $(window).scroll(function(){
+		  if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+		  } else {
+              $('#scrollTop').addClass('no-display');
+		  }
+	   });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+    </script>
+    
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="zklogo.ico"/>
+    <link rel="icon" type="image/png" href="zklogo.png"/>
+</head>
+
+<!-- WEBPAGE -->
+    <!-- Header -->
+    <header id="top">
+        <div class="row">
+        <div class="c2"></div>
+        <div class="c8">
+            <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
+            <div id="title">
+                <img src="work/designs/designslogo.png" id="designslogo">
+                <h1 class="period">.</h1>
+                <h2 id="blurb">A collection of illustrations. Check out my <a href="http://dribbble.com/zainkho" target="_blank" style="color: #E84F89">Dribbble</a> and <a href="https://behance.net/zainkho" target="_blank" style="color: #105EFB">Bēhance</a>.</h2>
+            </div>
+            <div class="optionList" style="float: right">
+                <h2 class="option"><a href="index.html">work</a></h2>
+                <h2 class="option"><a href="about.html">about</a></h2>
+                <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+            </div>    
+        </div>
+        <div class="c2"></div>
+        </div>
+  </header>
+
+    <body>
+        <div class="content summary">        
+            <div class="row">
+                <div class="c1"></div>
+                <div class="c5">
+                    <a target="_blank" href="https://www.behance.net/zainkho">
+                        <img src="work/designs/Wind%20Waker.png" class="hvr-float design">
+                        <img src="work/designs/Totoro%20in%20the%20Rain.png" class="hvr-float design">
+                        <img src="work/designs/Great%20Wall%20of%20China.png" class="hvr-float design">
+                    </a>
+                </div>
+                <div class="c5">
+                    <a target="_blank" href="https://www.behance.net/zainkho">
+                    <img src="work/designs/Paper%20Campfire.png" class="hvr-float design">
+                    <img src="work/designs/Pikachu.png" class="hvr-float design">
+                    </a>
+                </div>
+                <div class="c1"></div>
+            </div>
+        </div>
+        
+    <!-- Scroll To Top -->
+        <div class="c1">
+            <a href="#top"><button id="scrollTop" class="no-display">top</button></a>
+        </div>
+        
+        <div class="footer">
+            <div class="row">
+                <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
+            </div>
+            <div class="row">
+                <div class="optionList" style="padding: 1em">
+                    <h2 class="option"><a href="index.html">work</a></h2>
+                    <h2 class="option"><a href="about.html">about</a></h2>
+                    <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

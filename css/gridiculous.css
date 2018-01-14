@@ -58,14 +58,14 @@ table{border-collapse:collapse;border-spacing:0}
 /* =Gridiculous
 -------------------------------------------------------------- */
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}
-body{font-size:100%;line-height:1.6875}
+body{font-size:100%;}
 .grid{margin:0 auto;max-width:1200px;width:100%}
 img{max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto}
 .wfull{width:100%;max-width:100%}
 .w320{max-width:320px}
 .w640{max-width:640px}
 .w960{max-width:960px}
-.row{width:100%;margin-bottom:20px}
+.row{width:100%}
 .row .row{width:auto;margin:0 -20px}
 .c1{width:8.33%}
 .c2{width:16.66%}
@@ -79,7 +79,7 @@ img{max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto}
 .c10{width:83.33%}
 .c11{width:91.66%}
 .c12{width:100%}
-.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{min-height:1px;float:left;padding-left:20px;padding-right:20px;position:relative}
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{min-height:1px;float:left;position:relative}
 .s1{margin-left:8.33%}
 .s2{margin-left:16.66%}
 .s3{margin-left:25%}

@@ -1,65 +1,73 @@
 /* style.css */
 
 @font-face {
-    font-family: 'Lato';
-    src: url(../fonts/Lato-Regular.ttf);
+    font-family: 'Proxima Nova';
+    src: url(../fonts/ProximaNova.ttf);
 }
 @font-face {
-    font-family: 'Moon';
-    src: url(../fonts/Moon.otf);
+    font-family: 'Proxima Nova Bold';
+    src: url(../fonts/ProximaNovaBold.ttf);
+}
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato-Regular.ttf);
+} 
+@font-face {
+    font-family: 'Big John';
+    src: url(../fonts/BigJohn.otf)
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
-
 html {
-    background-color: #f5f5f5;
+    background-color: #FFFFFF;
 }
 
 body {
-    font-family: 'Lato', 'Roboto';
+    font-family: 'Proxima Nova', 'Arial';
     color: #414040;
+    display: block;
 }
 div {
     transition: 0.28s;
 }
 
 h1 {
-    font-family: 'Moon';
+    font-family: 'Proxima Nova';
     font-weight: normal;
-    text-align: center;
+    font-size: 3.5em;
 }
 h2 {
     font-family: 'Arial';
-    font-size: 1em;
     font-weight: bold;
-    text-transform: uppercase;
+    font-size: 0.7em;
 }
 h3 {
-    font-family: 'Lato', 'Roboto';
-    font-size: 2.25vw;
-    font-weight: bold;
-    text-align: center;
+    font-family: 'Proxima Nova Bold', 'Arial';
+    font-size: 1.6em;
+    margin-top: 0.75em;
+    margin-bottom: 0.25em;
 }
 h4 {
-    font-family: 'Lato', 'Roboto';
-    font-size: 2.25vw;
-    font-weight: normal;
-    text-align: center;
-    line-height: 110%;
+    font-family: 'Proxima Nova Bold', 'Arial';
+    font-weight: bold;
+    font-size: 2.59em;
+    margin-bottom: 0;
 }
 p {
-    font-size: 1.75 vw;
+    font-family: 'Proxima Nova', 'Arial';
+    font-weight: normal;
+    font-size: 1.45em;
 }
 a {
     text-decoration: none;
     color: #414040;
     transition: 0.28s;
 }
-h4 a {
-    border-bottom: 1px dotted #414040;
-    transition: .28s;
+li {
+    font-family: 'Proxima Nova', 'Arial';
+    font-weight: normal;
+    font-size: 1.45em;
 }
-p a:hover {
+h2 a:hover, p a:hover {
     opacity: 0.75;
     transition: 0.25s;
 }
@@ -68,60 +76,78 @@ h1 a:hover, h3 a:hover {
     border-bottom: 1px dotted #797979;
     transition: .28s;
 }
-
-img {
-    margin: 1.5em;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px #a1a1a1;
-    transition: 0.28s;
-}
-.c9 img:hover {
-    transform: scale(1.02);
-    transition: 0.28s;
+.bold {
+    font-family: 'Proxima Nova Bold';
 }
 
 header {
-    padding: 4em;
-    background-color: #fafafa;
+    background-color: #FFFFFF;
     position: relative;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 0.8);
-    background-blend-mode: lighten;
+    display: block;
+    padding: 2em;
 }
 header h1 {
-    font-size: 7vw;
-    display: inline;
-    padding: 0.25em;
-    vertical-align: middle; 
+    font-size: 3.5em;
+    display: inline; 
     position: relative;
 }
-.container {
-    display: block;
-    margin: auto;
-    text-align: center;
+
+.row {
+    padding: 3em;
 }
-.container:hover {
-    transform: scale(1.02);
+
+.footer {
+  padding: 3em;
+  background-color: #FFFFFF;
+  text-align: center;
 }
-#zklogo {
-    height: 10vw;
+.footer .row {
+    padding: 1em;
+}
+
+.zklogo {
+    height: 5.55em;
     width: auto;
     display: inline-block;
     vertical-align: middle;
     position: relative;
     box-shadow: none;
-
 }
-
+#nalplogo {
+    height: 5.55em;
+    display: inline-block;
+    margin: 0;
+}
+#designslogo {
+    height: 5.55em;
+    display: inline-block;
+    margin-bottom: -0.5em;
+}
+#chirplogo {
+    height: 4em;
+    display: inline-block;
+    margin: 0;
+}
+.period {
+    display: inline;
+}
+#title {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 1em;
+}
+#blurb {
+    margin-top: -0.25em;
+    display: block;
+    width: 25em;
+}
 .optionList {
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: -1em;
-    position: relative;
+    display: inline-block;
+    padding: 3em;
 }
-.optionList h2 {
+.option {
+    text-transform: uppercase;
     opacity: 0.5;
     display: inline;
     margin: 0.75vw;
@@ -135,71 +161,140 @@ header h1 {
 
 .content {
     animation: 1.0s ease-in fadeIn;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    margin: 0 auto;
-    text-align: center;
 }
 .work {
-    display: inline-block;
-    width: 19em;
     height: auto;
-}
-.work div {
-    height: 12.5vw;
-    width: 12.5vw;
-    margin: 0 auto;
-    border-radius: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
+    width: auto;
+    text-align: left;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
 }
 .work:hover {
+    transform: scale(1.02);
+    z-index: 1;
+    transition: 0.28s;
+}
+.work .c4 {
+    padding-bottom: 2em;
+}
+.work img {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+#earbud {
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 2.15em;
+    color: #1D90FF;
+}
+#campmosaic {
+    font-family: 'Big John';
+    font-size: 2em;
+}
+#convo {
+    font-family: 'Lato';
+    font-size: 3.06em;
+    color: #FE3853;
+    text-transform: lowercase;
+}
+#travel {
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+.learnmore {
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 0.6em;
+    cursor: pointer;
+    opacity: 0.5;
+    color: #414040;
+    background-color: transparent;
+    border: 2px solid #414040;
+    border-radius: 5px;
+    text-transform: uppercase;
+    height: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: 0.28s;
+}
+.learnmore:hover {
+    opacity: 1;
+    z-index: 999;
+    transition: 0.28s;
+}
+
+.bio {
+    background-color: #FAFAFA;
+    padding: 5em;
+    font-size: 0.824em;
+}
+
+.summary {
+    background-color: #FAFAFA;
+    padding: 2em;
+}
+.summary p {
+    font-size: 1.2em;
+}
+.sumimage {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.design {
+    padding: 1.5em;
+}
+
+.photo {
+    margin: 1.5em;
+    border-radius: 2.5px;
+    box-shadow: 0 4px 8px #a1a1a1;
+    transition: 0.28s;
+}
+.c3 h3 {
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 1.25em;
+    text-transform: uppercase;
+}
+.c9 img:hover {
     transform: scale(1.02);
     transition: 0.28s;
 }
 
 #scrollTop {
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    opacity: 0.5;
+    color: #414040;
+    background-color: #F5F5F5;
+    border: 1.5px solid #414040;
+    border-radius: 5px;
+    text-transform: uppercase;
+
     position: fixed;
     bottom: 20px; 
     right: 30px; 
     width: 5em;
     height: 2.5em;
     z-index: 99;
-    opacity: 0.5;
-    cursor: pointer;
-    color: #414040;
-    background-color: #f5f5f5;
-    border: 1.5px solid #414040;
-    border-radius: 5px;
-    text-transform: uppercase;
+    
     transition: 0.28s;
 }
 #scrollTop:hover {
     opacity: 1;
+    background-color: #FFFFFF;
     transform: scale(1.02);
-
-    box-shadow: 0 4px 8px #a1a1a1;
     transition: 0.28s;
 }
 #scrollTop.no-display {
     opacity: 0;
-}
-
-#research {
-    background-image: url(../work/research.png);
-}
-#design {
-    background-image: url(../work/design.png);
-}
-#travel {
-    background-image: url(../work/travel.png);
-}
-
-#bio {
-    text-align: left;
-    transition: 0.28s;
 }
 
 /* Animations */

@@ -1,4 +1,4 @@
-<!-- travel.html -->
+<!-- designs.html -->
 
 <!DOCTYPE html>
 <html lang="en" id="home">
@@ -15,16 +15,10 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
-    <link href="css/hover-min.css" rel="stylesheet">
-
+    <link href="css/hover-min.css" rel="stylesheet"> 
+    
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var images = ['cambridge1.jpg', 'cambridge2.jpg', 'chicago2.jpg', 'dallas1.jpg', 'florence1.jpg', 'london2.jpg', 'milan2.jpg', 'orlando1.jpg', 'sendai1.jpg', 'sendai3.jpg', 'venice1.jpg', 'venice2.jpg'];
-            $('header').css({'background-image': 'url(photos/' + images[Math.floor(Math.random() * images.length)] + ')'});
-        });
-    </script>
     <script>
         /* Button appears on scroll */
         $(window).scroll(function(){
@@ -50,177 +44,191 @@
           });
         });
     </script>
-
+    
     <!-- Webpage Icons -->
     <link rel="icon" type="image/x-icon" href="zklogo.ico"/>
     <link rel="icon" type="image/png" href="zklogo.png"/>
-
-    <!-- Stop right-clicking on my website to steal pics ya dumb shits-->
-    <body oncontextmenu="return false"/>
 </head>
 
 <!-- WEBPAGE -->
     <!-- Header -->
     <header id="top">
-        <div class="container">
-            <a href="index.html">
-                <div>
-                    <img src="zklogo.png" id="zklogo"/>
-                    <h1 class="title">Travel</h1>
-                </div>
-            </a>
+        <div class="row">
+        <div class="c2"></div>
+        <div class="c8">
+            <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
+            <div id="title">
+                <h1 id="travel">travel</h1>
+                <h1 class="period">.</h1>
+                <h2 id="blurb">My favorite photos from my favorite places around the world. Read more on <a href="http://medium.com/@zainkho" target="_blank" style="color: #28E175">Medium</a>.</h2>
+            </div>
+            <div class="optionList" style="float: right">
+                <h2 class="option"><a href="index.html">work</a></h2>
+                <h2 class="option"><a href="about.html">about</a></h2>
+                <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+            </div>    
         </div>
-        <div class="optionList">
-            <h2 class="option"><a href="index.html">HOME</a></h2>
+        <div class="c2"></div>
         </div>
-    </header>
+  </header>
 
     <body>
-        <div class="content">
-            <p>I love to travel and just thought I'd share a tiny part of the wonderful experiences I've been fortunate enough to have. Photos are all taken on iPhone 5s, 6, and X (more recently) without any additional filters, lenses, or mods. Read about my travels on <a href="http://medium.com/@zainkho" target="_blank" style="color: #28E175">Medium</a>.</p>
-            <br>
-
+        <div class="content summary">
             <div class="row">
-                <!-- Athens -->
-                <div class="c3">
-                    <h2>athens, greece</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/athens1.jpg">
-                </div>
-                
-                <!-- Austin -->
-                <div class="c3">
-                    <h2>austin, usa</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/austin1.jpg">
-                </div>
+                <div class="c1"></div>
+                <div class="c10">
+                    <!-- Athens -->
+                    <div class="c3">
+                        <h3>athens, greece</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/athens1.jpg" class="photo">
+                    </div>
 
-                <!-- Chicago -->
-                <div class="c3">
-                    <h2>chicago, usa</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/chicago1.jpg">
-                    <img src="photos/chicago2.jpg">
-                </div>
+                    <!-- Austin -->
+                    <div class="c3">
+                        <h3>austin, usa</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/austin1.jpg" class="photo">
+                    </div>
 
-                <!-- Cairo -->
-                <div class="c3">
-                    <h2>cairo, egypt</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/cairo1.jpg">
-                    <img src="photos/cairo2.jpg">
-                </div>
-                
-                <!-- Cambridge -->
-                <div class="c3">
-                    <h2>cambridge, usa</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/cambridge1.jpg">
-                    <img src="photos/cambridge2.jpg">
-                </div>
+                    <!-- Chicago -->
+                    <div class="c3">
+                        <h3>chicago, usa</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/chicago1.jpg" class="photo">
+                    </div>
 
-                <!-- Dallas -->
-                <div class="c3">
-                    <h2>dallas, usa</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/dallas1.jpg">
-                    <img src="photos/dallas2.jpg">
-                </div>
+                    <!-- Cairo -->
+                    <div class="c3">
+                        <h3>cairo, egypt</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/cairo1.jpg" class="photo">
+                        <img src="work/travel/cairo2.jpg" class="photo">
+                    </div>
 
-                <!-- Florence -->
-                <div class="c3">
-                    <h2>florence, italy</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/florence1.jpg">
-                </div>
-                
-                <!-- Istanbul -->
-                <div class="c3">
-                    <h2>istanbul, turkey</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/istanbul1.jpg">
-                    <img src="photos/istanbul2.jpg">
-                </div>
+                    <!-- Cambridge -->
+                    <div class="c3">
+                        <h3>cambridge, usa</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/cambridge1.jpg" class="photo">
+                        <img src="work/travel/cambridge2.jpg" class="photo">
+                    </div>
 
-                <!-- London -->
-                <div class="c3">
-                    <h2>london, uk</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/london1.jpg">
-                    <img src="photos/london2.jpg">
-                    <img src="photos/london3.jpg">
-                </div>
+                    <!-- Dallas -->
+                    <div class="c3">
+                        <h3>dallas, usa</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/dallas1.jpg" class="photo">
+                        <img src="work/travel/dallas2.jpg" class="photo">
+                    </div>
 
-                <!-- Madrid -->
-                <div class="c3">
-                    <h2>madrid, uk</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/madrid1.jpg">
-                </div>
+                    <!-- Florence -->
+                    <div class="c3">
+                        <h3>florence, italy</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/florence1.jpg" class="photo">
+                    </div>
 
-                <!-- Milan -->
-                <div class="c3">
-                    <h2>milan, italy</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/milan1.jpg">
-                    <img src="photos/milan2.jpg">
-                </div>
+                    <!-- Istanbul -->
+                    <div class="c3">
+                        <h3>istanbul, turkey</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/istanbul1.jpg" class="photo">
+                        <img src="work/travel/istanbul2.jpg" class="photo">
+                    </div>
 
-                <!-- Orlando -->
-                <div class="c3">
-                    <h2>orlando, usa</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/orlando1.jpg">
-                    <img src="photos/orlando2.jpg">
-                    <img src="photos/orlando3.jpg">
-                </div>
+                    <!-- London -->
+                    <div class="c3">
+                        <h3>london, uk</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/london1.jpg" class="photo">
+                        <img src="work/travel/london2.jpg" class="photo">
+                        <img src="work/travel/london3.jpg" class="photo">
+                    </div>
 
-                <!-- Sendai -->
-                <div class="c3">
-                    <h2>sendai, japan</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/sendai1.jpg">
-                    <img src="photos/sendai2.jpg">
-                    <img src="photos/sendai3.jpg">
-                </div>
+                    <!-- Madrid -->
+                    <div class="c3">
+                        <h3>madrid, uk</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/madrid1.jpg" class="photo">
+                    </div>
 
-                <!-- Sydney -->
-                <div class="c3">
-                    <h2>sydney, australia</h2>
-                </div>
-                <div class="c9">
-                    <img src="photos/sydney1.jpg">
-                    <img src="photos/sydney2.jpg">
-                    <img src="photos/sydney3.jpg">
-                    <img src="photos/sydney4.jpg">
-                    <img src="photos/sydney5.jpg">
-                </div>
+                    <!-- Milan -->
+                    <div class="c3">
+                        <h3>milan, italy</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/milan1.jpg" class="photo">
+                        <img src="work/travel/milan2.jpg" class="photo">
+                    </div>
 
-                <!-- Venice -->
-                <div class="c3">
-                    <h2>venice, italy</h2>
+                    <!-- Orlando -->
+                    <div class="c3">
+                        <h3>orlando, usa</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/orlando1.jpg" class="photo">
+                        <img src="work/travel/orlando2.jpg" class="photo">
+                        <img src="work/travel/orlando3.jpg" class="photo">
+                    </div>
+
+                    <!-- Sendai -->
+                    <div class="c3">
+                        <h3>sendai, japan</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/sendai1.jpg" class="photo">
+                        <img src="work/travel/sendai2.jpg" class="photo">
+                        <img src="work/travel/sendai3.jpg" class="photo">
+                    </div>
+
+                    <!-- Sydney -->
+                    <div class="c3">
+                        <h3>sydney, australia</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/sydney1.jpg" class="photo">
+                        <img src="work/travel/sydney2.jpg" class="photo">
+                    </div>
+
+                    <!-- Venice -->
+                    <div class="c3">
+                        <h3>venice, italy</h3>
+                    </div>
+                    <div class="c9">
+                        <img src="work/travel/venice1.jpg" class="photo">
+                        <img src="work/travel/venice2.jpg" class="photo">
+                    </div>
                 </div>
-                <div class="c9">
-                    <img src="photos/venice1.jpg">
-                    <img src="photos/venice2.jpg">
-                    <img src="photos/venice3.jpg">
-                </div>
-                <div class="c1">
-                <a href="#top"><button onclick="topFunction()" id="scrollTop" class="no-display">top</button></a>
+                <div class="c1"></div>
             </div>
+        </div>
+        
+    <!-- Scroll To Top -->
+        <div class="c1">
+            <a href="#top"><button id="scrollTop" class="no-display">top</button></a>
+        </div>
+        
+        <div class="footer">
+            <div class="row">
+                <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
+            </div>
+            <div class="row">
+                <div class="optionList" style="padding: 1em">
+                    <h2 class="option"><a href="index.html">work</a></h2>
+                    <h2 class="option"><a href="about.html">about</a></h2>
+                    <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+                </div>
             </div>
         </div>
     </body>

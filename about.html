@@ -15,17 +15,8 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
-    <link href="css/hover-min.css" rel="stylesheet">
-
-    <!-- Javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var images = ['cambridge1.jpg', 'cambridge2.jpg', 'chicago2.jpg', 'dallas1.jpg', 'florence1.jpg', 'london2.jpg', 'milan2.jpg', 'orlando1.jpg', 'sendai1.jpg', 'sendai3.jpg', 'venice1.jpg', 'venice2.jpg'];
-            $('header').css({'background-image': 'url(photos/' + images[Math.floor(Math.random() * images.length)] + ')'});
-        });
-    </script>
-
+    <link href="css/hover-min.css" rel="stylesheet"> 
+    
     <!-- Webpage Icons -->
     <link rel="icon" type="image/x-icon" href="zklogo.ico"/>
     <link rel="icon" type="image/png" href="zklogo.png"/>
@@ -33,42 +24,62 @@
 
 <!-- WEBPAGE -->
     <!-- Header -->
-    <header>
-        <div class="container">
-            <a href="index.html">
-                <div>
-                    <img src="zklogo.png" id="zklogo"/>
-                    <h1 class="title">Zain Khoja</h1>
-                </div>
-            </a>
+    <header id="top">
+        <div class="row">
+        <div class="c2"></div>
+        <div class="c8">
+            <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
+            <div id="title">
+                <h1>Zain Khoja</h1>
+                <h2 id="blurb">Student at <a href="http://tams.unt.edu" target="_blank" style="color: #007a33">TAMS</a>. Aspiring product designer.</h2>
+            </div>
+            <div class="optionList" style="float: right">
+                <h2 class="option"><a href="index.html">work</a></h2>
+                <h2 class="option" style="opacity: 1">about</h2>
+                <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+            </div>    
         </div>
-        <div class="optionList">
-            <h2 class="option"><a href="index.html">WORK</a></h2>
-            <h2 class="option" style="opacity: 1">ABOUT</h2>
-            <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">RESUME</a></h2>
+        <div class="c2"></div>
         </div>
   </header>
 
     <body>
-        <div class="content">
-            <div class="c6" id="bio">
-                <p>Hey there!</p>
+        <div class="row bio">
+        <div class="c1"></div>
+        <div class="c5">
+          
+            <p>What's up!</p>
 
-                <p>I’m Zain, a student (on the right) at the <a href="http://tams.unt.edu" target="_blank" style="color: #007a33">Texas Academy of Math and Science</a> studying to be a product designer. I once wanted to be a programmer, but decided that I was more fascinated with pictures than text.</p>
+            <p>I’m Zain, a student at the <a href="http://tams.unt.edu" target="_blank" style="color: #007a33">Texas Academy of Math and Science</a> studying to be a product designer. I once wanted to be a programmer, but decided that I was more fascinated with pictures than text.</p>
 
-                <p>I entered design when I went to a hackathon and connecting people to ideas instead of being engrossed in the medium of technology. I kept thinking of ideas and new ways to improve the lives of people around me.</p>
+            <p>I entered design when I went to a hackathon and enjoyed connecting people to ideas instead of being engrossed in the medium of technology. I kept thinking of ideas and new ways to improve the lives of people around me.</p>
 
-                <p>I've previously engaged in research at the University of North Texas (UNT) specifically in usability testing labs. Along with a team of dedicated students, I developed an accessible auditory display to enhance programming for visually impaired users.</p>
+            <p>I've previously engaged in research at the University of North Texas (UNT) in various usability testing labs. Along with a team of dedicated students, I developed an accessible auditory display to enhance programming for visually impaired users.</p>
 
-                <p>I currently work with the <a href="http://xrezlab.com" target="_blank" style="color: #D75C49">xREZ Art + Science Lab</a> at the University of North Texas, studying virtual presence. I'm also lucky to get the opportunity to visit many different places and write about my experiences on <a href="http://medium.com/@zainkho" style="color: #28E175">Medium</a>.</p>
+            <p>I currently work with the <a href="http://xrezlab.com" target="_blank" style="color: #D75C49">xREZ Art + Science Lab</a> at the University of North Texas, studying virtual presence. I'm also lucky to get the opportunity to visit many different places and write about my experiences on <a href="http://medium.com/@zainkho" style="color: #28E175">Medium</a></p>
 
-                <p>If you'd like to get to know me better, feel free to connect with me on <a href="http://twitter.com/@zainkho" target="_blank" style="color: #55ACEE">Twitter</a> or <a href="http://www.linkedin.com/in/zainkho" target="_blank" style="color: #0077b5">LinkedIn</a>.</p>
+            <p>If you'd like to get in touch with me, feel free to reach out via <a href="http://twitter.com/@zainkho" target="_blank" style="color: #55ACEE">Twitter</a> or <a href="http://www.linkedin.com/in/zainkho" target="_blank" style="color: #0077b5">LinkedIn</a>.
+            </p>
 
-                <p>Let me know if you’d like to <a href="http://m.me/zainkho7" target="_blank" style="border-bottom: 1px dotted">talk</a> or <a href="mailto: zainkhoja7@gmail.com?subject=Yo" style="border-bottom: 1px dotted">work</a> with me!</p>
-
+            <p>Let me know if you’d like to <a href="http://m.me/zainkho7" target="_blank" style="border-bottom: 1px dotted">talk</a> or <a href="mailto: zainkhoja7@gmail.com?subject=Yo" style="border-bottom: 1px dotted">work</a> with me!</p>
+        </div>
+        <div class="c1"></div>
+        <div class="c4">
+            <img src="zkavi.jpg" class="photo">
+        </div>
+        <div class="c1"></div>
+        </div>
+        
+        <div class="footer">
+            <div class="row">
+                <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
             </div>
-            <div class="c6">
-                <img width="75%" height="auto" src="zkavi.jpg">
+            <div class="row">
+                <div class="optionList" style="padding: 1em">
+                    <h2 class="option"><a href="index.html">work</a></h2>
+                    <h2 class="option" style="opacity: 1">about</h2>
+                    <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+                </div>
             </div>
         </div>
     </body>
