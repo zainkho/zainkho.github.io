@@ -510,9 +510,9 @@ i {
         margin-top: -10vw;
     }
     h1 {
+        font-family: 'SFUI';
         font-size: 1.75em;
         margin-top: -7vw;
-        letter-spacing: -0.25vw;
     }
     h3 {
         font-size: 0.5em;
