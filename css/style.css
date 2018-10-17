@@ -520,6 +520,7 @@ i {
     }
     h4 {
         font-size: 0.625em;
+        letter-spacing: -0.125vw;
     }
     .project {
         display: inline-block;
