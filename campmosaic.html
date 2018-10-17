@@ -1,21 +1,21 @@
 <!-- campmosaic.html -->
 
 <!DOCTYPE html>
-<html lang="en" id="home">
+<html lang="en">
 
 <!-- HEAD -->
-<head>
+<head id="top">
     <meta charset="UTF-8">
-    <title>Zain Khoja</title>
+    <title>Camp Mosaic · Zain Khoja</title>
 
     <!-- Responsive Web Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
     <link href="css/hover-min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -37,7 +37,7 @@
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
-                }, 800, function(){
+                }, 500, function(){
                     window.location.hash = hash;
                 });
             }
@@ -58,91 +58,139 @@
 
       gtag('config', 'UA-89012104-2');
     </script>
+
 </head>
 
 <!-- WEBPAGE -->
-    <!-- Header -->
-    <header id="top">
-        <div class="row">
-        <div class="c2"></div>
-        <div class="c8">
-            <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
-            <div id="title">
-                <h1 id="campmosaic">Camp Mosaic</h1>
-                <h1 class="period">.</h1>
-                <h2 id="blurb">Designing a cohesive system for a volunteer youth skill-building camp.</h2>
-            </div>
+<!-- Header -->
+<header>
+    <!-- Nav -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <a href="index.html">
+                <img src="zklogo.png" class="zklogo"/>
+                <div id="name">Zain Khoja</div>
+            </a>
             <div class="optionList" style="float: right">
-                <h2 class="option"><a href="index.html">work</a></h2>
-                <h2 class="option"><a href="about.html">about</a></h2>
-                <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+                <h3 class="option"><a href="index.html">work</a></h3>
+                <h3 class="option"><a href="about.html">about</a></h3>
+                <h3 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h3>
             </div>    
         </div>
-        <div class="c2"></div>
+        <div class="c1"></div>
+    </div>
+    <!-- Title -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <h1 class="campmosaictitle">
+                Camp Mosaic.<br>
+                Design system for youth.
+            </h1>
         </div>
+        <div class="c1"></div>
+    </div>
   </header>
 
-    <body>
-        <div class="content">        
-            <div class="summary row">
-                <div class="c1"></div>
-                <div class="c5">
-                    <h3>Overview</h3>
-                        <p>In addition to creating graphic assets, I created a badge system to make identification and attendance easier in daily use.</p>
-                    <h3>Roles</h3>
-                        <p>
-                            Information Coordinator<br>
-                            Graphic Designer<br>
-                            Interaction Designer<br>
-                        </p>
-                    <h3>Timeline</h3>
-                        <p>June 2017 - July 2017</p>
-                    <h3>Results</h3>
-                        <p>System implemented and managed a camp of over 100 youth participants’ attendance for a 5-day summer camp.</p>
-                </div>
-                <div class="c5"><img src="work/campmosaic/campmosaic.png" class="sumimage"></div>
-                <div class="c1"></div>
-            </div>
+<body>
+    <!-- Summary --> 
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c5">
+            <p>
+            <span style="font-family: SFUI Bold">Overview</span><br>
+            Designed a child-friendly badge system that communicated identity, location, transportation, allergy details, and emergency contacts.
+            </p>
             
-            <div class="row">
-                <div class="c2"></div>
-                <div class="c8">
-                    <h4>The problem.</h4>
-                        <p>As the Information Coordinator for Camp Mosaic, my responsibilities spanned from taking attendance to managing our database. Despite these tasks, I felt my skills were not all being put to use. Furthermore, the camp's processes were dated, and lacked a cohesive design system across the multitude of media in the camp.</p>
-                    
-                    <h4>First, think vocabulary.</h4>
-                        <p>What does having a "cohesive design" really mean? To me at camp, that meant figuring out an easier way than taking attendance on paper for over a hundred youth participants. My solution was to reduce the process to minutes in accessbility and completion.</p>
-                    
-                    <h4>Second, the backend.</h4>
-                        <p>With phones resting in each and every counselor’s pockets, QR codes were an accessible tool that I felt could best be utilized in this situation. I created Google Forms for each counselor’s group of participants as well as attendance for our staff to be taken each morning.</p>
-                        
-                    <h4>Third, making thousands of badges.</h4>
-                        <p>The badges were difficult to make. Without any previous experience in editorial or printed design, my goal was to simply make sure everything was legible. I used colors to designate positions among staff and a numbering system for children (yes—the staff made lots of jokes about labelling kids with numbers). </p>
-                        <img src="work/campmosaic/cmobadges.png">
-                    
-                    <h4>Fourth, implementation.</h4>
-                        <p>The badges were printed and distributed to counselors on the first day. Initially, we had some issues adjusting to the exact interfaces that the users (counselors) would access. However, by the second day of camp, the manual 15 minute attendance time was cut in half. By the last day of camp, attendance was completed within 2 minutes. Only one badge was harmed in the project due to water damage.</p>
-                </div>
-                <div class="c2"></div>
-            </div>
+            <p>
+            <span style="font-family: SFUI Bold">Roles</span><br>
+            Information Coordinator<br>
+            Graphic Designer
+            </p>
+            
+            <p>
+            <span style="font-family: SFUI Bold">Timeline</span><br>
+            June 2017 to August 2017
+            </p> 
         </div>
+        <div class="c5">
+            <img src="work/campmosaic/campmosaicmockup2.png">
+        </div>
+        <div class="c1"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="row content">
+        <div class="c1"></div>
+        <div class="c10 divider">
+            <h1 class="campmosaictitle">Problem</h1>
+            <p>
+                As the Information Coordinator for Camp Mosaic, my responsibilities spanned from taking attendance to managing our database. In past years, attendance was run on paper, ensuring that a human was always in charge of the presence of participants and their whereabouts. However, this wasn’t effective once the camp grew to over 100 participants separated out over two buildings.
+            </p><br>
+            
+            <h1 class="campmosaictitle">Context</h1>
+            <p>
+                Camp Mosaic is magical. In fact, transporting participants to a land where elephants can live in shoes and snaps are a language was part of what made the camp grow so exponentially. But in order to be believable, those in charge participants, group counselors, should always be with their participants. However, in the morning, during attendance, they are pulled out for 5 to 10 minutes to communicate vital information.
+            </p><br>
+            
+            <h1 class="campmosaictitle">Assumptions</h1>
+            <p>
+                With phones resting in each and every counselor’s pockets, the internet was an accessible tool that could be easily utilized in this situation. To start, I created Google Forms for each counselor’s group of participants as well as for our staff. These forms served as an easier form of attendance. Each group counselor (or me, for staff attendance) would only have to navigate to their personal form URL and mark who was absent.
+            </p><br>
+
+            <h1 class="campmosaictitle">Ideation</h1>
+            <p>
+                In past years, counselors might have had a badge with a name and the back of the plastic cover would be a list of participants along with details about allergies, transportation, and emergency contacts; but this information was unorganized and confusing. Badges also became exclusive, with participants trying to grab and stealing them. What if I redesigned badges that could solve the problem of attendance and information organization at the same time?
+            </p>
+            
+            <p class="c6">
+                <span style="font-family: SFUI Bold">Counselor Badges</span><br>
+                While I wasn’t a counselor, badges all had similar layouts. Names first, positions second, then a big old symbol for first aid in case of emergency. After I had met the details from the old badges, I began to think about the attendance. Forcing counselors to bookmark or type a link in the morning wasn’t efficient and might have taken longer than the original method, even with link shorteners. QR codes provided a quick and  symbolic way with a small learning curve. The whitespace present on previous badges was used to house the QR code prominently and easily for quick morning scans. Lastly, we color-coded the badges depending on the hierarchy of position.
+            </p><br>
+            <img src="work/campmosaic/counselorbadgemockup.png" class="projectimg" style="padding-top: 1.5em">
+            
+            <p class="c12">
+                <span style="font-family: SFUI Bold">Participant Badges</span><br>
+                But there was still a lot of data left to distribute. We had to convey allergies, transportation methods, and emergency contacts to counselors. With participants still nabbing at counselor badges, I just gave them badges for themselves. Simply having counselors collecting their participants’ badges at the end of the day minimized replacements and solved a huge problem.
+                
+                <img src="work/campmosaic/ppantbadgemockup.png" class="fullimg">
+            </p>
+            
+            <h1 class="campmosaictitle">Results</h1>
+            <p>
+                The badges were printed and distributed to counselors on the first day. Initially, we had some issues adjusting to the exact interfaces that the counselors would access. However, by the second day of camp, the manual 15-minute attendance took less than 5 minutes. By the last day of camp, attendance was completed within 2 minutes. Less than five badges had to be replaced due to counselors forgetting to collect them or damage during water activties. This process has been adopted by the Central Camp Mosaic region and will expand in the future to other regions.
+            </p><br>
+        </div>
+        <div class="c1"></div>
+    </div>
+    
         
     <!-- Scroll To Top -->
-        <div class="c1">
-            <a href="#top"><button id="scrollTop" class="no-display">top</button></a>
+    <div class="c1">
+        <a href="#top" class="no-display" id="scrollTop"></a>
         </div>
         
-        <div class="footer">
-            <div class="row">
-                <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
-            </div>
-            <div class="row">
-                <div class="optionList" style="padding: 1em">
-                    <h2 class="option"><a href="index.html">work</a></h2>
-                    <h2 class="option"><a href="about.html">about</a></h2>
-                    <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
-                </div>
-            </div>
+    <div class="footer">
+    </div>
+</body>
+
+<footer>
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c6">
+            <h4>If you’re looking to work with me or simply need boba tea recommendations, feel free to email me at <a href="mailto: znk4@cornell.edu?subject=Hey!">znk4@cornell.edu</a>.</h4>
         </div>
-    </body>
+        <div class="c2"></div>
+        <div class="c2">
+            <h4 class="links">
+                <a href="https://twitter.com/zainkho"  target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://dribbble.com/zainkho" target="_blank"><i class="fab fa-dribbble"></i></a>
+                <a href="https://medium.com/@zainkho" target="_blank"><i class="fab fa-medium-m"></i></a>
+                <a href="https://linkedin.com/in/zainkho" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </h4>
+        </div>
+        <div class="c1"></div>
+    </div>
+</footer>
 </html>

@@ -1,0 +1,189 @@
+<!-- respond.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>Respond · Zain Khoja</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link href="css/hover-min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        /* Button appears on scroll */
+        $(window).scroll(function(){
+		  if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+		  } else {
+              $('#scrollTop').addClass('no-display');
+		  }
+	   });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+    </script>
+    
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="zklogo.ico"/>
+    <link rel="icon" type="image/png" href="zklogo.png"/>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89012104-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-89012104-2');
+    </script>
+
+</head>
+
+<!-- WEBPAGE -->
+<!-- Header -->
+<header>
+    <!-- Nav -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <a href="index.html">
+                <img src="zklogo.png" class="zklogo"/>
+                <div id="name">Zain Khoja</div>
+            </a>
+            <div class="optionList" style="float: right">
+                <h3 class="option"><a href="index.html">work</a></h3>
+                <h3 class="option"><a href="about.html">about</a></h3>
+                <h3 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h3>
+            </div>    
+        </div>
+        <div class="c1"></div>
+    </div>
+    <!-- Title -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <h1 class="respondtitle">
+                Respond.<br>
+                HackMIT 2018.
+            </h1>
+        </div>
+        <div class="c1"></div>
+    </div>
+  </header>
+
+<body>
+    <!-- Summary --> 
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c5">
+            <p>
+            <span style="font-family: SFUI Bold">Overview</span><br>
+            An app that enables first responders to reach those who need help faster and safer after natural disasters. Inspired by Hurricane Florence.
+            </p>
+            
+            <p>
+            <span style="font-family: SFUI Bold">Roles</span><br>
+            User Interface Designer<br>
+            User Experience Designer
+            </p>
+            
+            <p>
+            <span style="font-family: SFUI Bold">Timeline</span><br>
+            September 2018
+            </p> 
+        </div>
+        <div class="c5">
+            <img src="work/respond/respondmockup.png">
+        </div>
+        <div class="c1"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="row content">
+        <div class="c1"></div>
+        <div class="c10 divider">
+            <h1 class="respondtitle">Problem</h1>
+            <p>
+                First responders take care of lots of people after natural disasters. However, it’s difficult to collectively analyze all the people who need help and how urgent care is needed. With one of our team members from Duke University, a location affected by Hurricane Florence, the issue was very real and had promise for innovation.
+            </p><br>
+            
+            <h1 class="respondtitle">Research</h1>
+            <p>
+                When looking at current methods used by first responders, we noticed there was a lack of proactive searching. The current processes relied on crowdsourced information and tips followed up by search-and-rescue missions. We saw that there was an opportunity for modern technologies to possibly help the situation.
+            </p><br>
+            
+            <h1 class="respondtitle">Ideation</h1>
+            <p>
+                <span style="font-family: SFUI Bold">Urgency Levels</span><br>
+                Our idea was to create a versatile mobile app that would aggregate data from these drones and use machine learning to prioritize situations by urgency levels high, medium, or low.
+                
+                <img src="work/respond/urgencymockup.png" class="projectimg">
+                
+                Using IBM Watson’s speech-to-text and tone analyzer APIs, we were able to teach a neural network emergency vocabulary and successfully assign priority levels to situations. First responders could also listen to the survivors’ messages themselves to identify age, level of panic, shock, etc.
+            </p>
+            <p>
+                <span style="font-family: SFUI Bold">Routes</span><br>
+                The second piece of the application would allow first responders to select certain situations and automatically generate routes based on the drone information. Automatically generated routes would also suggest the fastest route, reaching all situations as quickly as possible, or the safest route, reaching the highest danger situations first.
+                
+                <img src="work/respond/routesmockup.png" class="projectimg">
+            </p><br>
+            
+            <h1 class="respondtitle">Results</h1>
+            <p>
+                Within the hackathon environment, we weren’t able to test the application’s use in with real first responders. However, our application was able to separate out different situations and showcase those that needed the most urgent care for the user. The app was recognized by Microsoft’s Azure team and IBM’s Call for Code competition team.
+            </p><br>
+        </div>
+        <div class="c1"></div>
+    </div>
+    
+        
+    <!-- Scroll To Top -->
+    <div class="c1">
+        <a href="#top" class="no-display" id="scrollTop"></a>
+        </div>
+        
+    <div class="footer">
+    </div>
+</body>
+
+<footer>
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c6">
+            <h4>If you’re looking to work with me or simply need boba tea recommendations, feel free to email me at <a href="mailto: znk4@cornell.edu?subject=Hey!">znk4@cornell.edu</a>.</h4>
+        </div>
+        <div class="c2"></div>
+        <div class="c2">
+            <h4 class="links">
+                <a href="https://twitter.com/zainkho"  target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://dribbble.com/zainkho" target="_blank"><i class="fab fa-dribbble"></i></a>
+                <a href="https://medium.com/@zainkho" target="_blank"><i class="fab fa-medium-m"></i></a>
+                <a href="https://linkedin.com/in/zainkho" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </h4>
+        </div>
+        <div class="c1"></div>
+    </div>
+</footer>
+</html>

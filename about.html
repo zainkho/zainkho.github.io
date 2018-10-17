@@ -1,21 +1,49 @@
 <!-- about.html -->
 
 <!DOCTYPE html>
-<html lang="en" id="home">
+<html lang="en">
 
 <!-- HEAD -->
-<head>
+<head id="top">
     <meta charset="UTF-8">
-    <title>Zain Khoja</title>
+    <title>About · Zain Khoja</title>
 
     <!-- Responsive Web Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
     <link href="css/hover-min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        /* Button appears on scroll */
+        $(window).scroll(function(){
+		  if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+		  } else {
+              $('#scrollTop').addClass('no-display');
+		  }
+	   });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 400, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+    </script>
     
     <!-- Webpage Icons -->
     <link rel="icon" type="image/x-icon" href="zklogo.ico"/>
@@ -34,61 +62,79 @@
 </head>
 
 <!-- WEBPAGE -->
-    <!-- Header -->
-    <header id="top">
-        <div class="row">
-        <div class="c2"></div>
-        <div class="c8">
-            <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
-            <div id="title">
-                <h1>Zain Khoja</h1>
-                <h2 id="blurb">Student at <a href="https://www.cornell.edu/" target="_blank" style="color: #B31B1B">Cornell</a>. Aspiring product designer.</h2>
-            </div>
+<!-- Header -->
+<header>
+    <!-- Nav -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <a href="index.html">
+                <img src="zklogo.png" class="zklogo"/>
+                <div id="name">Zain Khoja</div>
+            </a>
             <div class="optionList" style="float: right">
-                <h2 class="option"><a href="index.html">work</a></h2>
-                <h2 class="option" style="opacity: 1">about</h2>
-                <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+                <h3 class="option"><a href="index.html">work</a></h3>
+                <h3 class="option selected">about</h3>
+                <h3 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h3>
             </div>    
         </div>
-        <div class="c2"></div>
+        <div class="c1"></div>
+    </div>
+    <!-- Title -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <h1>
+                Hey, I'm Zain.<br>
+                It's nice to meet you.
+            </h1>
         </div>
+        <div class="c1"></div>
+    </div>
   </header>
 
-    <body>
-        <div class="row bio">
+<body>
+    <div class="row content">
         <div class="c1"></div>
         <div class="c5">
-          
-            <p>What's up!</p>
+            <p>I’m currently a student at <a href="https://www.cornell.edu/" target="_blank" style="color: #B31B1B">Cornell University</a> studying Information Science and most recently worked at <a href="https://arcadiamgroup.com/" target="_blank" style="color: #199F9F">Arcadia Media Group</a>, designing logos and online interactions for cryptocurrencies.<br><br>
 
-            <p>I’m Zain, a student at <a href="https://www.cornell.edu/" target="_blank" style="color: #B31B1B">Cornell University</a> studying Information Science.</p>
+            I was born and raised in Dallas, TX, where I developed a strong interest in the role in the way people behaved with products everyday.<br><br>
 
-            <p>I entered design when I went to a hackathon and enjoyed connecting people to ideas through the medium of user experiences and products. I'm always thinking of ideas and new ways to improve the lives of people around me, whether they include technology or not.</p>
-
-            <p>I've previously engaged in research at the University of North Texas (UNT) in various usability testing labs. Along with a team of dedicated students, I developed an accessible auditory display to enhance programming for visually impaired users. I also worked with the <a href="http://xrezlab.com" target="_blank" style="color: #D75C49">xREZ Art + Science Lab</a> at the University of North Texas, where I studied virtual presence.</p>
-                
-            <p>I look for new experiences and lifestyles everywhere I go, so be sure to catch a few of my write-ups on <a href="http://medium.com/@zainkho" style="color: #28E175">Medium</a>.</p>
-
-            <p>Let me know if you’d like to <a href="http://m.me/zainkho7" target="_blank" style="border-bottom: 1px dotted">talk</a> or <a href="mailto: zainkhoja7@gmail.com?subject=Yo" style="border-bottom: 1px dotted">work</a> with me!</p>
+            If you’d like to chat (over some boba tea) or would like to challenge me to a <span style="text-decoration: line-through">competitive</span> friendly game of table tennis, <a href="http://m.me/zainkho7" target="_blank">let me know!</a></p>
         </div>
         <div class="c1"></div>
         <div class="c4">
-            <img src="zkavi.jpg" class="photo">
+            <img src="zkavi.jpg" id="avi">
         </div>
         <div class="c1"></div>
+    </div>
+        
+    <!-- Scroll To Top -->
+    <div class="c1">
+        <a href="#top" class="no-display" id="scrollTop"></a>
         </div>
         
-        <div class="footer">
-            <div class="row">
-                <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
-            </div>
-            <div class="row">
-                <div class="optionList" style="padding: 1em">
-                    <h2 class="option"><a href="index.html">work</a></h2>
-                    <h2 class="option" style="opacity: 1">about</h2>
-                    <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
-                </div>
-            </div>
+    <div class="footer">
+    </div>
+</body>
+
+<footer>
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c6">
+            <h4>If you’re looking to work with me or simply need boba tea recommendations, feel free to email me at <a href="mailto: znk4@cornell.edu?subject=Hey!">znk4@cornell.edu</a>.</h4>
         </div>
-    </body>
+        <div class="c2"></div>
+        <div class="c2">
+            <h4 class="links">
+                <a href="https://twitter.com/zainkho"  target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://dribbble.com/zainkho" target="_blank"><i class="fab fa-dribbble"></i></a>
+                <a href="https://medium.com/@zainkho" target="_blank"><i class="fab fa-medium-m"></i></a>
+                <a href="https://linkedin.com/in/zainkho" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </h4>
+        </div>
+        <div class="c1"></div>
+    </div>
+</footer>
 </html>

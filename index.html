@@ -1,10 +1,10 @@
 <!-- index.html -->
 
 <!DOCTYPE html>
-<html lang="en" id="home">
+<html lang="en">
 
 <!-- HEAD -->
-<head>
+<head id="top">
     <meta charset="UTF-8">
     <title>Zain Khoja</title>
 
@@ -13,9 +13,9 @@
 
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
     <link href="css/hover-min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -37,7 +37,7 @@
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
-                }, 800, function(){
+                }, 500, function(){
                     window.location.hash = hash;
                 });
             }
@@ -62,141 +62,120 @@
 </head>
 
 <!-- WEBPAGE -->
-    <!-- Header -->
-    <header id="top">
-        <div class="row">
-        <div class="c2"></div>
-        <div class="c8">
-            <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
-            <div id="title">
-                <h1>Zain Khoja</h1>
-                <h2 id="blurb">Student at <a href="https://www.cornell.edu/" target="_blank" style="color: #B31B1B">Cornell</a>. Aspiring product designer.</h2>
-            </div>
+<!-- Header -->
+<header>
+    <!-- Nav -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <a href="index.html">
+                <img src="zklogo.png" class="zklogo"/>
+                <div id="name">Zain Khoja</div>
+            </a>
             <div class="optionList" style="float: right">
-                <h2 class="option" style="opacity: 1">work</h2>
-                <h2 class="option"><a href="about.html">about</a></h2>
-                <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+                <h3 class="option selected">work</h3>
+                <h3 class="option"><a href="about.html">about</a></h3>
+                <h3 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h3>
             </div>    
         </div>
-        <div class="c2"></div>
+        <div class="c1"></div>
+    </div>
+    <!-- Title -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <h1>
+                Student at <a href="https://www.cornell.edu/" target="_blank" style="color: #B31B1B">Cornell</a>.<br>
+                Aspiring Product Designer.
+            </h1>
         </div>
+        <div class="c1"></div>
+    </div>
   </header>
 
-    <body>
-        <div class="row">
-        <div class="c2"></div>
-        <div class="content c8">        
+<body>
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10 work">
+            <!-- Respond -->
+            <a href="respond.html"><div class="project left respond hvr-float">
+                <img src="work/respond/respondmockup.png">
+                <h2>Respond</h2>
+                <p class="caption">Prioritizing situations for first responders.<p>
+            </div></a>
+            
+            <!-- Tint -->
+            <a href="tint.html"><div class="project right tint hvr-float">
+                <img src="work/tint/tintmockup.png">
+                <h2>Tint</h2>
+                <p class="caption">Concept for automated photo categorization.</p>
+            </div></a>
             
             <!-- NALP -->
-            <div class="row work">
-                <div class="c4">
-                    <img src="work/nalp/nalplogo.png" id="nalplogo">
-                    <p>Logo design project for an organization encouraging minorities to engage in politics.<p>
-                    <a href="nalp.html"><button class="learnmore">learn more</button></a>
-                </div>
-                <div class="c1"></div>
-                <div class="c7">
-                    <img src="work/nalp/nalp.png">
-                </div>
-            </div>
+            <a href="nalp.html"><div class="project left nalp hvr-float">
+                <img src="work/nalp/nalpmockup.png">
+                <p class="caption">Designing for minorities in politics.</p>
+            </div></a>
             
             <!-- EarBud -->
-            <div class="row work">
-                <div class="c7">
-                    <img src="work/earbud/earbud.png">
-                </div>
-                <div class="c1"></div>
-                <div class="c4">
-                    <h1 id="earbud">EarBud</h1>
-                    <p>An auditory display seeking to enhance programming for visually impaired users.<p>
-                    <a href="earbud.html"><button class="learnmore">learn more</button></a>
-                </div>
-            </div>
+            <a href="earbud.html"><div class="project right earbud hvr-float">
+                <img src="work/earbud/earbudmockup.png">
+                <h2>EarBud</h2>
+                <p class="caption">An auditory display for teaching code.</p>
+            </div></a>
             
             <!-- Camp Mosaic -->
-            <div class="row work">
-                <div class="c4">
-                    <h1 id="campmosaic">Camp Mosaic</h1>
-                    <p>Designing a cohesive system for a volunteer youth skill-building camp.<p>
-                    <a href="campmosaic.html"><button class="learnmore">learn more</button></a>
-                </div>
-                <div class="c2"></div>
-                <div class="c6">
-                    <img src="work/campmosaic/campmosaic.png">
-                </div>
-            </div>
-            
-            <!-- Convo -->
-            <div class="row work">
-                <div class="c7">
-                    <img src="work/convo/convo.png">
-                </div>
-                <div class="c1"></div>
-                <div class="c4">
-                    <h1 id="convo">Convo</h1>
-                    <p>An alternative design to an application that turns text message conversations into entertainment.<p>
-                    <a target="_blank" href="https://medium.com/@ZainKho/performing-your-first-gig-as-a-designer-5bf8758a21c8"><button class="learnmore">learn more</button></a>
-                </div>                
-            </div>
+            <a href="campmosaic.html"><div class="project left campmosaic hvr-float">
+                <img src="work/campmosaic/campmosaicmockup.png">
+                <p class="caption">Cohesive design system for youth camps.</p>
+            </div></a>
             
             <!-- Chirp -->
-            <div class="row work">
-                <div class="c4">
-                    <img src="work/chirp/chirplogo.png" id="chirplogo">
-                    <p>A web application that creates beautiful melodies out of social media posts.<p>
-                    <a href="chirp.html"><button class="learnmore">learn more</button></a>
-                </div>
-                <div class="c1"></div>
-                <div class="c7">
-                    <img src="work/chirp/chirp.png">
-                </div>
-            </div>
+            <a href="chirp.html"><div class="project right chirp hvr-float">
+                <img src="work/chirp/chirpmockup.png">
+                <p class="caption">Using tweets to make symphonies.</p>
+            </div></a>
             
             <!-- Designs -->
-            <div class="row work">
-                <div class="c7">
-                    <img src="work/designs/designs.png">
-                </div>
-                <div class="c1"></div>
-                <div class="c4">
-                    <img src="work/designs/designslogo.png" id="designslogo">
-                    <p>A collection of illustrations I've created for clients and personal use.<p>
-                    <a href="designs.html"><button class="learnmore">learn more</button></a>
-                </div>
-            </div>
+            <a href="designs.html"><div class="project left designs hvr-float ">
+                <img src="work/designs/designsmockup.png">
+                <p class="caption">Illustrations for client and personal use.</p>
+            </div></a>
             
             <!-- Travel -->
-            <div class="row work">
-                <div class="c4">
-                    <h1 id="travel">Travel</h1>
-                    <p>My favorite photos from my favorite places around the world.<p>
-                    <a href="travel.html"><button class="learnmore">learn more</button></a>
-                </div>
-                <div class="c1"></div>
-                <div class="c7">
-                    <img src="work/travel/travel.png" class="photo">
-                </div>
-            </div>
+            <a href="travel.html"><div class="project right travel hvr-float ">
+                <h2>TRAVEL</h2>
+                <p class="caption">Amateur photography from around the world.</p>
+            </div></a>
         </div>
-        <div class="c2"></div>
-        </div>
+        <div class="c1"></div>
+    </div>
         
     <!-- Scroll To Top -->
-        <div class="c1">
-            <a href="#top"><button id="scrollTop" class="no-display">top</button></a>
+    <div class="c1">
+        <a href="#top" class="no-display" id="scrollTop"></a>
         </div>
         
-        <div class="footer">
-            <div class="row">
-                <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
-            </div>
-            <div class="row">
-                <div class="optionList" style="padding: 1em">
-                    <h2 class="option" style="opacity: 1">work</h2>
-                    <h2 class="option"><a href="about.html">about</a></h2>
-                    <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
-                </div>
-            </div>
+    <div class="footer">
+    </div>
+</body>
+
+<footer>
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c6">
+            <h4>If you’re looking to work with me or simply need boba tea recommendations, feel free to email me at <a href="mailto: znk4@cornell.edu?subject=Hey!">znk4@cornell.edu</a>.</h4>
         </div>
-    </body>
+        <div class="c2"></div>
+        <div class="c2">
+            <h4 class="links">
+                <a href="https://twitter.com/zainkho"  target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://dribbble.com/zainkho" target="_blank"><i class="fab fa-dribbble"></i></a>
+                <a href="https://medium.com/@zainkho" target="_blank"><i class="fab fa-medium-m"></i></a>
+                <a href="https://linkedin.com/in/zainkho" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </h4>
+        </div>
+        <div class="c1"></div>
+    </div>
+</footer>
 </html>

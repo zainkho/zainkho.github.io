@@ -1,21 +1,21 @@
 <!-- earbud.html -->
 
 <!DOCTYPE html>
-<html lang="en" id="home">
+<html lang="en">
 
 <!-- HEAD -->
-<head>
+<head id="top">
     <meta charset="UTF-8">
-    <title>Zain Khoja</title>
+    <title>EarBud · Zain Khoja</title>
 
     <!-- Responsive Web Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
     <link href="css/hover-min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -37,7 +37,7 @@
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
-                }, 800, function(){
+                }, 500, function(){
                     window.location.hash = hash;
                 });
             }
@@ -58,110 +58,149 @@
 
       gtag('config', 'UA-89012104-2');
     </script>
+
 </head>
 
 <!-- WEBPAGE -->
-    <!-- Header -->
-    <header id="top">
-        <div class="row">
-        <div class="c2"></div>
-        <div class="c8">
-            <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
-            <div id="title">
-                <h1 id="earbud">EarBud</h1>
-                <h1 class="period">.</h1>
-                <h2 id="blurb">An auditory display seeking to enhance programming for visually impaired users.</h2>
-            </div>
+<!-- Header -->
+<header>
+    <!-- Nav -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <a href="index.html">
+                <img src="zklogo.png" class="zklogo"/>
+                <div id="name">Zain Khoja</div>
+            </a>
             <div class="optionList" style="float: right">
-                <h2 class="option"><a href="index.html">work</a></h2>
-                <h2 class="option"><a href="about.html">about</a></h2>
-                <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+                <h3 class="option"><a href="index.html">work</a></h3>
+                <h3 class="option"><a href="about.html">about</a></h3>
+                <h3 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h3>
             </div>    
         </div>
-        <div class="c2"></div>
+        <div class="c1"></div>
+    </div>
+    <!-- Title -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <h1 class="earbudtitle">
+                EarBud.<br>
+                Accessibility research.
+            </h1>
         </div>
+        <div class="c1"></div>
+    </div>
   </header>
 
-    <body>
-        <div class="content">        
-            <div class="summary row">
-                <div class="c1"></div>
-                <div class="c5">
-                    <h3>Overview</h3>
-                        <p>EarBud is a website that enables visually impaired users to navigate and comprehend block-based computer programs.</p>
-                    <h3>Roles</h3>
-                        <p>
-                            Undergraduate Research Assistant<br>
-                            Audio Engineer<br>
-                            User Interface Designer<br>
-                            User Experience Designer<br>
-                        </p>
-                    <h3>Timeline</h3>
-                        <p>May 2017 - Present</p>
-                    <h3>Results</h3>
-                        <p>Currently conducting further usabliity testing for public release.</p>
-                </div>
-                <div class="c5"><img src="work/earbud/earbud.png" class="sumimage"></div>
-                <div class="c1"></div>
-            </div>
+<body>
+    <!-- Summary --> 
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c5">
+            <p>
+            <span style="font-family: SFUI Bold">Overview</span><br>
+            A website that enables visually impaired users to navigate and comprehend block-based computer programs.
+            </p>
             
-            <div class="row">
-                <div class="c2"></div>
-                <div class="c8">
-                    <h4>The problem.</h4>
-                        <p>Speech readers are a means to an end for most visually impaired people, but are not necessarily the most productive tools for comprehension and usability.</p>
-                    
-                    <h4>First, we need to catch up.</h4>
-                        <p>In order to effectively create a way for visually impaired users to program better, our team had to figure out what was already known. From previous publications, we learned about the differences in the current speech technology and symbolistic sounds.</p>
-
-                        <p>We found out that auditory icons, or sounds that correlate to real world noises, weren’t as effective as earcons, or more abstract sounds. I focused on creating earcons.</p>
-                    
-                    <h4>Second, we thought about video games.</h4>
-                        <p>After creating sounds, we began to create a testing interface. Deriving controls from video games, we narrowed down our ideas to two distinct interaction systems:<br><br></p>
-                    
-                        <ol>
-                            <li>
-                                <span class="bold">WASD</span> for navigation<br>
-                                <span class="bold">Enter</span> for selection
-                            </li>
-                            <br><br>
-                            <li>
-                                <span class="bold">Arrow Keys</span> for navigation<br>
-                                <span class="bold">Tab</span> for selection
-                            </li>
-                        </ol>
-
-                        
-                    <h4>Third, I made the thing.</h4>
-                        <img src="work/earbud/ebudinterface.png" class="photo">
-                        <p>So then we needed a pretty interface similar to PencilCode.net, where our project would be implemented.</p>
-                    
-                    <h4>Fourth, we recruited very nice people.</h4>
-                        <p>Currently, we’re continuing to user test our interface. We test not only user’s comprehension of the simple programs we created, but also the recognition of earcons mapped to certain actions.</p>
-                    
-                    <h4>Our solution.</h4>
-                        <p>The EarBud auditory display project allows the user to pick the sounds: choosing from simple speech to earcons (abstract sounds) to spearcons (sped up speech). The auditory display also has special keyboard controls built to emphasize speed and minimize delays in sound comprehension.</p>
-                </div>
-                <div class="c2"></div>
-            </div>
+            <p>
+            <span style="font-family: SFUI Bold">Roles</span><br>
+            Research Assistant<br>
+            Audio Engineer<br>
+            User Interface Designer<br>
+            User Experience Designer
+            </p>
+            
+            <p>
+            <span style="font-family: SFUI Bold">Timeline</span><br>
+            May 2017 to May 2018
+            </p> 
         </div>
+        <div class="c5">
+            <img src="work/earbud/earbudmockup2.png">
+        </div>
+        <div class="c1"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="row content">
+        <div class="c1"></div>
+        <div class="c10 divider">
+            <h1 class="earbudtitle">Problem</h1>
+            <p>
+                Speech readers are a means to an end for most visually impaired people, but are not necessarily the most productive tools for comprehension and usability. While speech readers have widespread adoptability, the use of symbolic sounds has hardly been explored in accessibility tools.
+            </p><br>
+            
+            <h1 class="earbudtitle">Previous Literature</h1>
+            <p>
+                In order to effectively create a way for visually impaired users to program better, our team had to figure out what was already known. From previous publications, we learned about the differences in the current speech technology and symbolistic sounds. We found out that auditory icons, or sounds that correlate to real world noises, weren’t as effective as earcons, or more abstract sounds. I focused on creating earcons.
+                
+                <img src="work/earbud/earconmockup.png" class="fullimg">
+                
+                Another one of our team members worked on the spearcons, which are basically sped up versions of speech. We created spearcons of various speeds (in words per minute) and implemented those as options as well during the prototyping stage.
+            </p><br>
+            <h1 class="earbudtitle">Controls</h1>
+            <p>
+                After creating sounds, we began to create a testing interface. Deriving controls from video games, we narrowed down our ideas to two distinct interaction systems:
+                
+                <img src="work/earbud/controlsmockup.png" class="projectimg">
+                
+                Opting for the more familiar and ergonomic solution, we moved forward using the arrow keys for navigation and tab key for element selection.
+            </p><br>
+            
+            <h1 class="earbudtitle">Interface</h1>
+            <p>
+                Our project was based on the popular, block-based coding website PencilCode.net. Consequently, we wanted to recreate the interface as close as possible to the website since most users would be familiar with the current layout. Keeping in consideratoin that the user base had mostly never seen the website’s visuals, we just wanted to keep things simple and function.
+                
+                <img src="work/earbud/interfacemockup.png" class="fullimg">
+            </p><br>
+            
+            <h1 class="earbudtitle">Solution</h1>
+            <p>
+                The EarBud auditory display project allows the user to pick the sounds: choosing from simple speech to earcons (abstract sounds) to spearcons (sped up speech). The auditory display also has special keyboard controls built to emphasize speed and minimize delays in sound comprehension.
+            </p><br>
+            
+            <h1 class="earbudtitle">Results</h1>
+            <p>
+                We tested not only user’s comprehension of the simple programs we created, but also the recognition of earcons mapped to certain actions. Testing showed that earcons, speech, and spearcons were nearly equally effective in that order. Promising comprehension measures point to future coexistence of all three auditory cues in auditory displays.
+            </p><br>
+            
+            <h1 class="earbudtitle">Further Exploration</h1>
+            <p>
+                For one of my college applications, I wanted to see how my current project would look as an advertisement or animation. I created a short, minute-long video in Adobe After Effects to showcase the possiblities that EarBud offers to the word.
+                
+                <video controls src="work/earbud/earbudvideo.mp4" class="projectimg"/>
+            </p><br>
+        </div>
+        <div class="c1"></div>
+    </div>
+    
         
     <!-- Scroll To Top -->
-        <div class="c1">
-            <a href="#top"><button id="scrollTop" class="no-display">top</button></a>
+    <div class="c1">
+        <a href="#top" class="no-display" id="scrollTop"></a>
         </div>
         
-        <div class="footer">
-            <div class="row">
-                <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
-            </div>
-            <div class="row">
-                <div class="optionList" style="padding: 1em">
-                    <h2 class="option"><a href="index.html">work</a></h2>
-                    <h2 class="option"><a href="about.html">about</a></h2>
-                    <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
-                </div>
-            </div>
+    <div class="footer">
+    </div>
+</body>
+
+<footer>
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c6">
+            <h4>If you’re looking to work with me or simply need boba tea recommendations, feel free to email me at <a href="mailto: znk4@cornell.edu?subject=Hey!">znk4@cornell.edu</a>.</h4>
         </div>
-    </body>
+        <div class="c2"></div>
+        <div class="c2">
+            <h4 class="links">
+                <a href="https://twitter.com/zainkho"  target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://dribbble.com/zainkho" target="_blank"><i class="fab fa-dribbble"></i></a>
+                <a href="https://medium.com/@zainkho" target="_blank"><i class="fab fa-medium-m"></i></a>
+                <a href="https://linkedin.com/in/zainkho" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </h4>
+        </div>
+        <div class="c1"></div>
+    </div>
+</footer>
 </html>

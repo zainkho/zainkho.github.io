@@ -1,21 +1,21 @@
 <!-- chirp.html -->
 
 <!DOCTYPE html>
-<html lang="en" id="home">
+<html lang="en">
 
 <!-- HEAD -->
-<head>
+<head id="top">
     <meta charset="UTF-8">
-    <title>Zain Khoja</title>
+    <title>EarBud · Zain Khoja</title>
 
     <!-- Responsive Web Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/1bf75acbac.css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
     <link href="css/hover-min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -37,7 +37,7 @@
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
-                }, 800, function(){
+                }, 500, function(){
                     window.location.hash = hash;
                 });
             }
@@ -58,87 +58,125 @@
 
       gtag('config', 'UA-89012104-2');
     </script>
+
 </head>
 
 <!-- WEBPAGE -->
-    <!-- Header -->
-    <header id="top">
-        <div class="row">
-        <div class="c2"></div>
-        <div class="c8">
-            <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
-            <div id="title">
-                <img src="work/chirp/chirplogo.png" id="chirplogo">
-                <h1 class="period">.</h1>
-                <h2 id="blurb">Creating beautiful melodies out of social media posts.</h2>
-            </div>
+<!-- Header -->
+<header>
+    <!-- Nav -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <a href="index.html">
+                <img src="zklogo.png" class="zklogo"/>
+                <div id="name">Zain Khoja</div>
+            </a>
             <div class="optionList" style="float: right">
-                <h2 class="option"><a href="index.html">work</a></h2>
-                <h2 class="option"><a href="about.html">about</a></h2>
-                <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
+                <h3 class="option"><a href="index.html">work</a></h3>
+                <h3 class="option"><a href="about.html">about</a></h3>
+                <h3 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h3>
             </div>    
         </div>
-        <div class="c2"></div>
+        <div class="c1"></div>
+    </div>
+    <!-- Title -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <h1 class="chirptitle">
+                Chirp.<br>
+                HackUTD 2017.
+            </h1>
         </div>
+        <div class="c1"></div>
+    </div>
   </header>
 
-    <body>
-        <div class="content">        
-            <div class="summary row">
-                <div class="c1"></div>
-                <div class="c5">
-                    <h3>Overview</h3>
-                        <p>Chirp is a web application that uses sentiment analysis on Twitter to create music on various instruments.</p>
-                    <h3>Roles</h3>
-                        <p>
-                            User Interface Designer<br>
-                            Presentation Director
-                        </p>
-                    <h3>Timeline</h3>
-                        <p>March 2017 - April 2017</p>
-                    <h3>Results</h3>
-                        <p>Finalist for the University of North Texas Sherman/Barsanti Inspiration Award.</p>
-                </div>
-                <div class="c5"><img src="work/chirp/chirp.png" class="sumimage"></div>
-                <div class="c1"></div>
-            </div>
+<body>
+    <!-- Summary --> 
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c5">
+            <p>
+            <span style="font-family: SFUI Bold">Overview</span><br>
+            A web application that analyzes tweet language to create musical notes on various instruments.
+            </p>
             
-            <div class="row">
-                <div class="c2"></div>
-                <div class="c8">
-                    <h4>The problem.</h4>
-                        <p>High schoolers have some of the most innovative and creative minds in the world: all the more reason that the field of academia should be doing more to attract these students to research as a profession. Unfortunately, research shows that students either 1) are afraid they are not smart enough or more commonly, 2) are disinterested in the topic of research.</p>
-                    
-                    <h4>First of all, what do teenagers like anyway?</h4>
-                        <p>Social media proves to be an attractive medium for teenage entertainment. Second? Music. Combining these two attractions results in a unique product that has interesting effects on teenage audiences.</p>
-                    
-                    <h4>Second, a swirl of music and media.</h4>
-                        <p>The idea I came up with was turning social media posts into music. Users can type in a keyword to learn about the popular opinions on that topic on Twitter. Furthermore, students can see the heaviest carries on positive and negative influences on that keyword.</p>
-                        <img src="work/chirp/chirpinterface.png">
-                    
-                    <h4>Third, results and reflection.</h4>
-                        <p>As an undergraduate researcher studying the effects of social media and technology usability at the University of North Texas, I created Chirp as a solution to generalizing the internet’s opinion as well as displaying this data in a media form that is familiar to the teenage demographic. The main purpose was to engage teenagers with research concepts of data collection and influence while also creating a piece of art. For this work, Chirp was selected as one of 10 finalists for the University of North Texas Sherman/Barsanti Inspiration Award.</p>
-                </div>
-                <div class="c2"></div>
-            </div>
+            <p>
+            <span style="font-family: SFUI Bold">Roles</span><br>
+            User Interface Designer<br>
+            User Experience Designer
+            </p>
+            
+            <p>
+            <span style="font-family: SFUI Bold">Timeline</span><br>
+            March 2017 to April 2017
+            </p> 
         </div>
+        <div class="c5">
+            <img src="work/chirp/chirpmockup2.png">
+        </div>
+        <div class="c1"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="row content">
+        <div class="c1"></div>
+        <div class="c10 divider">
+            <h1 class="chirptitle">Problem</h1>
+            <p>
+                High schoolers have some of the most innovative and creative minds in the world - all the more reason that the field of academia should be doing more to attract these students to research as a profession. Unfortunately, research shows that students either 1) are afraid they are not smart enough or more commonly, 2) are disinterested in the topic of research.
+            </p><br>
+            
+            <h1 class="chirptitle">Research</h1>
+            <p>
+                While research is an impressive and rewarding extracurricular for students, it’s commonly seen as too complex or unapproachable for those not yet in a university. Contrastingly, social media proves to be the most attractive medium for teenage entertainment. Second? Music. Combining these two attractions results in a unique product that has interesting effects on teenage audiences.
+            </p><br>
+            
+            <h1 class="chirptitle">Ideation</h1>
+            <p>
+                We wanted to find a way to analyze social trends and introduce the concept of using independent variables to visualize different results. Chirp, while mostly a fun application, attempted to accomplish these goals.  Users can type in a keyword to learn about the popular opinions on that topic on Twitter.
+                
+                <img src="work/chirp/ideationmockup.png" class="projectimg">
+                
+                The results of each search played music based on the sentiment analysis of each tweet. Negative scores resulted in lower notes while positive scores translated to high notes. Furthermore, users could see the tweets that swung the melody the most. For fun, we added a few more instruments that, when switched quickly, could create multi-instrument symphonies!
+            </p><br>
+            
+            <h1 class="chirptitle">Results</h1>
+            <p>
+                As an undergraduate researcher studying the effects of social media and technology usability at the University of North Texas, I created Chirp as a solution to generalizing the internet’s opinion as well as displaying this data in a media form that is familiar to the teenage demographic. The main purpose was to engage teenagers with research concepts of data collection and influence while also creating a piece of art. For this work, Chirp was selected as one of 10 finalists for the University of North Texas Sherman/Barsanti Inspiration Award.
+            </p><br>
+        </div>
+        <div class="c1"></div>
+    </div>
+    
         
     <!-- Scroll To Top -->
-        <div class="c1">
-            <a href="#top"><button id="scrollTop" class="no-display">top</button></a>
+    <div class="c1">
+        <a href="#top" class="no-display" id="scrollTop"></a>
         </div>
         
-        <div class="footer">
-            <div class="row">
-                <a href="index.html"><img src="zklogo.png" class="zklogo"/></a>
-            </div>
-            <div class="row">
-                <div class="optionList" style="padding: 1em">
-                    <h2 class="option"><a href="index.html">work</a></h2>
-                    <h2 class="option"><a href="about.html">about</a></h2>
-                    <h2 class="option"><a target="_blank" href="ZainKhoResume.pdf">resume</a></h2>
-                </div>
-            </div>
+    <div class="footer">
+    </div>
+</body>
+
+<footer>
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c6">
+            <h4>If you’re looking to work with me or simply need boba tea recommendations, feel free to email me at <a href="mailto: znk4@cornell.edu?subject=Hey!">znk4@cornell.edu</a>.</h4>
         </div>
-    </body>
+        <div class="c2"></div>
+        <div class="c2">
+            <h4 class="links">
+                <a href="https://twitter.com/zainkho"  target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://dribbble.com/zainkho" target="_blank"><i class="fab fa-dribbble"></i></a>
+                <a href="https://medium.com/@zainkho" target="_blank"><i class="fab fa-medium-m"></i></a>
+                <a href="https://linkedin.com/in/zainkho" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </h4>
+        </div>
+        <div class="c1"></div>
+    </div>
+</footer>
 </html>

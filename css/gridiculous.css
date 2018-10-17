@@ -19,7 +19,6 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
 body{margin:0}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
-h1{font-size:2em;margin:0.67em 0}
 abbr[title]{border-bottom:1px dotted}
 b,strong{font-weight:bold}
 dfn{font-style:italic}
@@ -96,7 +95,7 @@ img{max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto}
 /* =Media query for 960 Screens - sets nested grids to 100%
 -------------------------------------------------------------- */
 @media only screen and (max-width:960px){
-.row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{width:100%;margin-bottom:20px}
+.row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{width:100%;margin-bottom:0px}
 .row .row > div:last-child{margin-bottom:0 !important}
 }
 
@@ -105,5 +104,5 @@ img{max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto}
 @media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait){
 body{font-size:90%}
 .row{margin-bottom:0!important}
-.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{width:100%;margin-right:0;margin-left:0;margin-bottom:20px}
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{width:100%;margin-right:0;margin-left:0;margin-bottom:0px}
 }
