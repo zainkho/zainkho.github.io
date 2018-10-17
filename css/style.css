@@ -509,6 +509,9 @@ i {
     header {
         margin-top: -10vw;
     }
+    #name {
+        font-size: 5vw;
+    }
     h1 {
         font-size: 1.75em;
         margin-top: -7vw;
