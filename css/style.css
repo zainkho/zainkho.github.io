@@ -42,7 +42,7 @@ html {
     src: url(../fonts/Lato-Bold.woff2);
 }
 h1 {
-    font-family: 'SFUI Bold';
+    font-family: 'SFUI';
     font-size: 5em;
     line-height: 1.25em;
     margin: 0;
@@ -510,7 +510,6 @@ i {
         margin-top: -10vw;
     }
     h1 {
-        font-family: 'SFUI';
         font-size: 1.75em;
         margin-top: -7vw;
     }
