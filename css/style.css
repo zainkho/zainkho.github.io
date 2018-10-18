@@ -43,7 +43,7 @@ html {
 }
 h1 {
     font-family: 'SFUI Bold';
-    font-size: 5em;
+    font-size: 3em;
     line-height: 1.25em;
     margin: 0;
 }
@@ -264,6 +264,9 @@ img {
     border-top: 1px solid #B2B2B2;
     padding-top: 3em;
 }
+.title {
+    font-size: 5em;
+}
 .projectimg {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -306,7 +309,7 @@ video {
 .campmosaictitle {
     background: url(../work/campmosaic/campmosaicbackground2.png) bottom / cover no-repeat;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
 }
 .chirptitle {
     color: #FFCDDC;
@@ -319,8 +322,8 @@ video {
     margin-bottom: 1.5em;
     padding: 1em;
 }
+
 .athenstitle {
-    
     background: url(../work/travel/athens1.jpg) center / cover no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
@@ -402,7 +405,7 @@ video {
     -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
 }
 .city {
-    font-size: 0.5em;
+    font-size: 1em;
 }
 .photo {
     display: inline;
@@ -425,6 +428,9 @@ video {
     overflow: scroll;
     white-space: nowrap;
     margin-bottom: 3em;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 
 
