@@ -505,7 +505,7 @@ i {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     header {
         margin-top: -10vw;
     }
@@ -528,15 +528,42 @@ i {
     .project {
         display: inline-block;
         position: relative;
-        height: 35vw;
-        width: 35vw;
+        height: 70vw;
+        width: 70vw;
         border-radius: 0.75vw;
-        padding: 2vw;
+        padding: 4vw;
         overflow: hidden;
-        margin: 2vw;
+        margin: 3vw;
 
         color: #FFFFFF;
         text-align: center;
+    }
+    .project h2 {
+        font-size: 10vw;
+        margin-top: 42.5vw;
+        margin-bottom: 0em;
+    }
+    .nalp img {
+        margin-top: 10vw;
+    }
+    .earbud img {
+        margin-top: 3vw;
+    }
+    .campmosaic img {
+        margin-top: 16vw;
+    }
+    .chirp img {
+        margin-top: 6vw;
+    }
+    .designs img {
+        margin-top: 4vw;
+    }
+    .travel h2 {
+        font-size: 15vw;
+        margin-top: 20vw;
+    }
+    .caption {
+        font-size: 3vw;
     }
     #exploration {
         margin-top: 1.5em;
