@@ -523,17 +523,17 @@ i {
         font-size: 4.5vw;
     }
     h1 {
-        font-size: 1.75em;
+        font-size: 1.5em;
         margin-top: -7vw;
     }
     h3 {
         font-size: 0.75em;
     }
     h4 {
-        font-size: 0.625em;
+        font-size: 1em;
     }
     .title {
-        font-size: 1.75em;
+        font-size: 1.5em;
     }
     .project {
         display: inline-block;
@@ -588,12 +588,20 @@ i {
         margin-left: 0;
     }
     footer {
-        margin-top: 2em;
+        margin-top: 3em;
         padding-bottom: 2em;
+    }
+    i {
+        transform: scale(1.5);
+        margin-right: 5vw;
+        margin-top: 5vw;
     }
     .links {
         display: inline-block;
         float: left;
+    }
+    #scrollTop {
+        bottom: 50.5px; 
     }
 }
 
