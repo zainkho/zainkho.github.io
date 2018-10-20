@@ -521,15 +521,17 @@ i {
     h1 {
         font-size: 1.75em;
         margin-top: -7vw;
-        letter-spacing: -0.40vw;
+        letter-spacing: -0.25vw;
     }
     h3 {
         font-size: 0.75em;
-        letter-spacing: -0.15vw;
+        letter-spacing: -0.05vw;
     }
     h4 {
         font-size: 0.625em;
-        letter-spacing: -0.125vw;
+    }
+    .title {
+        font-size: 1.75em;
     }
     .project {
         display: inline-block;
