@@ -44,6 +44,7 @@ html {
 h1 {
     font-family: 'SFUI Bold';
     font-size: 3em;
+    font-weight: inherit;
     line-height: 1.25em;
     margin: 0;
 }
@@ -53,16 +54,19 @@ h1 a:hover {
 h2 {
     font-family: 'SFUI Bold';
     font-size: 6vw;
+    font-weight: inherit;
     line-height: 1.25em;
     position: relative;
 }
 h3 {
     font-family: 'SFUI';
     font-size: 1em;
+    font-weight: inherit;
 }
 h4 {
     font-family: 'SFUI Light';
     font-size: 1.25em;
+    font-weight: inherit;
     line-height: 1.5em;
     letter-spacing: 0.25px;
     margin: 0;
@@ -71,6 +75,7 @@ p {
     position: relative;
     font-family: 'SFUI';
     font-size: 1.5em;
+    font-weight: inherit;
     margin-top: 0;
     margin-bottom: 1em;
 }
