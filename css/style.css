@@ -532,6 +532,9 @@ i {
     h4 {
         font-size: 1em;
     }
+    .option {
+        font-size: 2.75vw;
+    }
     .title {
         font-size: 1.75em;
     }
