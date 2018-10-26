@@ -209,7 +209,7 @@ img {
 }
 .tint img {
     z-index: 1;
-    margin-top: 1vw;
+    margin-top: 1em;
 }
 .nalp {
     background: url(../work/nalp/nalpbackground.png) center / contain no-repeat;
@@ -537,6 +537,9 @@ i {
     }
     .title {
         font-size: 1.75em;
+    }
+    .projectimg {
+        height: auto;
     }
     .project {
         display: inline-block;
