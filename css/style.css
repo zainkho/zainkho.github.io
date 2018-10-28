@@ -313,7 +313,7 @@ video {
 .campmosaictitle {
     background: url(../work/campmosaic/campmosaicbackground2.png) bottom / cover no-repeat;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
 }
 .chirptitle {
     color: #FFCDDC;
