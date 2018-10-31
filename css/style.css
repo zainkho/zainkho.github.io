@@ -519,8 +519,12 @@ i {
     header {
         margin-top: -10vw;
     }
+    .zklogo {
+        height: 10vw;
+    }
     #name {
         font-size: 4.5vw;
+        display: none;
     }
     h1 {
         font-size: 1.75em;
@@ -533,7 +537,8 @@ i {
         font-size: 1em;
     }
     .option {
-        font-size: 2.75vw;
+        font-size: 4vw;
+        margin: 2.5vw;
     }
     .title {
         font-size: 1.75em;
@@ -549,7 +554,7 @@ i {
         border-radius: 2vw;
         padding: 4vw;
         overflow: hidden;
-        margin: 3vw;
+        margin: 2vw;
 
         color: #FFFFFF;
         text-align: center;
