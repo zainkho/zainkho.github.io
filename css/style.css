@@ -191,6 +191,18 @@ img {
     font-size: 1.25vw;
     margin: 0em;
 }
+.ideocolab {
+    background: #FFDB6D;
+    padding-left: 0;
+}
+.ideocolab h2 {
+    font-family: "SFUI Bold";
+    color: #000000;
+}
+.ideocolab img {
+    width: 100%;
+    margin-top: 2vw;
+}
 .respond {
     background-image: linear-gradient(to right, #FF7E7E, #FFB77E, #FFDE88);
 }
@@ -281,6 +293,9 @@ img {
     margin-bottom: 1.5em;
 }
 
+.ideocolabtitle {
+    color: #FFDB6D;
+}
 .respondtitle {
     width: max-content;
     
@@ -503,6 +518,9 @@ i {
         color: #FFFFFF;
         text-align: center;
     }
+    .ideocolab {
+        padding-left: 0;
+    }
     #exploration {
         margin-top: 1.5em;
     }
@@ -566,6 +584,9 @@ i {
     }
     .caption {
         font-size: 3vw;
+    }
+    .ideocolab {
+        padding-left: 0;
     }
     .nalp img {
         margin-top: 10vw;
