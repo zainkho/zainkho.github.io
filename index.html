@@ -19,15 +19,16 @@
     
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <script>
         /* Button appears on scroll */
         $(window).scroll(function(){
-		  if ($(this).scrollTop() > 20) {
+          if ($(this).scrollTop() > 20) {
               $('#scrollTop').removeClass('no-display');
-		  } else {
+          } else {
               $('#scrollTop').addClass('no-display');
-		  }
-	   });
+          }
+        });
 
         /* Smooth Scrolling */
         $(document).ready(function(){
