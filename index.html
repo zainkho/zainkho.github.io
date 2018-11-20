@@ -21,7 +21,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <script>
-        /* Button appears on scroll */
+        /* Scroll button appears on scroll */
         $(window).scroll(function(){
           if ($(this).scrollTop() > 20) {
               $('#scrollTop').removeClass('no-display');
@@ -43,6 +43,15 @@
                 });
             }
           });
+        });
+        
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#back').removeClass('no-display');
+          } else {
+              $('#back').addClass('no-display');
+          }
         });
     </script>
     
@@ -169,9 +178,6 @@
     <!-- Scroll To Top -->
     <div class="c1">
         <a href="#top" class="no-display" id="scrollTop"></a>
-        </div>
-        
-    <div class="footer">
     </div>
 </body>
 

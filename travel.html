@@ -19,15 +19,16 @@
     
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <script>
-        /* Button appears on scroll */
+        /* Scroll button appears on scroll */
         $(window).scroll(function(){
-		  if ($(this).scrollTop() > 20) {
+          if ($(this).scrollTop() > 20) {
               $('#scrollTop').removeClass('no-display');
-		  } else {
+          } else {
               $('#scrollTop').addClass('no-display');
-		  }
-	   });
+          }
+        });
 
         /* Smooth Scrolling */
         $(document).ready(function(){
@@ -37,11 +38,20 @@
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
-                }, 3000, function(){
+                }, 500, function(){
                     window.location.hash = hash;
                 });
             }
           });
+        });
+        
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#back').removeClass('no-display');
+          } else {
+              $('#back').addClass('no-display');
+          }
         });
     </script>
     
@@ -256,7 +266,9 @@
         <a href="#top" class="no-display" id="scrollTop"></a>
         </div>
         
-    <div class="footer">
+    <!-- Back -->
+    <div class="c1">
+        <a href="index.html" class="no-display" id="back"></a>
     </div>
 </body>
 

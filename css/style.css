@@ -502,6 +502,31 @@ i {
     opacity: 0;
 }
 
+/* Back */
+#back {
+    cursor: pointer;
+    outline: none !important;
+    
+    background: url(../back.png) center / contain no-repeat;
+    opacity: 0.3;
+
+    position: fixed;
+    top: 67.5px; 
+    left: 8.5vw; 
+    width: 0.8em;
+    height: 2em;
+    z-index: 99;
+    
+    transition: 0.28s;
+}
+#back:hover {
+    opacity: 1;
+    transition: 0.28s;
+}
+#back.no-display {
+    opacity: 0;
+}
+
 
 /* Responsive Modifications */
 @media screen and (max-width: 1275px) {
@@ -634,6 +659,9 @@ i {
     }
     #scrollTop {
         bottom: 57.5px; 
+    }
+    #back {
+        top: 57.5px; 
     }
 }
 
