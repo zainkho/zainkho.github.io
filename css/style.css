@@ -10,32 +10,32 @@ html {
 
 /* Typography */
 @font-face {
-    font-family: 'SFUI Thin';
-    src: url(../fonts/SF-UI-Display-Thin.woff2);
-}
-@font-face {
-    font-family: 'SFUI Light';
-    src: url(../fonts/SF-UI-Display-Light.woff2);
-}
-@font-face {
-    font-family: 'SFUI';
-    src: url(../fonts/SF-UI-Display-Regular.woff2);
-}
-@font-face {
-    font-family: 'SFUI Medium';
-    src: url(../fonts/SF-UI-Display-Medium.woff2);
-}
-@font-face {
-    font-family: 'SFUI Semibold';
-    src: url(../fonts/SF-UI-Display-Semibold.woff2);
-}
-@font-face {
     font-family: 'SFUI Bold';
-    src: url(../fonts/SF-UI-Display-Bold.woff2);
+    src: url(../fonts/SF-Pro-Display-Bold.woff2);
 }
 @font-face {
     font-family: 'SFUI Heavy';
-    src: url(../fonts/SF-UI-Display-Heavy.woff2);
+    src: url(../fonts/SF-Pro-Display-Heavy.woff2);
+}
+@font-face {
+    font-family: 'SFUI Light';
+    src: url(../fonts/SF-Pro-Display-Light.woff2);
+}
+@font-face {
+    font-family: 'SFUI Medium';
+    src: url(../fonts/SF-Pro-Display-Medium.woff2);
+}
+@font-face {
+    font-family: 'SFUI';
+    src: url(../fonts/SF-Pro-Display-Regular.woff2);
+}
+@font-face {
+    font-family: 'SFUI Semibold';
+    src: url(../fonts/SF-Pro-Display-Semibold.woff2);
+}
+@font-face {
+    font-family: 'SFUI Thin';
+    src: url(../fonts/SF-Pro-Display-Thin.woff2);
 }
 @font-face {
     font-family: 'Lato Bold';
