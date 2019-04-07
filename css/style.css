@@ -559,9 +559,6 @@ i {
         font-size: 4.5vw;
         display: none;
     }
-    .menu-icon {
-        display: inline-block;
-    }
     .content-mobile {
         display: block;
     }
@@ -591,8 +588,8 @@ i {
         width: 85vw;
         border-radius: 2vw;
         padding: 4.5vw;
+        margin-bottom: 6vw;
         overflow: hidden;
-        margin: 2vw;
 
         color: #FFFFFF;
         text-align: center;
