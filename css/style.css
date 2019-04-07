@@ -287,6 +287,10 @@ img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.respondlink {
+    text-decoration: underline;
+    text-decoration-color: #FF7E7E;
+}
 .ideocolabtitle {
     color: #FFC000;
 }
@@ -301,15 +305,27 @@ img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.tintlink {
+    text-decoration: underline;
+    text-decoration-color: #B2B2B2;
+}
 #screenshots {
-    margin-top: -5vw;
+    margin-top: -3vw;
     margin-bottom: 3em;
 }
 .nalptitle {
     color: #0052A5;
 }
+.nalplink {
+    text-decoration: underline;
+    text-decoration-color: #0052A5;
+}
 .earbudtitle {
     color: #1D90FF;
+}
+.earbudlink {
+    text-decoration: underline;
+    text-decoration-color: #1D90FF;
 }
 .video-mask {
     overflow: hidden;
