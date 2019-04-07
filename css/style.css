@@ -75,8 +75,8 @@ p {
     font-family: 'SFUI';
     font-size: 1.5em;
     font-weight: inherit;
-    margin-top: 0;
-    margin-bottom: 1em;
+    line-height: 1.75em;
+    max-width: 30em;
 }
 p a:hover {
     opacity: 0.6;
@@ -86,6 +86,11 @@ a {
     text-decoration: none;
     color: inherit;
     transition: 0.28s;
+}
+.section {
+    font-family: 'SFUI Semibold';
+    text-transform: uppercase;
+    color: #D8D8D8;
 }
 
 
@@ -124,7 +129,7 @@ header {
     display: inline;
     margin: 0.75vw;
 
-    transition: .28s;
+    transition: 0.28s;
 }
 .selected {
     opacity: 1;
@@ -134,12 +139,17 @@ header {
     opacity: 1;
     transition: 0.28s;
 }
-
+.content-mobile {
+    display: none;
+}
+.content-web {
+    display: inline;
+}
 
 /* Body */
 body {
     font-family: 'SFUI';
-    color: #000000;
+    color: #222222;
     display: block;
 }
 div {
@@ -197,7 +207,7 @@ img {
 }
 .ideocolab h2 {
     font-family: "SFUI Bold";
-    color: #000000;
+    color: #222222;
 }
 .ideocolab img {
     width: 100%;
@@ -237,22 +247,6 @@ img {
 .earbud img {
     margin-top: 2vw;
 }
-.campmosaic {
-    background: url(../work/campmosaic/campmosaicbackground.png) center / contain no-repeat;
-}
-.campmosaic img {
-    width: 77.5%;
-    position: relative;
-    margin-top: 7.5vw;
-}
-.chirp {
-    background: linear-gradient(#FFE5ED, #FFCDDC);
-}
-.chirp img {
-    width: 85%;
-    position: relative;
-    margin-top: 3vw;
-}
 .designs {
     background: #414040;
 }
@@ -261,18 +255,11 @@ img {
     position: relative;
     margin-top: 3vw;
 }
-.travel {
-    background: url(../work/travel/travelbackground.png) center / contain no-repeat;
-}
-.travel h2 {
-    font-size: 7vw;
-    margin-top: 10vw;
-}
 #avi {
-    height: 30vw;
-    width: 30vw;
+    height: 24em;
+    width: 24em;
     border-radius: 100em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 16px rgba(162, 162, 162, 0.5);
 }
 
 /* Project Pages */
@@ -293,9 +280,6 @@ img {
     margin-bottom: 1.5em;
 }
 
-.ideocolabtitle {
-    color: #FFDB6D;
-}
 .respondtitle {
     width: max-content;
     
@@ -303,14 +287,21 @@ img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.ideocolabtitle {
+    color: #FFC000;
+}
+.ideocolablink {
+    text-decoration: underline;
+    text-decoration-color: #FCC000;
+}
 .tinttitle {
     width: max-content;
     
-    background: linear-gradient(137.5deg, #B2B2B2, #666666 18%, #000000 18%);
+    background: linear-gradient(137.5deg, #B2B2B2, #666666 18%, #222222 18%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-#exploration {
+#screenshots {
     margin-top: -5vw;
     margin-bottom: 3em;
 }
@@ -320,19 +311,13 @@ img {
 .earbudtitle {
     color: #1D90FF;
 }
-video {
-    border-radius: 0.75vw;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.video-mask {
+    overflow: hidden;
+    border-radius: 0.5vw;
+    box-shadow: 0 4px 16px rgba(162, 162, 162, 0.5);
     transition: 0.28s;
 }
-.campmosaictitle {
-    background: url(../work/campmosaic/campmosaicbackground2.png) bottom / cover no-repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
-}
-.chirptitle {
-    color: #FFCDDC;
-}
+
 .designstitle {
     color: #414040;
 }
@@ -403,6 +388,11 @@ video {
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
 }
+.nyctitle {
+    background: url(../work/travel/nyc1.jpg) center / cover no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
+}
 .orlandotitle {
     background: url(../work/travel/orlando1.jpg) center / cover no-repeat;
     -webkit-background-clip: text;
@@ -432,7 +422,7 @@ video {
     margin-right: 0;
     
     height: 37.5vw;
-    border-radius: 0.25vw;
+    border-radius: 0.5em;
     
     transition: 0.28s;
 }
@@ -466,7 +456,7 @@ footer h4 {
     transition: 0.28s;
 }
 footer a:hover {
-    color: #000000;
+    color: #222222;
     transition: 0.28s;
 }
 i {
@@ -559,8 +549,8 @@ i {
 }
 
 @media screen and (max-width: 450px) {
-    header {
-        margin-top: -10vw;
+    html {
+        padding: 1em;
     }
     .zklogo {
         height: 10vw;
@@ -569,9 +559,14 @@ i {
         font-size: 4.5vw;
         display: none;
     }
-    h1 {
-        font-size: 1.75em;
-        margin-top: -7vw;
+    .menu-icon {
+        display: inline-block;
+    }
+    .content-mobile {
+        display: block;
+    }
+    .content-web {
+        display: none;
     }
     h3 {
         font-size: 0.75em;
@@ -584,7 +579,7 @@ i {
         margin: 2.5vw;
     }
     .title {
-        font-size: 1.75em;
+        font-size: 3em;
     }
     .projectimg {
         height: auto;
@@ -592,10 +587,10 @@ i {
     .project {
         display: inline-block;
         position: relative;
-        height: 70vw;
-        width: 70vw;
+        height: 85vw;
+        width: 85vw;
         border-radius: 2vw;
-        padding: 4vw;
+        padding: 4.5vw;
         overflow: hidden;
         margin: 2vw;
 
@@ -604,8 +599,7 @@ i {
     }
     .project h2 {
         font-size: 10vw;
-        margin-top: 42.5vw;
-        margin-bottom: 0em;
+        margin-top: 50vw;
     }
     .caption {
         font-size: 3vw;
@@ -613,17 +607,32 @@ i {
     .ideocolab {
         padding-left: 0;
     }
+    .respondtitle {
+        width: 100%;
+    }
+    .ideocolabtitle {
+        width: 100%;
+    }
+    .tinttitle {
+        width: 100%;
+    }
+    .earbudtitle {
+        width: 100%;
+    }
+    .nalptitle {
+        width: 100%;
+    }
+    .designstitle {
+        width: 100%;
+    }
+    #screenshots {
+        margin-top: 2em;
+    }
     .nalp img {
         margin-top: 10vw;
     }
     .earbud img {
         margin-top: 3vw;
-    }
-    .campmosaic img {
-        margin-top: 16vw;
-    }
-    .chirp img {
-        margin-top: 6vw;
     }
     .designs img {
         margin-top: 4vw;
@@ -645,13 +654,14 @@ i {
         margin-left: 0;
     }
     footer {
-        margin-top: 3em;
         padding-bottom: 2em;
     }
+    footer h4 {
+        font-size: 1.25em;
+    }
     i {
-        transform: scale(1.5);
+        transform: scale(1.25);
         margin-right: 5vw;
-        margin-top: 5vw;
     }
     .links {
         display: inline-block;
@@ -661,7 +671,7 @@ i {
         bottom: 57.5px; 
     }
     #back {
-        top: 57.5px; 
+        display: none;
     }
 }
 

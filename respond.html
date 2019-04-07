@@ -92,6 +92,7 @@
             <div class="optionList" style="float: right">
                 <h3 class="option"><a href="index.html">work</a></h3>
                 <h3 class="option"><a href="about.html">about</a></h3>
+                <h3 class="option"><a href="travel.html">travel</a></h3>
                 <h3 class="option"><a target="_blank" href="zainkhoresume.pdf">resume</a></h3>
             </div>    
         </div>
@@ -138,43 +139,67 @@
     </div>
     
     <!-- Content -->
-    <div class="row content">
-        <div class="c1"></div>
-        <div class="c10 divider">
-            <h1 class="respondtitle">Problem</h1>
+    <div class="row">
+        <div class="c3"></div>
+        <div class="c6 divider">
+            <h4 class="section">problem</h4>
+            <h1 class="respondtitle">Why natural disasters?</h1>
             <p>
-                First responders take care of lots of people after natural disasters. However, it’s difficult to collectively analyze all the people who need help and how urgent care is needed. With one of our team members from Duke University, a location affected by Hurricane Florence, the issue was very real and had promise for innovation.
+                Natural disasters are a city’s worst nightmare. Fortunately, we have first responders who are trained and prepared to risk their lives to save others in these difficult situations. However, it’s difficult to collect and analyze data for all the people who need help, from severity of injury to duration of travel to the site of the victim. One of our team members from Duke University had flown out early to MIT as a result of Hurricane Florence. We recognized an issue that was very real and had promise for innovation.
+            </p>
+            
+            <p>
+                When looking at current methods used by first responders, we noticed there was a lack of proactive searching; while there are areas of concentrated traffic, this many times lets down underpopulated areas. The current processes relied on crowdsourced information and tips followed up by search-and-rescue missions. First responders want to help as many people as possible, but they can’t because they don’t know where victims are and how severe their injuries are.
             </p><br>
             
-            <h1 class="respondtitle">Research</h1>
+            <h1 class="respondtitle">Assumptions</h1>
             <p>
-                Studying current methods used by first responders, we noticed there was a lack of proactive searching. The current processes relied on crowdsourced information and tips followed up by search-and-rescue missions. We saw that there was an opportunity for modern technologies to possibly help the situation.
+                While we didn’t have access to drones, we believed that using drones to search and relay information would be a good option to quickly find people who needed help. Drones would be able to provide 1) pictures, 2) audio messages from victims, and 3) estimated locations of victims.
             </p><br>
             
-            <h1 class="respondtitle">Ideation</h1>
+            <h4 class="section">ideation</h4>
+            <h1 class="respondtitle">How urgent is urgent?</h1>
             <p>
-                <span style="font-family: SFUI Bold">Urgency Levels</span><br>
-                Our idea was to create a versatile mobile app that would aggregate data from these drones and use machine learning to prioritize situations by urgency levels high, medium, or low.
+                Our idea was to create a versatile mobile app that would aggregate data from these drones and use machine learning to prioritize situations by urgency levels high, medium, or low. We tried various explorations that each presented the information in a different way; our objective was to allow a user to quickly take away vital information without overloading the screen with details.
+                
+                <img src="work/respond/urgencyexplorationsmockup.png" class="fullimg explorations">
+                
+                We compromised some of the ease of usability an scrolling for a more detailed view in the end. After all, first responders wouldn’t be scrolling through a feed like Facebook or Twitter, but rather accessing a few, isolated situations and details from within these situations.
                 
                 <img src="work/respond/urgencymockup.png" class="projectimg">
-                
-                Using IBM Watson’s speech-to-text and tone analyzer APIs, we were able to teach a neural network emergency vocabulary and successfully assign priority levels to situations. First responders could also listen to the survivors’ messages themselves to identify age, level of panic, shock, etc.
-            </p>
+            </p><br>
+
+            
+            <h1 class="respondtitle">Getting the details right</h1>
             <p>
-                <span style="font-family: SFUI Bold">Routes</span><br>
+                Using IBM Watson’s speech-to-text and tone analyzer APIs, we were able to teach a neural network emergency vocabulary and successfully assign priority levels to situations. First responders could also listen to the survivors’ messages themselves to identify age, level of panic, shock, etc.
+                
+                <img src="work/respond/situationexplorationsmockup.png" class="fullimg explorations">
+                
+                While speech-to-text technology has certainly made strides, some aspects of voice can convey severity of damage, age, and other factors that a first responder might want to know. Considering most messages would be 30 seconds to 1 minute in length, we believed that the ability to playback the original audio message was an important piece of this screen.
+                
+                <img src="work/respond/situationsmockup.png" class="projectimg">
+            </p><br>
+            
+            <h1 class="respondtitle">Driving is difficult</h1>
+            <p>
                 The second piece of the application would allow first responders to select certain situations and automatically generate routes based on the drone information. Automatically generated routes would also suggest the fastest route, reaching all situations as quickly as possible, or the safest route, reaching the highest danger situations first.
+                
+                <img src="work/respond/routeexplorationsmockup.png" class="fullimg explorations">
+                
+                The first route system allows a bit of subjectivity by allowing first responders to choose different types of routes and make judgements in unique circumstances. First responders are not meant to take servance under the machine of the app; rather, the technologies of the app should leverage current first responder natural disaster protocols to ease issues that slow down the process of saving lives.
                 
                 <img src="work/respond/routesmockup.png" class="projectimg">
             </p><br>
             
-            <h1 class="respondtitle">Results</h1>
+            <h4 class="section">results & metrics</h4>
+            <h1 class="respondtitle">At the end of the day...</h1>
             <p>
-                Within the hackathon environment, we weren’t able to test the application’s use in with real first responders. However, our application was able to separate out different situations and showcase those that needed the most urgent care for the user. The app was recognized by Microsoft’s Azure team and IBM’s Call for Code competition team.
+                Within the hackathon environment, we weren’t able to test the application’s use in with real first responders. Furthermore, testing this app in a real situation would be highly unlikely. However, our application was able to separate out different situations and showcase those that needed the most urgent care for the user. The app was recognized by Microsoft’s Azure team and IBM’s Call for Code competition for creating unique solutions to natural disasters.
             </p><br>
         </div>
-        <div class="c1"></div>
+        <div class="c3"></div>
     </div>
-    
         
     <!-- Scroll To Top -->
     <div class="c1">
