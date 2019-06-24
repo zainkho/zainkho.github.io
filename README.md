@@ -1,4 +1,3 @@
-# zainkho.github.io
-Zain Khoja's Personal Website &amp; Portfolio
+# Zain Khoja's Personal Website &amp; Portfolio
 
-See the site [here](https://zainkho.com).
+See my portfolio at [zainkho.com](https://zainkho.com).
