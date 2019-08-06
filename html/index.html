@@ -1,0 +1,210 @@
+<!-- Index -->
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Head -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>Zain Khoja</title>
+    <meta name="Description" content="Zain Khoja is a designer and student at Cornell. He's currently a Design Systems Intern at GitHub.">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/hover-min.css">
+
+    <!-- Javascript -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.scroll-to-top').removeClass('no-display');
+          } else {
+              $('.scroll-to-top').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="../zk-favicon.ico"/>
+    <link rel="icon" type="image/png" href="../zk-logo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89012104-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-89012104-2');
+    </script>
+
+    <!-- Twitter Preview -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@zainkho"/>
+    <meta name="twitter:creator" content="@zainkho"/>
+    <meta name="twitter:title" content="Zain Khoja" />
+    <meta name="twitter:description" content="Zain Khoja is a designer and student at Cornell."/>
+    <meta name="twitter:image:src" content="https://zainkho.com/zk-screenshot.png"/>
+</head>
+    
+<div class="grid">
+    <!-- Header -->
+    <header class="c12">
+        <!-- Nav -->
+        <div class="hero">
+            <div class="header">
+                <a href="index.html"><img alt="Zain Khoja logo" src="../zk-logo.png" class="zk-logo"></a>
+                <h3 class="medium content-web">Zain Khoja</h3>
+                <div class="nav">
+                    <h5 class="option selected">Work</h5>
+                    <h5 class="option"><a href="about.html">About</a></h5>
+                    <h5 class="option"><a href="travel.html">Travel</a></h5>
+                    <h5 class="option"><a href="resume.html">Resume</a></h5>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <div class="title">
+                <h1 class="content-web emoji">🖋️</h1>
+                <div>
+                    <h1 class="content-mobile">🖋️</h1>
+                    <h1>Yo, I'm Zain.</h1>
+                    <h1 class="medium">
+                        Student at <a href="https://www.cornell.edu/" target="_blank" rel="noopener" class="link cornell-link">Cornell</a>, design at <a href="https://www.github.com/" target="_blank" rel="noopener" class="link github-link">GitHub</a>.
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <body>
+        <div class="c12 content">
+            
+            <!-- GitHub -->
+            <a href="github.html"><div class="hvr-float exp exp-github">
+                <div class="exp-content">
+                    <img alt="GitHub logo" src="../work/github/github-logo.png" class="github-logo">
+                    <h2 class="white">GitHub</h2>
+                    <h5 class="medium white">Should designers code?</h5>
+                </div>
+            </div></a>
+
+            <!-- Starbucks -->
+            <a href="starbucks.html"><div class="hvr-float exp exp-starbucks">
+                <div class="exp-content">
+                    <div class="starbucks-heat-container">
+                        <div class="starbucks-heat evaporate-1"></div>
+                        <div class="starbucks-heat evaporate-2"></div>
+                        <div class="starbucks-heat evaporate-3"></div>
+                    </div>
+                    <img alt="coffee cup" src="../work/starbucks/starbucks-logo.png" class="starbucks-logo">
+                    <h2 class="white">Starbucks</h2>
+                    <h5 class="medium white">A solution to “omg I love your drink, what is it?”</h5>
+                </div>
+            </div></a>
+
+            <!-- IDEO -->
+            <a href="ideo.html"><div class="hvr-float exp exp-ideo">
+                <div class="exp-content">
+                    <div class="ideo-soundwaves-container">
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-1"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-5"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-4"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-2"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-4"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-6"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-5"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-2"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-5"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-1"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-2"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-5"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-4"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-4"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-7"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-5"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-4"></div>
+                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-1"></div>
+                    </div>
+                    <h2>IDEO</h2>
+                    <h5 class="medium">Disrupting the hospital voicemail industry.</h5>
+                </div>
+            </div></a>
+
+            <!-- Respond -->
+            <a href="respond.html"><div class="hvr-float exp exp-respond">
+                <div class="exp-content">
+                    <div class="respond-logo-container">
+                        <img alt="iPhone outline" src="../work/respond/respond-logo.png" class="hvr-float respond-logo">
+                        <img alt="iPhone outline" src="../work/respond/respond-logo.png" class="hvr-float respond-logo">
+                        <img alt="iPhone outline" src="../work/respond/respond-logo.png" class="hvr-float respond-logo">
+                    </div>
+                    <h2>Respond</h2>
+                    <h5 class="medium">Prioritizing situations for first responders.</h5>
+                </div>
+            </div></a>
+
+            <!-- Tint -->
+            <a href="tint.html"><div class="hvr-float exp exp-tint">
+                <div class="exp-content">
+                    <img alt="iPhone with photos" src="../work/tint/tint-logo.png" class="tint-logo">
+                    <h2 class="white">Tint</h2>
+                    <h5 class="medium white">Self-organizing photos with lots of background blurs.</h5>
+                </div>
+            </div></a>
+
+            <!-- NALP -->
+            <a href="nalp.html"><div class="hvr-float exp exp-nalp">
+                <div class="exp-content">
+                    <img alt="United States flag" src="../work/nalp/nalp-logo.png" class="nalp-logo">
+                    <h2 class="white">NALP</h2>
+                    <h5 class="medium white">Communication design around bipartisanship.</h5>
+                </div>
+            </div></a>
+
+        </div>
+    </body>
+    
+    <footer class="c12 grid">
+        <div class="c6-left">
+            <p>If you’re looking to work with me or want to grab some coffee, feel free to email me at <a href="mailto:znk4@cornell.edu?subject=Hey!" target="_blank" rel="noopener">znk4@cornell.edu</a>.</p>
+        </div>
+        <div class="social">
+            <a href="https://twitter.com/zainkho" target="_blank" rel="noopener"><img alt="Twitter icon" src="../icons/twitter.png" class="icons"></a>
+            <a href="https://medium.com/@zainkho" target="_blank" rel="noopener"><img alt="Medium icon" src="../icons/medium.png" class="icons"></a>
+            <a href="https://linkedin.com/in/zainkho" target="_blank" rel="noopener"><img alt="LinkedIn icon" src="../icons/linkedin.png" class="icons"></a>
+        </div>
+        
+        <!-- Scroll To Top -->
+        <a href="#top" aria-label="scroll to top" class="content-web no-display scroll-to-top"></a>
+    </footer>
+</div>
+   
+</html>

@@ -1,0 +1,250 @@
+<!-- Respond -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>Respond · Zain Khoja</title>
+    <meta name="Description" content="Zain Khoja is a designer and student at Cornell. He's currently a Design Systems Intern at GitHub.">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/hover-min.css">
+
+    <!-- Javascript -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>  
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.back').removeClass('no-display');
+          } else {
+              $('.back').addClass('no-display');
+          }
+        });
+        
+        /* Forward button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.forward').removeClass('no-display');
+          } else {
+              $('.forward').addClass('no-display');
+          }
+        });
+        
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.scroll-to-top').removeClass('no-display');
+          } else {
+              $('.scroll-to-top').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="../zk-favicon.ico"/>
+    <link rel="icon" type="image/png" href="../zk-logo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89012104-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-89012104-2');
+    </script>
+
+    <!-- Twitter Preview -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@zainkho"/>
+    <meta name="twitter:creator" content="@zainkho"/>
+    <meta name="twitter:title" content="Zain Khoja" />
+    <meta name="twitter:description" content="Zain Khoja is a designer and student at Cornell."/>
+    <meta name="twitter:image:src" content="https://zainkho.com/zk-screenshot.png"/>
+</head>
+
+<div class="grid">
+    <!-- Header -->
+    <header class="c12">
+        <!-- Nav -->
+        <div class="hero">
+            <div class="header">
+                <a href="index.html"><img alt="Zain Khoja logo" src="../zk-logo.png" class="zk-logo"></a>
+                <h3 class="medium content-web">Zain Khoja</h3>
+                <div class="nav">
+                    <h5 class="option"><a href="index.html">Work</a></h5>
+                    <h5 class="option"><a href="about.html">About</a></h5>
+                    <h5 class="option"><a href="travel.html">Travel</a></h5>
+                    <h5 class="option"><a href="resume.html">Resume</a></h5>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <div class="title">
+                <h1 class="content-web emoji">🚨</h1>
+                <div>
+                    <h1 class="content-mobile">🚨</h1>
+                    <h1 class="respond-title">Respond.<br>
+                    <span class="medium">HackMIT 2018.</span></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <body>
+        <div class="c12 body">
+            <div class="summary">
+                <div class="summary-section">
+                    <div class="section summary-item">
+                        <h5 class="subtitle">Overview</h5>
+                        <p>
+                            An app that enables first responders to reach those who need help faster and safer after natural disasters. Inspired by those who tended to the victims of Hurrican Florence.
+                        </p>
+                    </div>
+
+                    <div class="section summary-item">
+                        <h5 class="subtitle">Roles</h5>
+                        <p>User Interface Designer</p>
+                        <p>User Experience Designer</p>
+                    </div>
+                    
+                    <div class="section summary-item">
+                        <h5 class="subtitle">Team</h5>
+                        <p>
+                            <a href="https://www.instagram.com/jo_litz_700" target="_blank" rel="noopener" class="link respond-link">Joanna Feaster</a>, Engineer
+                        </p>
+                        <p>
+                            <a href="https://www.linkedin.com/in/karthik-nair-a43b41162" target="_blank" rel="noopener" class="link respond-link">Karthik Nair</a>, Engineer
+                        </p>
+                    </div>
+
+                    <div class="section summary-item">
+                        <h5 class="subtitle">Timeline</h5>
+                        <p>September 2018</p>
+                    </div>
+                </div>
+                <img alt="Respond project design system" src="../work/respond/respond-summary.png" class="summary-section">
+            </div>
+        </div>
+        
+        <div class="c6 divider"></div>
+        
+        <div class="c6">
+            <div class="section">
+                <h5 class="subtitle">Problem</h5>
+                <h2 class="respond-title">Why natural disasters?</h2>
+                <p>
+                    Natural disasters are a city’s worst nightmare. Fortunately, we have first responders who are trained and prepared to risk their lives to save others in these difficult situations. However, it’s difficult to collect and analyze data for all the people who need help, from severity of injury to duration of travel to the site of the victim. One of our team members from Duke University had flown out early to MIT as a result of Hurricane Florence. We recognized an issue that was very real and had promise for innovation.
+                </p>
+                <br><br>
+                <p>
+                    When looking at current methods used by first responders, we noticed there was a lack of proactive searching. While first responders can easily find concentrated urban area, underpopulated rural areas are often underserviced. The current processes relied on crowdsourced information and tips followed up by search-and-rescue missions. First responders want to help as many people as possible, but they sometimes don’t know the location and severity of victims’ injuries. 
+                </p>
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle"></h5>
+                <h2 class="respond-title">Assumptions.</h2>
+                <p>
+                    While we didn’t have access to drones, we believed that using drones to search and relay information would be a good option to quickly find people who needed help. Drones would be able to provide:
+                </p>
+                <br>
+                <ol>
+                    <li>Pictures</li>
+                    <li>Audio messages from victims</li>
+                    <li>Estimated locations of victims</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle">Ideation</h5>
+                <h2 class="respond-title">How urgent is urgent?</h2>
+                <p>
+                    Our idea was to create a versatile mobile app that would aggregate data from these drones and use machine learning to prioritize situations by urgency levels high, medium, or low. We tried various explorations that each presented the information in a different way; our objective was to allow a user to quickly take away vital information without overloading the screen with details. 
+                </p>
+                <img alt="urgency levels page explorations" src="../work/respond/respond-mockup-1.png" class="img">
+                <p>
+                    We compromised some of the ease of usability and scrolling for a more detailed view in the end. After all, first responders wouldn’t be scrolling through a feed like Facebook or Twitter, but rather accessing a few, isolated situations and details from within these situations.
+                </p>
+                <img alt="urgency levels page mockup" src="../work/respond/respond-mockup-2.png" class="img">
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle"></h5>
+                <h2 class="respond-title">Getting the details right.</h2>
+                <p>
+                    Using IBM Watson’s speech-to-text and tone analyzer APIs, we were able to teach a neural network emergency vocabulary and successfully assign priority levels to situations. First responders could also listen to the survivors’ messages themselves to identify age, level of panic, shock, etc.
+                </p>
+                <img alt="situations page explorations" src="../work/respond/respond-mockup-3.png" class="img">
+                <p>
+                    While speech-to-text technology has certainly made strides, some aspects of voice can convey severity of damage, age, and other factors that a first responder might want to know. Considering most messages would be 30 seconds to 1 minute in length, we believed that the ability to playback the original audio message was an important piece of this screen.
+                </p>
+                <img alt="situations page mockup" src="../work/respond/respond-mockup-4.png" class="img">
+            </div>
+                
+            <div class="section">
+                <h5 class="subtitle"></h5>
+                <h2 class="respond-title">Driving is difficult.</h2>
+                <p>
+                    The second piece of the application would allow first responders to select certain situations and automatically generate routes based on the drone information. Automatically generated routes would also suggest the fastest route, reaching all situations as quickly as possible, or the safest route, reaching the highest danger situations first.
+                </p>
+                <img alt="routes page explorations" src="../work/respond/respond-mockup-5.png" class="img">
+                <p>
+                    The first route system allows a bit of subjectivity by allowing first responders to choose different types of routes and make judgements in unique circumstances. First responders are not meant to take servance under the machine of the app; rather, the technologies of the app should leverage current first responder natural disaster protocols to ease issues that slow down the process of saving lives.
+                </p>
+                <img alt="routes page mockup" src="../work/respond/respond-mockup-6.png" class="img">
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle">Results & Metrics</h5>
+                <h2 class="respond-title">At the end of the day...</h2>
+                <p>
+                    Within the hackathon environment, we weren’t able to test the application’s use in with real first responders. Furthermore, testing this app in a real situation would be highly unlikely. However, our application was able to separate out different situations and showcase those that needed the most urgent care for the user. The app was recognized by <a href="https://azure.microsoft.com/en-us/" target="_blank" rel="noopener" class="link respond-link">Microsoft’s Azure team</a> and <a href="https://developer.ibm.com/callforcode/"target="_blank" rel="noopener" class="link respond-link">IBM’s Call for Code competition</a>  for creating unique solutions to natural disasters.
+                </p>
+            </div>
+        </div>
+    </body>
+    
+    <footer class="c12 grid">
+        <div class="c6-left">
+            <p>If you’re looking to work with me or want to grab some coffee, feel free to email me at <a href="mailto:znk4@cornell.edu?subject=Hey!" target="_blank" rel="noopener">znk4@cornell.edu</a>.</p>
+        </div>
+        <div class="social">
+            <a href="https://twitter.com/zainkho" target="_blank" rel="noopener"><img alt="Twitter icon" src="../icons/twitter.png" class="icons"></a>
+            <a href="https://medium.com/@zainkho" target="_blank" rel="noopener"><img alt="Medium icon" src="../icons/medium.png" class="icons"></a>
+            <a href="https://linkedin.com/in/zainkho" target="_blank" rel="noopener"><img alt="LinkedIn icon" src="../icons/linkedin.png" class="icons"></a>
+        </div>  
+        
+        <!-- Back -->
+        <a href="index.html" aria-label="back" class="content-web no-display back"></a>
+        <!-- Forward -->
+        <a href="tint.html" aria-label="forward" class="content-web no-display forward"></a>
+        <!-- Scroll To Top -->
+        <a href="#top" aria-label="scroll to top" class="content-web no-display scroll-to-top"></a>
+    </footer>
+    
+</div>
+
+</html>

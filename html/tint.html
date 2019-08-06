@@ -1,0 +1,214 @@
+<!-- Tint -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>Tint · Zain Khoja</title>
+    <meta name="Description" content="Zain Khoja is a designer and student at Cornell. He's currently a Design Systems Intern at GitHub.">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/hover-min.css">
+
+    <!-- Javascript -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>  
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.back').removeClass('no-display');
+          } else {
+              $('.back').addClass('no-display');
+          }
+        });
+        
+        /* Forward button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.forward').removeClass('no-display');
+          } else {
+              $('.forward').addClass('no-display');
+          }
+        });
+        
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.scroll-to-top').removeClass('no-display');
+          } else {
+              $('.scroll-to-top').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="../zk-favicon.ico"/>
+    <link rel="icon" type="image/png" href="../zk-logo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89012104-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-89012104-2');
+    </script>
+
+    <!-- Twitter Preview -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@zainkho"/>
+    <meta name="twitter:creator" content="@zainkho"/>
+    <meta name="twitter:title" content="Zain Khoja" />
+    <meta name="twitter:description" content="Zain Khoja is a designer and student at Cornell."/>
+    <meta name="twitter:image:src" content="https://zainkho.com/zk-screenshot.png"/>
+</head>
+
+<div class="grid">
+    <!-- Header -->
+    <header class="c12">
+        <!-- Nav -->
+        <div class="hero">
+            <div class="header">
+                <a href="index.html"><img alt="Zain Khoja logo" src="../zk-logo.png" class="zk-logo"></a>
+                <h3 class="medium content-web">Zain Khoja</h3>
+                <div class="nav">
+                    <h5 class="option"><a href="index.html">Work</a></h5>
+                    <h5 class="option"><a href="about.html">About</a></h5>
+                    <h5 class="option"><a href="travel.html">Travel</a></h5>
+                    <h5 class="option"><a href="resume.html">Resume</a></h5>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <div class="title">
+                <h1 class="content-web emoji">📸</h1>
+                <div>
+                    <h1 class="content-mobile">📸</h1>
+                    <h1 class="tint-title">Tint.<br>
+                    <span class="medium">Photo-organizing app concept.</span></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <body>
+        <div class="c12 body">
+            <div class="summary">
+                <div class="summary-section">
+                    <div class="section summary-item">
+                        <h5 class="subtitle">Overview</h5>
+                        <p>
+                            An application that automatically detects and classifies images on the go.
+                        </p>
+                    </div>
+
+                    <div class="section summary-item">
+                        <h5 class="subtitle">Roles</h5>
+                        <p>User Interface Designer</p>
+                        <p>User Experience Designer</p>
+                    </div>
+
+                    <div class="section summary-item">
+                        <h5 class="subtitle">Timeline</h5>
+                        <p>September 2018</p>
+                    </div>
+                </div>
+                <img alt="Tint project design system" src="../work/tint/tint-summary.png" class="summary-section">
+            </div>
+        </div>
+        
+        <div class="c6 divider"></div>
+        
+        <div class="c6">
+            <div class="section">
+                <h5 class="subtitle">Problem</h5>
+                <h2 class="tint-title">Organize your photos.</h2>
+                <p>
+                    We see a lot of cool things everyday, but we don’t have the time to make a note of all the objects that pique our curiosity. What if an application could automatically organize and compile knowledge about these objects while we’re out and remind us when we get home?
+                </p>
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle">Ideation</h5>
+                <h2 class="tint-title">Taking a shot.</h2>
+                <p>
+                    People want to look up things that are interesting to them, but can’t because it’s time prohibitive. Playing around with the concept of a general camera app, I recognized the strong familiarity that users had with current applications. In order to retain user behaviors, I created a simple camera view. When you’re on the go, you just want to take the picture and move on with your day. The view simply contains a single button for taking pictures and accessing a library of previously taken photos.
+                </p>
+                <img alt="camera page mockup" src="../work/tint/tint-mockup-1.png" class="img">
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle"></h5>
+                <h2 class="tint-title">A pinch of popularity.</h2>
+                <p>
+                    The ability to modify images in this application is a mode of entertainment. As apps like Snapchat and the "Story" concept grow, it’s important to recognize the intended audience of a younger user base. Users expect to be able to play with photos, so this aspect is vital for familiarity.
+                </p>
+                <img alt="edit photo page mockup" src="../work/tint/tint-mockup-2.png" class="img">
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle"></h5>
+                <h2 class="tint-title">Reflecting on the day.</h2>
+                <p>
+                    The idea is for a user to be able to "catch up" on their day, so the photo library is focused on memory and reflects on the last photo taken by the user. Users can look at their photos chronologically by default, by category (which is suggestable in the 'Edit' screen above or done automatically by machine learning APIs), and by keyword. 
+                </p>
+                <img alt="photo categorization mockup" src="../work/tint/tint-mockup-3.png" class="img">
+                <p>
+                    The background of the application will always be a blurred, tinted version of the last photo taken, providing the subtle "reflection" aspect mentioned earlier.
+                </p>
+            </div>
+                
+            <div class="section">
+                <h5 class="subtitle">Results & Metrics</h5>
+                <h2 class="tint-title">Further Explorations</h2>
+                <p>
+                    This project was originally an intended design for the <a href="http://www.getclip.io" target="_blank" rel="noopener" class="link tint-link">Y-Combinator Startup School project 'Clip'</a>. During the project, I produced a handful of more high-fidelity mockups to show scrolling and search results.
+                </p>
+                <img alt="further explorations mockup" src="../work/tint/tint-mockup-4.png" class="img">
+            </div>
+        </div>
+    </body>
+    
+    <footer class="c12 grid">
+        <div class="c6-left">
+            <p>If you’re looking to work with me or want to grab some coffee, feel free to email me at <a href="mailto:znk4@cornell.edu?subject=Hey!" target="_blank" rel="noopener">znk4@cornell.edu</a>.</p>
+        </div>
+        <div class="social">
+            <a href="https://twitter.com/zainkho" target="_blank" rel="noopener"><img alt="Twitter icon" src="../icons/twitter.png" class="icons"></a>
+            <a href="https://medium.com/@zainkho" target="_blank" rel="noopener"><img alt="Medium icon" src="../icons/medium.png" class="icons"></a>
+            <a href="https://linkedin.com/in/zainkho" target="_blank" rel="noopener"><img alt="LinkedIn icon" src="../icons/linkedin.png" class="icons"></a>
+        </div>  
+        
+        <!-- Back -->
+        <a href="index.html" aria-label="back" class="content-web no-display back"></a>
+        <!-- Forward -->
+        <a href="nalp.html" aria-label="forward" class="content-web no-display forward"></a>
+        <!-- Scroll To Top -->
+        <a href="#top" aria-label="scroll to top" class="content-web no-display scroll-to-top"></a>
+    </footer>
+    
+</div>
+
+</html>

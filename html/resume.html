@@ -1,0 +1,246 @@
+<!-- Resume -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>Resume · Zain Khoja</title>
+    <meta name="Description" content="Zain Khoja is a designer and student at Cornell. He's currently a Design Systems Intern at GitHub.">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/hover-min.css">
+
+    <!-- Javascript -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>  
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.back').removeClass('no-display');
+          } else {
+              $('.back').addClass('no-display');
+          }
+        });
+        
+        /* Forward button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.forward').removeClass('no-display');
+          } else {
+              $('.forward').addClass('no-display');
+          }
+        });
+        
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('.scroll-to-top').removeClass('no-display');
+          } else {
+              $('.scroll-to-top').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="../zk-favicon.ico"/>
+    <link rel="icon" type="image/png" href="../zk-logo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89012104-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-89012104-2');
+    </script>
+
+    <!-- Twitter Preview -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@zainkho"/>
+    <meta name="twitter:creator" content="@zainkho"/>
+    <meta name="twitter:title" content="Zain Khoja" />
+    <meta name="twitter:description" content="Zain Khoja is a designer and student at Cornell."/>
+    <meta name="twitter:image:src" content="https://zainkho.com/zk-screenshot.png"/>
+</head>
+
+<div class="grid">
+    <!-- Header -->
+    <header class="c12">
+        <!-- Nav -->
+        <div class="hero">
+            <div class="header">
+                <a href="index.html"><img alt="Zain Khoja logo" src="../zk-logo.png" class="zk-logo"></a>
+                <h3 class="medium content-web">Zain Khoja</h3>
+                <div class="nav">
+                    <h5 class="option"><a href="index.html">Work</a></h5>
+                    <h5 class="option"><a href="about.html">About</a></h5>
+                    <h5 class="option"><a href="travel.html">Travel</a></h5>
+                    <h5 class="option selected">Resume</h5>
+                </div>
+            </div>
+
+            <!-- Title -->
+            <div class="title">
+                <h1 class="content-web emoji">💼</h1>
+                <div>
+                    <h1 class="content-mobile">💼</h1>
+                    <h1>Resume.<br>
+                    <span class="medium">Or download it <a href="../zainkhoresume.pdf" aria-label="Zain Khoja resume" target="_blank" rel="noopener" class="link" style="border-bottom: 0.075em solid var(--black)">here</a> if you like.</span></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <body>
+        <div class="c6 body">
+            
+            <div class="section">
+                <h5 class="subtitle">Education</h5>
+                <h3><a href="https://www.cornell.edu/" target="_blank" rel="noopener" class="link cornell-link">Cornell University</a></h3>
+                <p class="medium">B.S. Information Science · May 2022</p>
+                <br>
+                <p>Concentration in User Experience</p>
+                <p>GPA 4.0</p>
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle">Experience</h5>
+                <h3><a href="https://www.github.com/" target="_blank" rel="noopener" class="link github-link">GitHub</a></h3>
+                <p class="medium">Design Systems Intern · June 2019 to Aug 2019</p>
+                <br>
+                <p> 
+                    Created prototyping tools to speed up product design exploration flow, documentation sites to ease onboarding for new designers, and core components for Primer, GitHub’s open source design system. 
+                </p>
+            </div>
+
+            <div class="section">
+                <h3><a href="https://www.github.com/" target="_blank" rel="noopener" class="link" style="color: #CB422A">xREZ Art + Science Lab</a></h3>
+                <p class="medium">Research Assistant · Aug 2017 to May 2018</p>
+                <br>
+                <p> 
+                    Analyzed data from 52 participants to further explore the concept of presence in virtual reality. Co-authored paper in the Engineering Reality of Virtual Reality conference 2018. Read more at https://bit.ly/xREZVR.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle">Projects</h5>
+                <h3>Starbucks Sampler</h3>
+                <p class="medium">Jan 2019 to May 2019</p>
+                <br>
+                <p> 
+                    Designed a feature allowing users to share modified favorites with friends and encouraging users to try new drinks.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h3>Respond</h3>
+                <p class="medium">September 2018</p>
+                <br>
+                <p> 
+                    Designed a mobile app using machine learning to prioritize situations for first responders during natural disasters. Recognized by IBM’s Call for Code competition at HackMIT.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle">Activities</h5>
+                <h3><a href="https://cornellappdev.com" target="_blank" rel="noopener" class="link cornell-link">Cornell AppDev</a></h3>
+                <p class="medium">Product Designer · Jan 2019 to Present</p>
+                <br>
+                <p> 
+                    Designed for Eatery, an application to help students find food on campus. Shipped the Collegetown Eatery expansion to the App Store to support students residing off-campus.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h3><a href="https://www.akfusa.org/" target="_blank" rel="noopener" class="link" style="color: #1C7C54">Aga Khan Foundation</a></h3>
+                <p class="medium">University Ambassador · Sept 2016 to Present</p>
+                <br>
+                <p> 
+                    Organized the annual Aga Khan Foundation Walk/Run, raising $1 million towards the alleviation of global poverty. Led the Innovative Solutions Challenge, inviting students to solve issues faced by local communities.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle">Awards</h5>
+                <h3>a16z Generation Design Program</h3>
+                <p class="medium">Jan 2019 to May 2019</p>
+                <br>
+                <p> 
+                    Selected as part of a cohort of design mentees to connect with designers from companieswithin the a16z portfolio.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h3>Eagle Scout</h3>
+                <p class="medium">April 2015</p>
+                <br>
+                <p> 
+                    Created an environmental education program for the City of Carrollton for children in elementary and middle school.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h5 class="subtitle">Skills</h5>
+                <h3>Design</h3>
+                <br>
+                <p>Figma, Sketch, Origami Studio</p>
+            </div>
+            
+            <div class="section">
+                <h3>Languages</h3>
+                <br>
+                <p>HTML/CSS, Git</p>
+            </div>
+            
+            <div class="section">
+                <h3>Interests</h3>
+                <br>
+                <p>Table Tennis, Ukulele, Sweet Tea</p>
+            </div>
+            
+        </div>
+    </body>
+    
+    <footer class="c12 grid">
+        <div class="c6-left">
+            <p>If you’re looking to work with me or want to grab some coffee, feel free to email me at <a href="mailto:znk4@cornell.edu?subject=Hey!" target="_blank" rel="noopener">znk4@cornell.edu</a>.</p>
+        </div>
+        <div class="social">
+            <a href="https://twitter.com/zainkho" target="_blank" rel="noopener"><img alt="Twitter icon" src="../icons/twitter.png" class="icons"></a>
+            <a href="https://medium.com/@zainkho" target="_blank" rel="noopener"><img alt="Medium icon" src="../icons/medium.png" class="icons"></a>
+            <a href="https://linkedin.com/in/zainkho" target="_blank" rel="noopener"><img alt="LinkedIn icon" src="../icons/linkedin.png" class="icons"></a>
+        </div>  
+        
+        <!-- Back -->
+        <a href="index.html" aria-label="back" class="content-web no-display back"></a>
+        <!-- Forward -->
+        <a href="github.html" aria-label="forward" class="content-web no-display forward"></a>
+        <!-- Scroll To Top -->
+        <a href="#top" aria-label="scroll to top" class="content-web no-display scroll-to-top"></a>
+    </footer>
+    
+</div>
+
+</html>
