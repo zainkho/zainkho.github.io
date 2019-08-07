@@ -189,7 +189,7 @@ a {
 /* GLOBAL */ 
 html {
     color: var(--black);
-    background-color: #FAFAFA;
+    background: #FAFAFA;
     overflow-x: hidden;
     margin-top: 3vw;
     margin-bottom: 3vw;
@@ -308,14 +308,14 @@ video {
     text-align: left;
 }
 .exp-github {
-    background-color: #24292e;
+    background: #24292e;
 
 }
 .exp-starbucks {
-    background-color: #00704A;
+    background: #00704A;
 }
 .exp-ideo {
-    background-color: #FFDB6D;
+    background: #FFDB6D;
 }
 .exp-respond {
     background: linear-gradient(#FF7E7E, #FFB77E, #FFDE88);
@@ -350,7 +350,7 @@ video {
     width: 5vw;
     height: 65%;
     border-radius: 10em;
-    background-color: var(--white);
+    background: var(--white);
 }
 .evaporate-1 {
     animation: 3.0s ease-in infinite evaporate;
@@ -384,7 +384,7 @@ video {
     width: 0.5em;
     height: 100%;
     border-radius: 10em;
-    background-color: var(--gray-05);
+    background: var(--gray-05);
 }
 .ideo-soundwaves-1 {
     height: 25%;
