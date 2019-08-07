@@ -352,17 +352,10 @@ video {
     border-radius: 10em;
     background: var(--white);
 }
-.evaporate-1 {
-    animation: 3.0s ease-in infinite evaporate;
-    animation-delay: 0.5s;
-}
-.evaporate-2 {
+.evaporate {
     animation: 3.0s ease-in infinite evaporate;
 }
-.evaporate-3 {
-    animation: 3.0s ease-in infinite evaporate;
-    animation-delay: 1.0s;
-}
+
 .starbucks-logo {
     position: relative;
     margin-bottom: 1.5em;
