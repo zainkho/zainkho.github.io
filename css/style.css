@@ -632,6 +632,13 @@ footer p a:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
 }
+
+.travel-sf {
+    background: url(../work/travel/sf1.jpg) center / cover no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
+}
+
 .travel-sendai {
     background: url(../work/travel/sendai1.jpg) center / cover no-repeat;
     -webkit-background-clip: text;
