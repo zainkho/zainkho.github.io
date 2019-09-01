@@ -217,6 +217,11 @@ video {
 }
 .zk-logo {
     height: 3em;
+    transition: 1.5s ease-in-out;
+}
+.zk-logo:hover {
+    transform: rotate(1800deg);
+    transition: 15.0s linear;
 }
 .nav {
     line-height: 3em;
@@ -231,7 +236,6 @@ video {
     font-weight: 500;
     color: var(--black);
 }
-
 .option:hover {
     color: var(--black);
 }
