@@ -85,7 +85,7 @@
     <meta name="twitter:image:src" content="https://zainkho.com/zk-screenshot.png"/>
 </head>
 
-<div class="grid">
+<body class="grid">
     <!-- Header -->
     <header class="c12">
         <!-- Nav -->
@@ -113,134 +113,132 @@
         </div>
     </header>
     
-    <body>
-        <div class="c12 body">
-            <div class="summary">
-                <div class="summary-section">
-                    <div class="section summary-item">
-                        <h5 class="subtitle">Overview</h5>
-                        <p>
-                            Creating tools, documentation sites, and core components for Primer, GitHub’s open source design system.
-                        </p>
-                    </div>
-
-                    <div class="section summary-item">
-                        <h5 class="subtitle">Roles</h5>
-                        <p>Design Systems Intern</p>
-                    </div>
-
-                    <div class="section summary-item">
-                        <h5 class="subtitle">Team</h5>
-                        <p>
-                            <a href="http://broccolini.net" target="_blank" rel="noopener" class="link github-link">Diana Mounter</a>, Design Infrastructure Manager
-                        </p>
-                        <p>
-                            <a href="http://emilybrick.me" target="_blank" rel="noopener" class="link github-link">Emily Brick</a>, Designer
-                        </p>
-                        <p>
-                            <a href="http://ashguillau.me" target="_blank" rel="noopener" class="link github-link">Ash Guillame</a>, Designer
-                        </p>
-                        <p>
-                            <a href="http://primer.style/team" target="_blank" rel="noopener" class="link github-link">GitHub Primer Design Team</a>
-                        </p>
-                    </div>
-
-                    <div class="section summary-item">
-                        <h5 class="subtitle">Timeline</h5>
-                        <p>June 2019 to August 2019</p>
-                    </div>
+    <div class="c12 main">
+        <div class="summary">
+            <div class="summary-section">
+                <div class="section summary-item">
+                    <h5 class="subtitle">Overview</h5>
+                    <p>
+                        Creating tools, documentation sites, and core components for Primer, GitHub’s open source design system.
+                    </p>
                 </div>
-                <img alt="GitHub prototyping pages" src="work/github/github-summary.png" class="summary-section">
-            </div>
-        </div>
-        
-        <div class="c6 divider"></div>
-        
-        <div class="c6">
-            <div class="section">
-                <h5 class="subtitle">Background</h5>
-                <h2 class="github-title">What is Primer?</h2>
-                <p>
-                    <a href="https://primer.style/" target="_blank" rel="noopener" class="link github-link">Primer is GitHub’s open source design system</a>, serving as a single source of truth for design resources, tooling, and guidelines. The team not only supports the way design components are used in products, but also their development and maintainence. Our team is also in charge of core UI, making sure that our sites are accessible and responsive.
-                </p>
-                <br><br>
-                <p>
-                    During the course of my internship, I worked on several projects in progress as well as saw a couple projects to completion. Because of GitHub’s great open source culture, I’m happy that I can share some of these projects so soon.
-                </p>
-            </div>
-            
-            <div class="section">
-                <h5 class="subtitle">Problem</h5>
-                <h2 class="github-title">Low or high fidelity?</h2>
-                <p>
-                    Prototyping is an essential part of the Product Designer workflow at GitHub. Given the nature of the product, most designers work heavily in Figma for exploration before moving directly into code to prototyping. However, the fidelity of Figma work among designers can differ drastically.
-                </p>
-                <img alt="low and high fidelity explorations" src="work/github/github-mockup-1.png" class="img shadow"> 
-                <p>
-                    While high fidelity prototypes allowed designers to use our UI components, sometimes these prototypes look too polished. Using high fidelity components also required designers to detach them if they wanted to explore new modifications. This process was limiting to creative freedom.
-                </p>
-                <br><br>    
-                <p>
-                    On the other hand, low fidelity prototypes excelled at letting designers think about features at the highest level without being bound by details. However, moving from low fidelity tools like sticky notes to interactive prototypes was difficult since these sticky notes didn’t correlate to GitHub UI. This made developer handoff much more difficult.
-                </p>
-            </div>
-            
-            <div class="section">
-                <h5 class="subtitle"></h5>
-                <h2 class="github-title">Our north star</h2>
-                <p>
-                    There's not been a consistent set of tools to explicitly state that a design is in it's beginning/rough stages. Designers often end up using our high fidelity components or finding different ways to make the UI look less ‘polished’ or final. We wanted a solution that would:
-                </p>
-                <br>
-                <p>
-                    ✅ Reduce detaching<br>
-                    ✅ Create a set of medium fidelity assets<br>
-                    ✅ Create a starting point for new projects<br>
-                    ✅ Allow explorations using GitHub UI
-                </p>
-            </div>
-            
-            <div class="section">
-                <h5 class="subtitle">Ideation</h5>
-                <h2 class="github-title">Creating classification</h2>
-                <p>
-                    The driving statement that pushed forward our ideation was that <strong>structure should be complemented with flexibility</strong>. In order to accomplish this, we came up with two different types of elements.
-                </p>
-                <br><br>
-                <p>
-                    The <strong>components classification</strong> was given to elements that are smaller and resuable, just like the components being used in high fidelity prototypes – except this time in a lower fidelity. These elements aren’t meant to be changed, but can be hidden/removed. They visually resemble grayscale GitHub UI.
-                </p>
-                <img alt="prototyping components" src="work/github/github-mockup-2.png" class="img">
-                <p>
-                    The <strong>frames classification</strong> was given to elements that are larger and might be components in a high fidelity mockup. However, at the exploration stage, these elements are meant to be changed. They’re detached by default and sometimes have hidden elements for designers to show/hide based on the needed level of fidelity. Frames also might contain some of the components shown above.
-                </p>
-                <img alt="prototyping frames" src="work/github/github-mockup-3.png" class="img">
-            </div>
-                
-            <div class="section">
-                <h5 class="subtitle"></h5>
-                <h2 class="github-title">Getting feedback</h2>
-                <p>
-                    After creating our initial prototyping pages, we asked the Product Design team for feedback on what would help them the most. We received some very valuable feedback that helped us improve the pages to a point where they could be most effectively used.
-                </p>
-                <img alt="prototyping feedback" src="work/github/github-mockup-4.png" class="img shadow">
-            </div>
-            
-            <div class="section">
-                <h5 class="subtitle">Results & Metrics</h5>
-                <h2 class="github-title">See it yourself</h2>
-                <p>
-                    The prototyping pages were a great experience in learning the workflow and asynchronous communication used within GitHub’s design team. You can check out the file below:
-                </p>
 
-                <iframe title="GitHub Prototyping Pages" class="img" style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FbOU0fFoN9dnVUpvEzbTqRP%2Fprototyping-pages%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+                <div class="section summary-item">
+                    <h5 class="subtitle">Roles</h5>
+                    <p>Design Systems Intern</p>
+                </div>
 
-                <p>
-                     If you’d like to know more about my other work at GitHub, please contact me and let’s grab some coffee.
-                </p>
+                <div class="section summary-item">
+                    <h5 class="subtitle">Team</h5>
+                    <p>
+                        <a href="http://broccolini.net" target="_blank" rel="noopener" class="link github-link">Diana Mounter</a>, Design Infrastructure Manager
+                    </p>
+                    <p>
+                        <a href="http://emilybrick.me" target="_blank" rel="noopener" class="link github-link">Emily Brick</a>, Designer
+                    </p>
+                    <p>
+                        <a href="http://ashguillau.me" target="_blank" rel="noopener" class="link github-link">Ash Guillame</a>, Designer
+                    </p>
+                    <p>
+                        <a href="http://primer.style/team" target="_blank" rel="noopener" class="link github-link">GitHub Primer Design Team</a>
+                    </p>
+                </div>
+
+                <div class="section summary-item">
+                    <h5 class="subtitle">Timeline</h5>
+                    <p>June 2019 to August 2019</p>
+                </div>
             </div>
+            <img alt="GitHub prototyping pages" src="work/github/github-summary.png" class="summary-section">
         </div>
-    </body>
+    </div>
+
+    <div class="c6 divider"></div>
+
+    <div class="c6">
+        <div class="section">
+            <h5 class="subtitle">Background</h5>
+            <h2 class="github-title">What is Primer?</h2>
+            <p>
+                <a href="https://primer.style/" target="_blank" rel="noopener" class="link github-link">Primer is GitHub’s open source design system</a>, serving as a single source of truth for design resources, tooling, and guidelines. The team not only supports the way design components are used in products, but also their development and maintainence. Our team is also in charge of core UI, making sure that our sites are accessible and responsive.
+            </p>
+            <br><br>
+            <p>
+                During the course of my internship, I worked on several projects in progress as well as saw a couple projects to completion. Because of GitHub’s great open source culture, I’m happy that I can share some of these projects so soon.
+            </p>
+        </div>
+
+        <div class="section">
+            <h5 class="subtitle">Problem</h5>
+            <h2 class="github-title">Low or high fidelity?</h2>
+            <p>
+                Prototyping is an essential part of the Product Designer workflow at GitHub. Given the nature of the product, most designers work heavily in Figma for exploration before moving directly into code to prototyping. However, the fidelity of Figma work among designers can differ drastically.
+            </p>
+            <img alt="low and high fidelity explorations" src="work/github/github-mockup-1.png" class="img shadow"> 
+            <p>
+                While high fidelity prototypes allowed designers to use our UI components, sometimes these prototypes look too polished. Using high fidelity components also required designers to detach them if they wanted to explore new modifications. This process was limiting to creative freedom.
+            </p>
+            <br><br>    
+            <p>
+                On the other hand, low fidelity prototypes excelled at letting designers think about features at the highest level without being bound by details. However, moving from low fidelity tools like sticky notes to interactive prototypes was difficult since these sticky notes didn’t correlate to GitHub UI. This made developer handoff much more difficult.
+            </p>
+        </div>
+
+        <div class="section">
+            <h5 class="subtitle"></h5>
+            <h2 class="github-title">Our north star</h2>
+            <p>
+                There's not been a consistent set of tools to explicitly state that a design is in it's beginning/rough stages. Designers often end up using our high fidelity components or finding different ways to make the UI look less ‘polished’ or final. We wanted a solution that would:
+            </p>
+            <br>
+            <p>
+                ✅ Reduce detaching<br>
+                ✅ Create a set of medium fidelity assets<br>
+                ✅ Create a starting point for new projects<br>
+                ✅ Allow explorations using GitHub UI
+            </p>
+        </div>
+
+        <div class="section">
+            <h5 class="subtitle">Ideation</h5>
+            <h2 class="github-title">Creating classification</h2>
+            <p>
+                The driving statement that pushed forward our ideation was that <strong>structure should be complemented with flexibility</strong>. In order to accomplish this, we came up with two different types of elements.
+            </p>
+            <br><br>
+            <p>
+                The <strong>components classification</strong> was given to elements that are smaller and resuable, just like the components being used in high fidelity prototypes – except this time in a lower fidelity. These elements aren’t meant to be changed, but can be hidden/removed. They visually resemble grayscale GitHub UI.
+            </p>
+            <img alt="prototyping components" src="work/github/github-mockup-2.png" class="img">
+            <p>
+                The <strong>frames classification</strong> was given to elements that are larger and might be components in a high fidelity mockup. However, at the exploration stage, these elements are meant to be changed. They’re detached by default and sometimes have hidden elements for designers to show/hide based on the needed level of fidelity. Frames also might contain some of the components shown above.
+            </p>
+            <img alt="prototyping frames" src="work/github/github-mockup-3.png" class="img">
+        </div>
+
+        <div class="section">
+            <h5 class="subtitle"></h5>
+            <h2 class="github-title">Getting feedback</h2>
+            <p>
+                After creating our initial prototyping pages, we asked the Product Design team for feedback on what would help them the most. We received some very valuable feedback that helped us improve the pages to a point where they could be most effectively used.
+            </p>
+            <img alt="prototyping feedback" src="work/github/github-mockup-4.png" class="img shadow">
+        </div>
+
+        <div class="section">
+            <h5 class="subtitle">Results & Metrics</h5>
+            <h2 class="github-title">See it yourself</h2>
+            <p>
+                The prototyping pages were a great experience in learning the workflow and asynchronous communication used within GitHub’s design team. You can check out the file below:
+            </p>
+
+            <iframe title="GitHub Prototyping Pages" class="img" style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FbOU0fFoN9dnVUpvEzbTqRP%2Fprototyping-pages%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+
+            <p>
+                 If you’d like to know more about my other work at GitHub, please contact me and let’s grab some coffee.
+            </p>
+        </div>
+    </div>
     
     <footer class="c12 grid">
         <div class="c6-left">
@@ -260,6 +258,6 @@
         <a href="#top" aria-label="scroll to top" class="content-web no-display scroll-to-top"></a>
     </footer>
     
-</div>
+</body>
 
 </html>
