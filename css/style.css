@@ -467,7 +467,7 @@ footer p a:hover {
     height: 1.5em;
     cursor: pointer;
     outline: none !important;
-    background: url(../icons/chevron-left.png) center / contain no-repeat;
+    background: url(../icons/chevron-left.svg) center / contain no-repeat;
     opacity: 0.45;
 
     transition: 0.28s;
@@ -490,7 +490,7 @@ footer p a:hover {
     height: 1.5em;
     cursor: pointer;
     outline: none !important;
-    background: url(../icons/chevron-right.png) center / contain no-repeat;
+    background: url(../icons/chevron-right.svg) center / contain no-repeat;
     opacity: 0.45;
 
     transition: 0.28s;
@@ -513,7 +513,7 @@ footer p a:hover {
     height:1.5em;
     cursor: pointer;
     outline: none !important;
-    background: url(../icons/chevron-up.png) center / contain no-repeat;
+    background: url(../icons/chevron-up.svg) center / contain no-repeat;
     opacity: 0.45;
 
     transition: 0.28s;
