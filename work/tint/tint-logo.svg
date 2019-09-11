@@ -1,0 +1,20 @@
+<svg width="249" height="196" viewBox="0 0 249 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4612 0C6.9222 0 0 6.92221 0 15.4612V180.539C0 189.078 6.9222 196 15.4612 196H81.5388C90.0778 196 97 189.078 97 180.539V15.4612C97 6.9222 90.0778 0 81.5388 0H15.4612ZM14.2835 5.94659C9.68556 5.94659 5.95822 9.67392 5.95822 14.2718V180.896C5.95822 185.494 9.68556 189.221 14.2835 189.221H82.4782C87.0761 189.221 90.8034 185.494 90.8034 180.896V14.2718C90.8034 9.67393 87.0761 5.94659 82.4782 5.94659H73.0456C72.3887 5.94659 71.8563 6.47907 71.8563 7.13592V7.84951C71.8563 10.4769 69.7263 12.6068 67.099 12.6068H29.6627C27.0353 12.6068 24.9054 10.4769 24.9054 7.8495V7.13591C24.9054 6.47907 24.3729 5.94659 23.7161 5.94659H14.2835Z" fill="#FAFAFA"/>
+<circle cx="49" cy="176" r="8" fill="#FAFAFA" fill-opacity="0.7"/>
+<circle cx="49" cy="176" r="6" fill="#FAFAFA"/>
+<circle cx="17" cy="179" r="4.5" stroke="#FAFAFA"/>
+<rect x="12" y="22" width="32" height="32" rx="2" fill="#FAFAFA"/>
+<rect x="53" y="22" width="32" height="32" rx="2" fill="#FAFAFA"/>
+<path d="M103 22H124C125.105 22 126 22.8954 126 24V52C126 53.1046 125.105 54 124 54H103V22Z" fill="#FAFAFA"/>
+<path d="M103 63H124C125.105 63 126 63.8954 126 65V93C126 94.1046 125.105 95 124 95H103V63Z" fill="#FAFAFA"/>
+<path d="M103 104H124C125.105 104 126 104.895 126 106V134C126 135.105 125.105 136 124 136H103V104Z" fill="#FAFAFA"/>
+<rect x="135" y="22" width="32" height="32" rx="2" fill="#FAFAFA"/>
+<rect x="176" y="22" width="32" height="32" rx="2" fill="#FAFAFA"/>
+<rect x="12" y="63" width="32" height="32" rx="2" fill="#FAFAFA"/>
+<rect x="53" y="63" width="32" height="32" rx="2" fill="#FAFAFA"/>
+<rect x="12" y="104" width="32" height="32" rx="2" fill="#FAFAFA"/>
+<rect x="53" y="104" width="32" height="32" rx="2" fill="#FAFAFA"/>
+<rect x="135" y="104" width="32" height="32" rx="2" fill="#FAFAFA"/>
+<rect x="176" y="104" width="32" height="32" rx="2" fill="#FAFAFA"/>
+<rect x="217" y="104" width="32" height="32" rx="2" fill="#FAFAFA"/>
+</svg>
