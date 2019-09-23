@@ -189,7 +189,7 @@ a {
 /* GLOBAL */ 
 html {
     color: var(--black);
-    background: #FAFAFA;
+    background: var(--white);
     overflow-x: hidden;
     margin-top: 3vw;
     margin-bottom: 3vw;
