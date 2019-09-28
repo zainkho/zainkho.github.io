@@ -356,8 +356,17 @@ video {
     border-radius: 10em;
     background: var(--white);
 }
-.evaporate {
-    animation: 3.0s ease-in infinite evaporate;
+.evaporate-1 {
+    animation: 2.0s ease-in-out infinite evaporate;
+    animation-delay: 0s;
+}
+.evaporate-2 {
+    animation: 2.0s ease-in-out infinite evaporate;
+    animation-delay: 0.5s;
+}
+.evaporate-3 {
+    animation: 2.0s ease-in-out infinite evaporate;
+    animation-delay: 1.0s;
 }
 
 .starbucks-logo {
@@ -661,6 +670,17 @@ footer p a:hover {
     display: none;
 }
 
+/* INSTAGRAM */
+.ig-title {
+    background: linear-gradient(45deg, #F86737 0%, #B02999 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5vw;
+}
+.ig-link {
+    color: #C13584;
+}
+
 /* GITHUB */
 .github-title {
     color: #24292E;
@@ -861,18 +881,12 @@ footer p a:hover {
 
 @keyframes evaporate {
     0% {
-        transform:translateY(75%);
-        opacity: 0;
+        transform:translateY(50%);
     }
-    25% {
-        opacity: 1;
-    }
-    75% {
-        transform: translateY(0%);
-        opacity: 0;
+    50% {
+        transform: translateY(25%);
     }
     100% {
-        transform: translateY(0%);
-        opacity: 0;
+        transform: translateY(50%);
     }
 }
