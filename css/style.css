@@ -681,6 +681,15 @@ footer p a:hover {
     color: #C13584;
 }
 
+/* DORM ROOM FUND */
+.drf-title {
+    color: #0702D1;
+    margin-bottom: 1.5vw;
+}
+.drf-link {
+    color: #0702D1;
+}
+
 /* GITHUB */
 .github-title {
     color: #24292E;
