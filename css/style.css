@@ -8,7 +8,6 @@
     --gray-02: #959DA5;
     --gray-03: #586069;
     --gray-04: #2F363D;
-    --gray-05: #1B1F23;
 }
 
 /* TYPOGRAPHY */
@@ -96,6 +95,9 @@ a {
     text-decoration: none;
     color: inherit;
     transition: 0.28s;
+}
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, li::selection, a::selection, span::selection, br::selection, strong::selection, img::selection, html::selection {
+    background: var(--gray-01);
 }
 @media screen and (min-width: 450px) {
     h1 {
@@ -390,7 +392,7 @@ video {
     width: 0.5em;
     height: 100%;
     border-radius: 10em;
-    background: var(--gray-05);
+    background: var(--black);
 }
 .ideo-soundwaves-1 {
     height: 25%;
