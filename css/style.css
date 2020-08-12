@@ -313,6 +313,13 @@ video {
     vertical-align: top;
     text-align: left;
 }
+.exp-ig {
+    background: linear-gradient(315deg, #FF7676 0%, #F54EA2 100%);
+/*    background: linear-gradient(45deg, #F5F2BE 0%, #FFCC80 20%, #FFAF87 40%, #DF9583 60%, #C39097 80%, #8A7897 100%);*/
+/*    background: linear-gradient(45deg, #FFD521 0%, #F50000 50%, #B900B4 100%);*/
+    background-size: 200% 200%;
+    animation: 9.6s ease-in-out infinite gradient;
+}
 .exp-github {
     background: #24292e;
 
@@ -329,10 +336,11 @@ video {
 .exp-tint {
     background: linear-gradient(135deg, #B2B2B2 0%, #666666 20%, #222222 20%);
 }
-.exp-nalp {
-    background: #0052A5;
+.ig-logo {
+    position: relative;
+    margin-bottom: 1.5em;
+    height: 17.5%;
 }
-
 .github-logo {
     position: relative;
     margin-bottom: 1.5em;
@@ -430,11 +438,6 @@ video {
     width: 20%;
 }
 .tint-logo {
-    position: relative;
-    margin-bottom: 1.5em;
-    height: 17.5%;
-}
-.nalp-logo {
     position: relative;
     margin-bottom: 1.5em;
     height: 17.5%;
@@ -674,22 +677,13 @@ footer p a:hover {
 
 /* INSTAGRAM */
 .ig-title {
-    background: linear-gradient(45deg, #F86737 0%, #B02999 100%);
+    background: linear-gradient(315deg, #FF7676 0%, #F54EA2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1.5vw;
 }
 .ig-link {
     color: #C13584;
-}
-
-/* DORM ROOM FUND */
-.drf-title {
-    color: #0702D1;
-    margin-bottom: 1.5vw;
-}
-.drf-link {
-    color: #0702D1;
 }
 
 /* GITHUB */
@@ -737,15 +731,6 @@ footer p a:hover {
 }
 .tint-link {
     color: var(--gray-03);
-}
-
-/* NALP */
-.nalp-title {
-    color: #0052A5;
-    margin-bottom: 1.5vw;
-}
-.nalp-link {
-    color: #0366D6;
 }
 
 /* RESPONSIVE */
@@ -878,6 +863,17 @@ footer p a:hover {
   }
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 @keyframes infinite-bob {
     0% {
         transform:translateY(5%)
