@@ -314,11 +314,9 @@ video {
     text-align: left;
 }
 .exp-ig {
-    background: linear-gradient(315deg, #FF7676 0%, #F54EA2 100%);
-/*    background: linear-gradient(45deg, #F5F2BE 0%, #FFCC80 20%, #FFAF87 40%, #DF9583 60%, #C39097 80%, #8A7897 100%);*/
-/*    background: linear-gradient(45deg, #FFD521 0%, #F50000 50%, #B900B4 100%);*/
-    background-size: 200% 200%;
-    animation: 9.6s ease-in-out infinite gradient;
+    background: linear-gradient(45deg, #FF6868 0%, #FF7676 33.33%, #F54EA2 66.67%, #FF41A0 100%);
+    background-size: 300% 300%;
+    animation: 4.8s ease-in-out infinite ig-gradient;
 }
 .exp-github {
     background: #24292e;
@@ -346,7 +344,7 @@ video {
     margin-bottom: 1.5em;
     height: 17.5%;
     
-    animation: 1.0s ease-in-out infinite infinite-bob;
+    animation: 1.0s ease-in-out infinite github-infinite-bob;
 }
 .starbucks-heat-container {
     display: flex;
@@ -367,15 +365,15 @@ video {
     background: var(--white);
 }
 .evaporate-1 {
-    animation: 2.0s ease-in-out infinite evaporate;
+    animation: 2.0s ease-in-out infinite starbucks-evaporate;
     animation-delay: 0s;
 }
 .evaporate-2 {
-    animation: 2.0s ease-in-out infinite evaporate;
+    animation: 2.0s ease-in-out infinite starbucks-evaporate;
     animation-delay: 0.5s;
 }
 .evaporate-3 {
-    animation: 2.0s ease-in-out infinite evaporate;
+    animation: 2.0s ease-in-out infinite starbucks-evaporate;
     animation-delay: 1.0s;
 }
 
@@ -677,7 +675,7 @@ footer p a:hover {
 
 /* INSTAGRAM */
 .ig-title {
-    background: linear-gradient(315deg, #FF7676 0%, #F54EA2 100%);
+    background: linear-gradient(45deg, #FF6868 0%, #FF7676 33.33%, #F54EA2 66.67%, #FF41A0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1.5vw;
@@ -863,7 +861,7 @@ footer p a:hover {
   }
 }
 
-@keyframes gradient {
+@keyframes ig-gradient {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -874,7 +872,7 @@ footer p a:hover {
 		background-position: 0% 50%;
 	}
 }
-@keyframes infinite-bob {
+@keyframes github-infinite-bob {
     0% {
         transform:translateY(5%)
     }
@@ -886,7 +884,7 @@ footer p a:hover {
     }
 }
 
-@keyframes evaporate {
+@keyframes starbucks-evaporate {
     0% {
         transform:translateY(50%);
     }
