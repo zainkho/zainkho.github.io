@@ -280,7 +280,7 @@ video {
     display: grid;
     grid-column-gap: 5vw;
     grid-template-columns: auto;
-    grid-row-gap: 5vw;
+    grid-row-gap: 10vw;
     grid-template-rows: auto auto auto;
     position: relative;
     margin-top: 3em;
@@ -786,6 +786,7 @@ footer p a:hover {
     /* BODY */
     .content {
         grid-template-columns: auto auto;
+        grid-row-gap: 5vw;
         margin-bottom: 3em;
     }
     .starbucks-heat {
