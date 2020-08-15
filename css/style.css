@@ -53,7 +53,7 @@ h2 {
     font-family: 'SF-Display';
     font-size: 36px;    
     font-weight: bold;
-    line-height: inherit;
+    line-height: 150%;
     margin: 0;
 }
 h3 {
@@ -104,7 +104,7 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
         font-size: calc(36px + 36* ((100vw - 320px) / 680));
     }
     h2 {
-        font-size: calc(30px + 30 * ((100vw - 320px) / (680)));
+        font-size: calc(24px + 30 * ((100vw - 320px) / (680)));
     }
     h3 {
         font-size: calc(18px + 18 * ((100vw - 320px) / (680)));
@@ -162,7 +162,7 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
     grid-template-columns: minmax(0, 1fr);
 }
 .c12 {
-    grid-column: 2 /12;
+    grid-column: 2 / 12;
 }
 .c6 {
     grid-column: 4 / 10;
@@ -193,8 +193,7 @@ html {
     color: var(--black);
     background: var(--white);
     overflow-x: hidden;
-    margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin: 3vw 6vw;
     
     animation: 1.0s ease-in fade-in;
 }
@@ -230,7 +229,7 @@ video {
 }
 .option {
     display: inline;
-    margin-left: 6vw;
+    margin-left: 5vw;
     font-weight: normal;
     color: var(--gray-03);
 }
@@ -285,14 +284,13 @@ video {
     grid-template-rows: auto auto auto;
     position: relative;
     margin-top: 3em;
-    margin-bottom: 3em;
 }
 .exp {
     display: flex;
     flex-direction: column;
     position: relative;
     width: 100%;
-    border-radius: 0.625em;
+    border-radius: 1.2em;
 }
 .exp:after {
     content: "";
@@ -443,6 +441,7 @@ video {
 
 /* FOOTER */
 footer {
+    display: flex;
     margin-top: 3em;
     line-height: 4em;
     color: var(--gray-03);
@@ -557,6 +556,9 @@ footer p a:hover {
     background: url(../work/travel/dallas1.jpg) center / cover no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0.25);
+}
+.overlay {
+    background: linear-gradient(transparent 72%, #FFFFFF 100%);
 }
 .scroll {
     padding-top: 1.5em;
@@ -740,6 +742,9 @@ footer p a:hover {
 }
 @media screen and (min-width: 550px) {
     /* GLOBAL */
+    html {
+        margin: 3vw 0vw;
+    }
     .content-web {
         display: inline;
     }
@@ -781,6 +786,7 @@ footer p a:hover {
     /* BODY */
     .content {
         grid-template-columns: auto auto;
+        margin-bottom: 3em;
     }
     .starbucks-heat {
         width: 2vw;
