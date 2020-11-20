@@ -297,6 +297,9 @@ video {
     display: block;
     padding-bottom: 100%;
 }
+.exp h5 {
+    padding: 0 1em;
+}
 .exp-content {
     display: flex;
     flex-direction: column;
@@ -316,6 +319,12 @@ video {
     background-size: 300% 300%;
     animation: 4.8s ease-in-out infinite ig-gradient;
 }
+.exp-patch {
+    background: var(--white);
+    box-sizing: border-box;
+    border: 1.5vh solid #FF5A60;
+    margin: -1.5vh 0;
+}
 .exp-github {
     background: #24292e;
 
@@ -329,10 +338,12 @@ video {
 .exp-respond {
     background: linear-gradient(#FF7E7E, #FFB77E, #FFDE88);
 }
-.exp-tint {
-    background: linear-gradient(135deg, #B2B2B2 0%, #666666 20%, #222222 20%);
-}
 .ig-logo {
+    position: relative;
+    margin-bottom: 1.5em;
+    height: 17.5%;
+}
+.patch-logo {
     position: relative;
     margin-bottom: 1.5em;
     height: 17.5%;
@@ -432,11 +443,6 @@ video {
     position: relative;
     margin: 1.5vw;
     width: 20%;
-}
-.tint-logo {
-    position: relative;
-    margin-bottom: 1.5em;
-    height: 17.5%;
 }
 
 /* FOOTER */
@@ -686,6 +692,15 @@ footer p a:hover {
     color: #C13584;
 }
 
+/* PATCHRX */
+.patch-title {
+    color: #FF5A60;
+    margin-bottom: 1.5vw;
+}
+.patch-link {
+    color: #FF5A60;
+}
+
 /* GITHUB */
 .github-title {
     color: #24292E;
@@ -720,17 +735,6 @@ footer p a:hover {
 }
 .respond-link {
     color: #D60000;
-}
-
-/* TINT */
-.tint-title {
-    background: linear-gradient(135deg, #B2B2B2 0%, #666666 10%, #222222 10%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1.5vw;
-}
-.tint-link {
-    color: var(--gray-03);
 }
 
 /* RESPONSIVE */
