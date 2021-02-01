@@ -322,9 +322,9 @@ video {
 .exp-patch {
     background: var(--white);
     box-sizing: border-box;
-    border: 1.5vh solid #FF5A60;
-    margin: -1.5vh 0;
+    border: 0.75em solid #FF5A60;
 }
+
 .exp-github {
     background: #24292e;
 
