@@ -694,16 +694,16 @@ footer p a:hover {
 
 /* PATCHRX */
 .patch-title {
-    color: #FF5A60;
+    color: #FF5257;
     margin-bottom: 1.5vw;
 }
 .patch-link {
-    color: #FF5A60;
+    color: #FF5257;
 }
 
 /* GITHUB */
 .github-title {
-    color: #24292E;
+    color: #6F42C1;
     margin-bottom: 1.5vw;
 }
 .github-link {
@@ -721,11 +721,11 @@ footer p a:hover {
 
 /* IDEO */
 .ideo-title {
-    color: var(--black);
+    color: #AB8507;
     margin-bottom: 1.5vw;
 }
 .ideo-link {
-    color: #DBAB09;
+    color: #AB8507;
 }
 
 /* RESPOND */
