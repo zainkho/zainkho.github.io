@@ -314,6 +314,11 @@ video {
     vertical-align: top;
     text-align: left;
 }
+.exp-ramp {
+    background: linear-gradient(90deg, #e0ff88, #f5ff78);
+    box-sizing: border-box;
+    border: 0.20em solid #000000;
+}
 .exp-ig {
     background: linear-gradient(45deg, #FF6868 0%, #FF7676 33.33%, #F54EA2 66.67%, #FF41A0 100%);
     background-size: 300% 300%;
@@ -338,22 +343,14 @@ video {
 .exp-respond {
     background: linear-gradient(#FF7E7E, #FFB77E, #FFDE88);
 }
-.ig-logo {
+.logo {
     position: relative;
     margin-bottom: 1.5em;
     height: 17.5%;
 }
-.patch-logo {
-    position: relative;
-    margin-bottom: 1.5em;
-    height: 17.5%;
-}
+
 .github-logo {
-    position: relative;
-    margin-bottom: 1.5em;
-    height: 17.5%;
-    
-    animation: 1.0s ease-in-out infinite github-infinite-bob;
+        animation: 1.0s ease-in-out infinite github-infinite-bob;
 }
 .starbucks-heat-container {
     display: flex;
@@ -384,12 +381,6 @@ video {
 .evaporate-3 {
     animation: 2.0s ease-in-out infinite starbucks-evaporate;
     animation-delay: 1.0s;
-}
-
-.starbucks-logo {
-    position: relative;
-    margin-bottom: 1.5em;
-    height: 17.5%;
 }
 .ideo-soundwaves-container {
     display: flex;
@@ -429,20 +420,6 @@ video {
 }
 .ideo-soundwaves-7 {
     height: 85%;
-}
-.respond-logo-container {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    margin-bottom: 1.5vw;
-    height: 45%;
-    align-items: center;
-    justify-content: center;
-}
-.respond-logo {
-    position: relative;
-    margin: 1.5vw;
-    width: 20%;
 }
 
 /* FOOTER */
@@ -674,11 +651,26 @@ footer p a:hover {
 }
 .city-venice {
     background: url(../work/travel/venice1.jpg) center / cover no-repeat;
-    -webkit-background-clip: text;
+    -webkit-backgroun-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0.25);
 }
 ::-webkit-scrollbar {
     display: none;
+}
+
+/* RAMP */
+.ramp-title {
+    background: linear-gradient(90deg, #e0ff88, #f5ff78);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.035em;
+    -webkit-text-stroke-color: #000000;
+    margin-bottom: 1.5vw;
+}
+.ramp-link {
+    color: #f5ff78;
+    -webkit-text-stroke-width: 0.025em;
+    -webkit-text-stroke-color: #000000;
 }
 
 /* INSTAGRAM */
@@ -726,15 +718,6 @@ footer p a:hover {
 }
 .ideo-link {
     color: #AB8507;
-}
-
-/* RESPOND */
-.respond-title {
-    color: #B31D28;
-    margin-bottom: 1.5vw;
-}
-.respond-link {
-    color: #D60000;
 }
 
 /* RESPONSIVE */
