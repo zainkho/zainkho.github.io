@@ -668,9 +668,11 @@ footer p a:hover {
     margin-bottom: 1.5vw;
 }
 .ramp-link {
-    color: #f5ff78;
-    -webkit-text-stroke-width: 0.025em;
-    -webkit-text-stroke-color: #000000;
+    color: #000000;
+    background: linear-gradient(90deg, #e0ff88, #f5ff78);
+    padding: 0.1em 0.25em;
+    border-radius: 3px;
+    margin: 0.075em;
 }
 
 /* INSTAGRAM */
