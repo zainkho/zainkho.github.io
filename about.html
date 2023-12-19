@@ -17,53 +17,11 @@
     <link rel="stylesheet" href="css/hover-min.css">
 
     <!-- Javascript -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script>
-        /* Back button appears on scroll */
-        $(window).scroll(function(){
-          if ($(this).scrollTop() > 20) {
-              $('.back').removeClass('no-display');
-          } else {
-              $('.back').addClass('no-display');
-          }
-        });
-        
-        /* Forward button appears on scroll */
-        $(window).scroll(function(){
-          if ($(this).scrollTop() > 20) {
-              $('.forward').removeClass('no-display');
-          } else {
-              $('.forward').addClass('no-display');
-          }
-        });
-        
-        /* Scroll button appears on scroll */
-        $(window).scroll(function(){
-          if ($(this).scrollTop() > 20) {
-              $('.scroll-to-top').removeClass('no-display');
-          } else {
-              $('.scroll-to-top').addClass('no-display');
-          }
-        });
-
-        /* Smooth Scrolling */
-        $(document).ready(function(){
-          $("a").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 500, function(){
-                    window.location.hash = hash;
-                });
-            }
-          });
-        });
-    </script>
+    <!-- TBD TBD TBD -->
 
     <!-- Webpage Icons -->
-    <link rel="icon" type="image/x-icon" href="zk-favicon.ico"/>
+    <link href="zk-favicon-light.ico" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="zk-favicon-dark.ico" rel="icon" media="(prefers-color-scheme: dark)">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89012104-2"></script>

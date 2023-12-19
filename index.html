@@ -7,45 +7,21 @@
 <head id="top">
     <meta charset="UTF-8">
     <title>Zain Khoja</title>
-    <meta name="description" content="Zain Khoja is a designer, student, and strong advocate for sweet tea at Cornell.">
+    <meta name="description" content="Zain Khoja is a software (but also sometimes other stuff) designer">
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS Links -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/hover-min.css">
 
     <!-- Javascript -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script>
-        /* Scroll button appears on scroll */
-        $(window).scroll(function(){
-          if ($(this).scrollTop() > 20) {
-              $('.scroll-to-top').removeClass('no-display');
-          } else {
-              $('.scroll-to-top').addClass('no-display');
-          }
-        });
+    <!-- TBD TBD TBD -->
 
-        /* Smooth Scrolling */
-        $(document).ready(function(){
-          $("a").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 500, function(){
-                    window.location.hash = hash;
-                });
-            }
-          });
-        });
-    </script>
+    <!-- Favicons -->
+    <link href="zk-favicon-light.ico" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="zk-favicon-dark.ico" rel="icon" media="(prefers-color-scheme: dark)">
 
-    <!-- Webpage Icons -->
-    <link rel="icon" type="image/x-icon" href="zk-favicon.ico"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89012104-2"></script>
@@ -57,14 +33,15 @@
       gtag('config', 'UA-89012104-2');
     </script>
 
-    <!-- Twitter Preview -->
+    <!-- Twitter preview -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@zainkho"/>
     <meta name="twitter:creator" content="@zainkho"/>
-    <meta name="twitter:title" content="Zain Khoja" />
-    <meta name="twitter:description" content="Zain Khoja is a designer and student at Cornell."/>
+    <meta name="twitter:title" content="Zain Khoja"/>
+    <meta name="twitter:description" content="Zain Khoja is a software (but also sometimes other stuff) designer"/>
     <meta name="twitter:image:src" content="https://zainkho.com/zk-screenshot.png"/>
 </head>
+
 
 <body class="grid">
     <!-- Header -->
@@ -87,7 +64,7 @@
                 <h1 class="content-web emoji">🖋️</h1>
                 <div>
                     <h1 class="content-mobile">🖋️</h1>
-                    <h1>Hello, I'm Zain.</h1>
+                    <h1>Zain Khoja.</h1>
                     <h1 class="medium">Creating joy <a href="https://www.cornell.edu/" target="_blank" rel="noopener" class="link cornell-link">@Cornell</a>, <a href="https://ramp.com/" target="_blank" rel="noopener" class="link ramp-title">@Ramp</a>.</h1>
                 </div>
             </div>
