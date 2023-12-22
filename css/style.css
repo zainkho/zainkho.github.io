@@ -114,19 +114,10 @@ p {
     line-height: 150%;
     margin: 0;
 }
-p > a {
-    border-bottom: 1px solid var(--darkShade);
-
-    transition: 0.16s;
-}
-p > a:hover {
-    border-bottom: 1px solid var(--lightShade);
-
-    transition: 0.16s;
-}
 .p1 {
     font-size: 24px;
     letter-spacing: -1px;
+    margin-bottom: 24px;
 }
 .p2 {
     font-size: 18px;
@@ -135,7 +126,6 @@ p > a:hover {
 
 a {
     color: var(--darkShade);
-    text-decoration: none;
 
     transition: 0.16s;
 }
@@ -206,8 +196,6 @@ html {
 
     width: 100vw;
     height: 100vh;
-    
-    animation: 0.48s ease-in fade-in;
 }
 body {
     flex-grow: 1;
@@ -252,6 +240,7 @@ video {
     border-radius: 4px;
     border: 0;
     box-shadow: 0 0 0 0;
+    text-decoration: none;
 
     align-items: center;
     padding: 12px;
@@ -337,6 +326,9 @@ main {
     padding: 0px 40px;
     gap: 40px;
 }
+.content {
+    gap: 40px;
+}
 
 #title {
     gap: 8px;
@@ -358,9 +350,6 @@ main {
     gap: 8px;
 }
 
-#tile-container {
-    gap: 40px;
-}
 #tile-stack {
     flex-grow: 1;
 
@@ -370,6 +359,7 @@ main {
     color: var(--darkShade);
     background-color: var(--bg);
     border-radius: 8px;
+    text-decoration: none;
     
     box-sizing: border-box;
     transition: 0.08s;
@@ -418,7 +408,6 @@ main {
     padding: 30px 24px 18px 24px;
 }
 
-
 .top {
     justify-content: flex-end;
     flex-grow: 1;
@@ -429,14 +418,14 @@ main {
 
 
 /* ABOUT */
-.avi {
-    margin-top: 3em;
-    margin-left: auto;
-    margin-right: auto;
-    height: 15em;
-    width: 15em;
-    border-radius: 100em;
+#bio {
+    gap: 120px;
 }
+#avi {
+    width: 480px;
+    height: 480px;
+}
+
 
 /* RESPONSIVE */
 .content-web {
