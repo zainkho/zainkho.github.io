@@ -135,42 +135,6 @@ a:hover {
     transition: 0.16s;
 }
 
-@media screen and (max-width: 1024px) {
-    h1 {
-        font-size: 72px;
-        font-weight: bold;
-        letter-spacing: -4px;
-    }
-    h2 {
-        font-size: 48px;
-        font-weight: bold;
-        letter-spacing: -3px;
-    }
-    h4 {
-        font-size: 48px;
-        font-weight: bold;
-        letter-spacing: -3px;
-    }
-}
-@media screen and (max-width: 800px) {
-    h1 {
-        font-size: 48px;
-        font-weight: bold;
-        letter-spacing: -3px;
-    }
-    h2 {
-        font-size: 32px;
-        font-weight: bold;
-        letter-spacing: -2px;
-    }
-
-    .p1 {
-        font-family: 'Helvetica';
-        font-size: 16px;
-        letter-spacing: 0px;
-    }
-}
-
 h1::selection, h2::selection, h3::selection, h4::selection, p::selection, a::selection, span::selection, br::selection, strong::selection, img::selection, html::selection {
     background: var(--lightestShade);
 }
@@ -185,9 +149,6 @@ h1::selection, h2::selection, h3::selection, h4::selection, p::selection, a::sel
     flex-direction: column;
 }
 
-/* SHADOWS */
-
-
 
 /* GLOBAL */ 
 html {
@@ -201,7 +162,8 @@ body {
     flex-grow: 1;
     width: 100vw;
 
-    margin: 0;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 svg {
@@ -227,10 +189,13 @@ svg {
     padding: 4px;
 }
 
-img {
-    -webkit-user-drag: none;
-}
-video {
+img, video {
+    border-radius: 4px;
+
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    
     -webkit-user-drag: none;
 }
 
@@ -367,7 +332,7 @@ main {
 .tile:hover {
     color: var(--darkestShade);
 
-    transform: 0.08s;
+    transition: 0.08s;
 }
 .tile:active {
     color: var(--darkestShade);
@@ -427,68 +392,65 @@ main {
 }
 
 
-/* RESPONSIVE */
-.content-web {
-    display: none;
+/* MAGIC */
+.stuff {
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    position: relative;
+  }
+.stuff::before {
+    content: '';
+    border: 1px solid rgba(5, 5, 5, 0.1);
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
-.content-mobile {
-    display: inherit;
-}
-@media screen and (min-width: 550px) {
-    /* GLOBAL */
-    
-    /* HEADER */
-    .header {
-        margin-bottom: 1.5em;
-        line-height: 3em;
-        justify-content: space-between;
-    }
-    .zk-logo {
-        margin-right: 1.5em;
-        height: 3em;
-    }
-    .nav {
-        margin-left: auto;
-        line-height: 3em;
-    }
-    
-    /* BODY */
-    .content {
-        grid-template-columns: auto auto;
-        grid-row-gap: 5vw;
-        margin-bottom: 3em;
-    }
-    
-    /* ABOUT */
-    .avi {
-        height: 35vw;
-        width: 35vw;
-    }
+.caption {
+    margin-top: 8px;
 }
 
-@media screen and (min-width: 1000px) {
-    /* GLOBAL */
-    .content-web {
-        display: inline;
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1023px) {
+    h1 {
+        font-size: 72px;
+        letter-spacing: -4px;
     }
-    
-    /* HEADER */
-    .selected {
-        font-weight: 500;
-        color: var(--fullShade);
+    h2 {
+        font-size: 48px;
+        letter-spacing: -3px;
     }
-    
-    /* SUMMARY */
-    .summary {
-        grid-template-columns: 50% 50%;
+    h4 {
+        font-size: 48px;
+        letter-spacing: -3px;
     }
-    
-    /* ABOUT */
-    .avi {
-        margin-top: auto;
-        margin-bottom: auto;
-        height: 25em;
-        width: 25em;
+
+    #hero {
+        
+    }
+}
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 48px;
+        letter-spacing: -3px;
+    }
+    h2 {
+        font-size: 32px;
+        letter-spacing: -2px;
+    }
+
+    .p1 {
+        font-family: 'Helvetica';
+        font-size: 16px;
+        letter-spacing: 0px;
     }
 }
 
