@@ -15,11 +15,31 @@ function getWeather() {
             .then(response => response.json())
             .then(data => {
                 // Returned API call
-                console.log(data)
+                // console.log(data)
 
-                let temp = data.main.temp
-                let weather = data.weather[0].main
-                console.log(temp + ', ' + weather)
+                let icon = ''
+                let temp = Math.round(data.main.temp)
+                let openweather_weather = data.weather[0].main
+
+                if (['Thunderstorm', 'Drizzle', 'Rain'].includes(openweather_weather)) {
+                    icon = 'umbrella'
+                    weather = 'Rain'
+                }
+                else if (['Snow'].includes(openweather_weather)) {
+                    icon = 'snowflake'
+                    weather = 'Snow'
+                }
+                else if (['Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall', 'Tornado', 'Clouds'].includes(openweather_weather)) {
+                    icon = 'cloud'
+                    weather = 'Cloudy'
+                }
+                else {
+                    icon = 'sun'
+                    weather = 'Sunny'
+                }
+
+                document.querySelector('#weather_icon').innerHTML = '<use href=\'images/sprites.svg#' + icon + '\'></use>'
+                document.querySelector('#weather_description').innerHTML = temp + '° & ' + weather
             })
             .catch(error => {
                 console.error('Error fetching weather data', error)
