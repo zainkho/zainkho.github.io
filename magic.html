@@ -50,6 +50,7 @@
             <div class='line' id='line-3'></div>
             <div class='line' id='line-4'></div>
         </div>
+
         <!-- Actions -->
         <nav class='row'>
             <a href='/' class='row button'>
@@ -64,6 +65,24 @@
                 <svg><use href='images/sprites.svg#magic'></use></svg>
             </a>
         </nav>
+
+        <!-- Logo -->
+        <a href='/'><svg id='zk-logo'>
+            <defs>
+                <!-- Definition for inset shadow that is used for zk-logo above -->
+                <filter id='inset' x='0' y='0' width='40' height='41' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
+                    <feFlood flood-opacity='0' result='BackgroundImageFix'/>
+                    <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/>
+                    <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/>
+                    <feOffset dy='1'/>
+                    <feGaussianBlur stdDeviation='0.5'/>
+                    <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/>
+                    <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/>
+                    <feBlend mode='normal' in2='shape' result='effect1_innerShadow_946_14435'/>
+                </filter>
+            </defs>
+            <use href='images/sprites.svg#zk-logo' filter='url(#inset)'></use>
+        </svg></a>
     </header>
 
     <main class='column'>
@@ -120,23 +139,12 @@
 
     <!-- Footer -->
     <footer class='row'>
-        <!-- Logo -->
-        <a href='/'><svg id='zk-logo'>
-            <defs>
-                <!-- Definition for inset shadow that is used for zk-logo above -->
-                <filter id='inset' x='0' y='0' width='40' height='41' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
-                    <feFlood flood-opacity='0' result='BackgroundImageFix'/>
-                    <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/>
-                    <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/>
-                    <feOffset dy='1'/>
-                    <feGaussianBlur stdDeviation='0.5'/>
-                    <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/>
-                    <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/>
-                    <feBlend mode='normal' in2='shape' result='effect1_innerShadow_946_14435'/>
-                </filter>
-            </defs>
-            <use href='images/sprites.svg#zk-logo' filter='url(#inset)'></use>
-        </svg></a>
+        <!-- Weather -->
+        <div class='row' id='weather'>
+            <svg id='weather_icon'></svg> 
+            <span class='sh3' id='weather_description'></span>
+        </div>
+
         <!-- Links -->
         <nav class='row'>
             <a href='https://twitter.com/zainkho' target='_blank' rel='noopener' class='row button'>
@@ -150,9 +158,15 @@
             </a>
         </nav>
     </footer>
+
+    <!-- Weather effects -->
+    <div class='weather-effect'></div>
+    <div id='splash'></div>
+
 </body>
 
 <!-- JS -->
+<script type='text/javascript' src="js/tsparticles.min.js"></script>
 <script type='text/javascript' src='js/script.js'></script>
 
 </html>
