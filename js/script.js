@@ -1,10 +1,10 @@
-/* Scripts */
+// Scripts
 
-/* VARIABLES */
+// VARIABLES
 let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'Dark' : 'Light'
 
 
-/* WEATHER */
+// WEATHER
 function getWeather() {
 
     // Get visitor location
