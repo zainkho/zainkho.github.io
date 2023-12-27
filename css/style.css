@@ -149,7 +149,6 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
-
 svg {
     width: 16px;
     height: 16px;
@@ -253,14 +252,21 @@ header {
 }
 
 nav {
+    align-items: center;
     gap: 8px;
 }
 
 #zk-logo {
     color: var(--fullShade);
     fill-opacity: 0.3;
-    width: 40px;
-    height: 40px;
+
+    transition: 0.08s;
+}
+#zk-logo:hover {
+    animation: 2.8s ease-in-out neon;
+    overflow: visible;
+
+    transition: 0.08s;
 }
 
 
@@ -415,33 +421,6 @@ main {
 .caption {
     margin-top: 8px;
 }
-
-
-/* ANIMATIONS */
-@keyframes fade-in {
-    0% {
-      opacity: 0;
-      transform: translateY(0.05%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  @keyframes flashing {
-      0% {
-          opacity: 1;
-      }
-      49% {
-          opacity: 1;
-      }
-      50% {
-          opacity: 0;
-      }
-      100% {
-         opacity: 0;
-      }
-  }
 
 
 /* DELIGHTS */
@@ -672,6 +651,10 @@ main {
 }
 
 
+
+
+
+/* DARK MODE */
 @media (prefers-color-scheme: dark) {
     :root {
         --fullShade: #FAFAFA;
@@ -687,6 +670,71 @@ main {
     .media::before {
         border: 1px solid rgba(250, 250, 250, 0.1);
 
+    }
+    .graphic {
+        background-color: rgba(250, 250, 250, 0.1);
+    }
+    .graphic:hover {
+        background-color: rgba(250, 250, 250, 0.3);
+    }
+}
+
+
+
+
+
+
+
+
+/* ANIMATIONS */
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(0.05%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes flashing {
+      0% {
+          opacity: 1;
+      }
+      49% {
+          opacity: 1;
+      }
+      50% {
+          opacity: 0;
+      }
+      100% {
+         opacity: 0;
+      }
+}
+@keyframes neon {
+    0% {
+        color: var(--darkerShade);
+        fill-opacity: 1;
+    }
+    5% {
+        color: var(--fullShade);
+        fill-opacity: 0.3;
+        filter: none;
+    }
+    10% {
+        color: var(--fullShade);
+        fill-opacity: 0.3;
+        filter: none;
+    }
+    15% {
+        color: var(--darkerShade);
+        fill-opacity: 1;
+        filter: drop-shadow(0px 2px 2px rgba(5, 5, 5, 0.3));
+    }
+    100% {
+        color: var(--darkerShade);
+        fill-opacity: 1;
+        filter: drop-shadow(0px 2px 2px rgba(5, 5, 5, 0.3));
     }
 }
 @keyframes sun-gradient {
