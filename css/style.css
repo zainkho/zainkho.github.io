@@ -281,6 +281,9 @@ footer {
     align-items: center;
     gap: 8px;
 }
+#weather-icon {
+    animation: 2.0s infinite play;    
+}
 
 
 /* BODY */
@@ -451,9 +454,6 @@ main {
     margin: auto;
     z-index: -1;
 }
-#sun {
-    animation: 4.8s ease-in-out infinite sun-gradient;
-}
 
 
 
@@ -592,15 +592,12 @@ main {
     }
     
     header {
-        padding: 16px;
+        padding: 16px 16px 24px 16px;
         gap: 16px;
     }
     footer {
         padding: 8px 16px;
         gap: 16px;
-    }
-    #weather {
-        width: fit-content;
     }
     main {
         padding: 0px 16px;
@@ -713,14 +710,20 @@ main {
       }
 }
 
-@keyframes sun-gradient {
+@keyframes play {
 	0% {
-		background-position: 0% 50%;
+		transform: scale(0.9);
 	}
-	50% {
-		background-position: 100% 50%;
-	}
+    49% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    99% {
+        transform: scale(1);
+    }
 	100% {
-		background-position: 0% 50%;
+		transform: scale(0.9);
 	}
 }

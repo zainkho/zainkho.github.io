@@ -85,7 +85,7 @@ function getWeather() {
                 }
 
                 // Data for weather badge
-                document.querySelector('#weather_icon').innerHTML = '<use href=\'images/sprites.svg#' + icon + '\'></use>'
+                document.querySelector('#weather-icon').innerHTML = '<use href=\'images/sprites.svg#' + icon + '\'></use>'
                 document.querySelector('#weather_description').innerHTML = temp + '° & ' + openweather_weather
 
             })
