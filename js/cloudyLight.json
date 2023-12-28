@@ -1,0 +1,39 @@
+{
+  "particles": {
+    "number": {
+      "value": 20,
+      "density": {
+        "enable": true,
+        "area": 800
+      }
+    },
+    "color": {
+      "value": "#586069"
+    },
+    "shape": {
+      "type": "image",
+      "image": [
+        { "src": "../images/icons/cloudLeftLight.svg"},
+        { "src": "../images/icons/cloudRightLight.svg"}
+      ]
+    },
+    "opacity": {
+      "value": 1
+    },
+    "size": {
+      "value": 16
+    },
+    "lineLinked": {
+      "enable": false
+    },
+    "move": {
+      "enable": true,
+      "random": true,
+      "speed": 1,
+      "direction": "right",
+      "straight": true,
+      "outMode": "out"
+    }
+  },
+  "detectsRetina": true
+}
