@@ -64,14 +64,14 @@ function getWeather() {
                 }
 
                 // Data for weather badge
-            document.querySelector('#weather-icon').innerHTML = '<use href=\'images/icons/sprites.svg#' + icon + '\'></use>'
+            document.querySelector('#weather-icon').innerHTML = '<use href=\'images/sprites.svg#' + icon + '\'></use>'
                 document.querySelector('#weather_description').innerHTML = temp + '° & ' + openweather_weather
 
                 // Swap SVG for weather icon animation
                 currentIcon = icon
                 setInterval(() => {
                     currentIcon = currentIcon == icon ? icon + '-animated' : icon;
-                    document.querySelector('#weather-icon').innerHTML = '<use href=\'images/icons/sprites.svg#' + currentIcon + '\'></use>'
+                    document.querySelector('#weather-icon').innerHTML = '<use href=\'images/sprites.svg#' + currentIcon + '\'></use>'
                 }, 1000)
 
                 // Initiate particle effect

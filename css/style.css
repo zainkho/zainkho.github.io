@@ -438,20 +438,6 @@ main {
     margin: auto;
     z-index: -1;
 }
-#cloudy {
-    height: 163px;
-    width: auto;
-    mask-image: linear-gradient(to right, transparent, transparent 40px, black 80px, black calc(100% - 80px), transparent calc(100% - 40px), transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, transparent 40px, black 80px, black calc(100% - 80px), transparent calc(100% - 40px), transparent);
-    box-sizing: border-box;
-    overflow: visible;
-    
-    top: 88px;
-    left: 35%;
-    right: 0;
-    bottom: auto;
-    margin: 16px;
-}
 #splash {
     display: none;
     background: var(--bg);
