@@ -1,54 +1,26 @@
 <!-- Index -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en' class='column'>
 
 <!-- Head -->
-<head id="top">
-    <meta charset="UTF-8">
-    <title>Zain Khoja</title>
-    <meta name="description" content="Zain Khoja is a designer, student, and strong advocate for sweet tea at Cornell.">
+<head>
+    <meta charset='UTF-8'>
+    <title>Home · Zain Khoja</title>
+    <meta name='description' content='Zain Khoja is a software (but also sometimes other stuff) designer'>
 
     <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/hover-min.css">
+    <!-- CSS -->
+    <link rel='stylesheet' href='css/style.css' type='text/css'>
 
-    <!-- Javascript -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script>
-        /* Scroll button appears on scroll */
-        $(window).scroll(function(){
-          if ($(this).scrollTop() > 20) {
-              $('.scroll-to-top').removeClass('no-display');
-          } else {
-              $('.scroll-to-top').addClass('no-display');
-          }
-        });
-
-        /* Smooth Scrolling */
-        $(document).ready(function(){
-          $("a").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 500, function(){
-                    window.location.hash = hash;
-                });
-            }
-          });
-        });
-    </script>
-
-    <!-- Webpage Icons -->
-    <link rel="icon" type="image/x-icon" href="zk-favicon.ico"/>
+    <!-- Favicons -->
+    <link href='images/zk-favicon-light.ico' rel='icon' media='(prefers-color-scheme: light)'>
+    <link href='images/zk-favicon-dark.ico' rel='icon' media='(prefers-color-scheme: dark)'>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89012104-2"></script>
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-89012104-2'></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -57,145 +29,170 @@
       gtag('config', 'UA-89012104-2');
     </script>
 
-    <!-- Twitter Preview -->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@zainkho"/>
-    <meta name="twitter:creator" content="@zainkho"/>
-    <meta name="twitter:title" content="Zain Khoja" />
-    <meta name="twitter:description" content="Zain Khoja is a designer and student at Cornell."/>
-    <meta name="twitter:image:src" content="https://zainkho.com/zk-screenshot.png"/>
+    <!-- Twitter preview -->
+    <meta name='twitter:card' content='summary_large_image'/>
+    <meta name='twitter:site' content='@zainkho'/>
+    <meta name='twitter:creator' content='@zainkho'/>
+    <meta name='twitter:title' content='Zain Khoja'/>
+    <meta name='twitter:description' content='Zain Khoja is a software (but also sometimes other stuff) designer'/>
+    <meta name='twitter:image:src' content='https://zainkho.com/zk-screenshot.png'/>
 </head>
 
-<body class="grid">
-    <!-- Header -->
-    <header class="c12">
-        <!-- Nav -->
-        <div class="hero">
-            <div class="header">
-                <a href="/"><img alt="Zain Khoja logo" src="zk-logo.svg" class="zk-logo"></a>
-                <h3 class="medium content-web">Zain Khoja</h3>
-                <nav class="nav">
-                    <h5 class="option selected">Work</h5>
-                    <h5 class="option"><a href="about">About</a></h5>
-                    <h5 class="option"><a href="travel">Travel</a></h5>
-                    <h5 class="option"><a href="zainkho-resume.pdf" aria-label="Zain Khoja reseume" target="_blank" rel="noopener">Resume</a></h5>
-                </nav>
-            </div>
 
-            <!-- Title -->
-            <div class="title">
-                <h1 class="content-web emoji">🖋️</h1>
-                <div>
-                    <h1 class="content-mobile">🖋️</h1>
-                    <h1>Hello, I'm Zain.</h1>
-                    <h1 class="medium">Creating joy <a href="https://www.cornell.edu/" target="_blank" rel="noopener" class="link cornell-link">@Cornell</a>, <a href="https://ramp.com/" target="_blank" rel="noopener" class="link ramp-title">@Ramp</a>.</h1>
-                </div>
-            </div>
+<body class='column'>
+    <!-- Header -->
+    <header class='row'>
+        <!-- Line -->
+        <div class='column line-container'>
+            <div class='line' id='line-1'></div>
+            <div class='line' id='line-2'></div>
+            <div class='line' id='line-3'></div>
+            <div class='line' id='line-4'></div>
         </div>
+
+        <!-- Actions -->
+        <nav class='row'>
+            <a class='row button' id='selected'>
+                <svg><use href='images/sprites.svg#home'></use></svg>
+                <span class='sh2'>Home</span>
+            </a>
+            <a href='about.html' class='row button'>
+                <svg><use href='images/sprites.svg#bookmark'></use></svg>
+                <span class='sh2'>About</span>
+            </a>
+
+            <!-- Logo -->
+            <a href='/' aria-label='Go to homepage' class='row'><svg class='icon-m' id='zk-logo'>
+                <defs>
+                    <!-- Definition for inset shadow that is used for zk-logo above -->
+                    <filter id='inset' x='0' y='0' width='32' height='32' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
+                        <feFlood flood-opacity='0' result='BackgroundImageFix'/>
+                        <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/>
+                        <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/>
+                        <feOffset dy='1'/>
+                        <feGaussianBlur stdDeviation='0.5'/>
+                        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/>
+                        <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/>
+                        <feBlend mode='normal' in2='shape' result='effect1_innerShadow_946_14435'/>
+                    </filter>
+                </defs>
+                <use href='images/sprites.svg#zk-logo' filter='url(#inset)'></use>
+            </svg></a>
+        </nav>
     </header>
 
-    <main class="c12 content">
+    <main class='column'>
+        <!-- Title -->
+        <div class='column' id='title'>
+            <h1>Zain Khoja</h1>
+            <p class='sh1' id='subtitle'>Software (but also sometimes <a href='magic.html' id='secret'>other stuff</a>) designer</p>
+        </div>
 
-            <!-- Ramp -->
-            <!--<a href="">--><div class="hvr-float exp exp-ramp">
-                <div class="exp-content">
-                    <img alt="Ramp" src="work/ramp/ramp-logo.svg" class="logo">
+        <!-- Tiles -->
+        <div class='row content'>
+            <!-- Headliners -->
+            <a href='https://ramp.com' target='_blank' rel='noopener' class='column tile tl'>
+                <div class='column top'>
+                    <svg class='icon-l'><use href='images/sprites.svg#Ramp'></use></svg> 
                     <h2>Ramp</h2>
-                    <h5 class="medium">Time is money. Save both.</h5>
                 </div>
-            </div><!--</a>-->
+                <div class='row bottom'>
+                    <p class='sh1'>Automating finance things · 2022 — <span id='flashing'>█</span></p>
+                </div>
+            </a>
 
-            <!-- Instagram -->
-            <!--<a href="">--><div class="hvr-float exp exp-ig">
-                <div class="exp-content">
-                    <img alt="Instagram" src="work/instagram/ig-logo.svg" class="logo">
-                    <h2 class="white">Instagram</h2>
-                    <h5 class="medium white">A reel-y cool product.</h5>
+            <a href='https://creators.instagram.com' target='_blank' rel='noopener' class='column tile tl web-only'>
+                <div class='column top'>
+                    <svg class='icon-l'><use href='images/sprites.svg#Instagram'></use></svg> 
+                    <h2>Instagram</h2>
                 </div>
-            </div><!--</a>-->
-        
-            <!-- PatchRx -->
-            <a href="patch"><div class="hvr-float exp exp-patch">
-                <div class="exp-content">
-                    <img alt="PatchRx" src="work/patch/patch-logo.svg" class="logo">
-                    <h2>PatchRx</h2>
-                    <h5 class="medium">Taking your medication with joy.</h5>
+                <div class='row bottom'>
+                    <p class='sh1'>Building cool video stuff · 2021 — 2022</p>
                 </div>
-            </div></a>
-        
-            <!-- GitHub -->
-            <a href="github"><div class="hvr-float exp exp-github">
-                <div class="exp-content">
-                    <img alt="GitHub logo" src="work/github/github-logo.svg" class="logo github-logo">
-                    <h2 class="white">GitHub</h2>
-                    <h5 class="medium white">Should designers code?</h5>
-                </div>
-            </div></a>
+            </a>
 
-            <!-- Starbucks -->
-            <a href="starbucks"><div class="hvr-float exp exp-starbucks">
-                <div class="exp-content">
-                    <div class="starbucks-heat-container">
-                        <div class="starbucks-heat evaporate-1"></div>
-                        <div class="starbucks-heat evaporate-2"></div>
-                        <div class="starbucks-heat evaporate-3"></div>
+            <!-- Tile stack -->
+            <div class='column' id='tile-stack'>
+
+                <a href='https://creators.instagram.com' target='_blank' rel='noopener' class='column tile ts mobile-only'>
+                    <div class='column top'>
+                        <svg class='icon-s'><use href='images/sprites.svg#Instagram'></use></svg> 
+                        <h3>Instagram</h3>
                     </div>
-                    <img alt="coffee cup" src="work/starbucks/starbucks-logo.png" class="logo">
-                    <h2 class="white">Starbucks</h2>
-                    <h5 class="medium white">A solution to “omg I love your drink, what is it?”</h5>
-                </div>
-            </div></a>
-
-            <!-- IDEO -->
-            <a href="ideo"><div class="hvr-float exp exp-ideo">
-                <div class="exp-content">
-                    <div class="ideo-soundwaves-container">
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-1"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-5"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-4"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-2"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-4"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-6"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-5"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-2"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-5"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-1"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-2"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-5"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-4"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-4"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-7"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-3"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-5"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-4"></div>
-                        <div class="hvr-bounce-in ideo-soundwaves ideo-soundwaves-1"></div>
+                    <div class='row bottom'>
+                        <p class='sh3'>Building cool video stuff</p>
                     </div>
-                    <h2>IDEO</h2>
-                    <h5 class="medium">Disrupting the hospital voicemail industry.</h5>
-                </div>
-            </div></a>
+                </a>
 
-        </main>
+                <a href='https://www.patchrx.io' target='_blank' rel='noopener' class='column tile ts'>
+                    <div class='column top'>
+                        <svg class='icon-s'><use href='images/sprites.svg#PatchRx'></use></svg> 
+                        <h3>PatchRx</h3>
+                    </div>
+                    <div class='row bottom'>
+                        <p class='sh3'>Helping people remember medicine</p>
+                    </div>
+                </a>
 
-    <footer class="c12 grid">
-        <div class="c6-left">
-            <p>If you’re looking to work with me or want to grab some coffee, feel free to email me at <a href="mailto:zainkhoja7@gmail.com?subject=Hey!" target="_blank" rel="noopener">zainkhoja7@gmail.com</a>.</p>
-        </div>
-        <div     class="social">
-            <a href="https://twitter.com/zainkho" target="_blank" rel="noopener"><img alt="Twitter icon" src="icons/twitter.svg" class="icons"></a>
-            <a href="https://medium.com/@zainkho" target="_blank" rel="noopener"><img alt="Medium icon" src="icons/medium.svg" class="icons"></a>
-            <a href="https://linkedin.com/in/zainkho" target="_blank" rel="noopener"><img alt="LinkedIn icon" src="icons/linkedin.svg" class="icons"></a>
+                <a href='https://primer.style' target='_blank' rel='noopener' class='column tile ts'>
+                    <div class='column top'>
+                        <svg class='icon-s'><use href='images/sprites.svg#GitHub'></use></svg> 
+                        <h3>GitHub</h3>
+                    </div>
+                    <div class='row bottom'>
+                        <p class='sh3'>Speeding up designer workflows</p>
+                    </div>
+                </a>
+
+                <a href='https://blog.prototypr.io/starbucks-for-people-not-machines-92e6651c2af7' target='_blank' rel='noopener' class='column tile ts'>
+                    <div class='column top'>
+                        <svg class='icon-s'><use href='images/sprites.svg#Starbucks'></use></svg> 
+                        <h3>Starbucks</h3>
+                    </div>
+                    <div class='row bottom'>
+                        <p class='sh3'>Sharing drinks with friends</p>
+                    </div>
+                </a>
+
+            </div>
+            
         </div>
 
-        <!-- Scroll To Top -->
-        <a href="#top" aria-label="scroll to top" class="content-web no-display scroll-to-top"></a>
+        <div class='row' id='spacer'></div>
+
+    </main>
+
+    
+    <!-- Footer -->
+    <footer class='row'>
+        <!-- Weather -->
+        <div class='row' id='weather'>
+            <svg id='weather-icon'></svg> 
+            <span class='sh3' id='weather_description'></span>
+        </div>
+
+        <!-- Links -->
+        <nav class='row'>
+            <a href='https://twitter.com/zainkho' aria-label='Visit my Twitter' target='_blank' rel='noopener' class='row button'>
+                <svg><use href='images/sprites.svg#twitter'></use></svg>
+            </a>
+            <a href='https://linkedin.com/in/zainkho' aria-label='Visit my Linkedin' target='_blank' rel='noopener' class='row button'>
+                <svg><use href='images/sprites.svg#linkedin'></use></svg>   
+            </a>
+            <a href='zainkho-resume.pdf' aria-label='View my resume' target='_blank' rel='noopener' class='row button'>
+                <svg><use href='images/sprites.svg#briefcase'></use></svg>
+            </a>
+        </nav>
     </footer>
+
+    <!-- Weather effects -->
+    <div class='weather-effect'></div>
+    <div id='splash'></div>
+
 </body>
+
+<!-- JS -->
+<script type='text/javascript' src="js/tsparticles.min.js"></script>
+<script type='text/javascript' src='js/script.js'></script>
 
 </html>
