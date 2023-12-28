@@ -453,11 +453,8 @@ main {
 }
 
 
-
-
-
 /* RESPONSIVE */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1239px) {
     h1 {
         font-size: 72px;
         letter-spacing: -4px;

@@ -24,9 +24,8 @@ function getWeather() {
                 let temp = Math.round(data.main.temp)
                 let openweather_weather = data.weather[0].main
                 let sunset = data.sys.sunset + '000'
+                let effect = ''
 
-                openweather_weather = 'Rain' //testing
-                
                 // Show weather div
                 document.querySelector('.weather-effect').style.display = 'block'
 
@@ -45,20 +44,18 @@ function getWeather() {
                 }
                 else if (['Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall', 'Tornado', 'Clouds'].includes(openweather_weather)) {
                     icon = 'cloud'
-                    effect = 'cloudy'
                     document.querySelector('.weather-effect').id = effect
                 }
                 else {
                     if (new Date().getTime() > sunset) {
-                        console.log(new Date().getTime())
-                        console.log(sunset)
                         icon = 'moon'
-                        effect = 'moon'
+                        if (theme == 'Dark') {
+                            effect = 'stars'
+                        }
                         document.querySelector('.weather-effect').id = effect
                     }
                     else {
                         icon = 'sun'
-                        effect = 'sun'
                         document.querySelector('.weather-effect').id = effect
                     }
                 }
@@ -73,9 +70,10 @@ function getWeather() {
                     currentIcon = currentIcon == icon ? icon + '-animated' : icon;
                     document.querySelector('#weather-icon').innerHTML = '<use href=\'images/sprites.svg#' + currentIcon + '\'></use>'
                 }, 1000)
+            
 
                 // Initiate particle effect for snow, rain, or moon weather
-                if (['rain', 'snow', 'moon'].includes(effect)) {
+                if (['rain', 'snow', 'stars'].includes(effect)) {
                     tsParticles.loadJSON(effect, 'js/' + effect + theme + '.json', function() {});
 
                     // If rain, add splahes
@@ -88,9 +86,11 @@ function getWeather() {
                         if (event.matches) { theme = 'Dark' } 
                         else { theme = 'Light' }
 
-                        tsParticles.loadJSON(effect, 'js/' + effect + theme + '.json', function() {});
-                        if (effect == 'rain') { 
-                            tsParticles.loadJSON('splash', 'js/splash' + theme + '.json', function() {}); 
+                        if (!(theme == 'Light' & effect == 'stars')) {
+                            tsParticles.loadJSON(effect, 'js/' + effect + theme + '.json', function() {});
+                            if (effect == 'rain') { 
+                                tsParticles.loadJSON('splash', 'js/splash' + theme + '.json', function() {}); 
+                            }
                         }
                     })
                 }
