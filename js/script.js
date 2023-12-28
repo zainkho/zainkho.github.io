@@ -25,13 +25,13 @@ function getWeather() {
                 let openweather_weather = data.weather[0].main
                 let sunset = data.sys.sunset + '000'
 
-                openweather_weather = 'Clouds' //testing
+                openweather_weather = 'Rain' //testing
                 
                 // Show weather div
                 document.querySelector('.weather-effect').style.display = 'block'
 
 
-                // Particle effect weather
+                // Set icon + copy + effect depending on weather
                 if (['Thunderstorm', 'Drizzle', 'Rain'].includes(openweather_weather)) {
                     icon = 'umbrella'
                     effect = 'rain'
@@ -64,34 +64,36 @@ function getWeather() {
                 }
 
                 // Data for weather badge
-            document.querySelector('#weather-icon').innerHTML = '<use href=\'images/sprites.svg#' + icon + '\'></use>'
+                document.querySelector('#weather-icon').innerHTML = '<use href=\'images/sprites.svg#' + icon + '\'></use>'
                 document.querySelector('#weather_description').innerHTML = temp + '° & ' + openweather_weather
 
-                // Swap SVG for weather icon animation
+                // Weather icon animation
                 currentIcon = icon
                 setInterval(() => {
                     currentIcon = currentIcon == icon ? icon + '-animated' : icon;
                     document.querySelector('#weather-icon').innerHTML = '<use href=\'images/sprites.svg#' + currentIcon + '\'></use>'
                 }, 1000)
 
-                // Initiate particle effect
-                tsParticles.loadJSON(effect, 'js/' + effect + theme + '.json', function() {});
-
-                // If rain, add splahes
-                if (effect == 'rain') { 
-                    tsParticles.loadJSON('splash', 'js/splash' + theme + '.json', function() {}); 
-                }
-
-                // Update particle colors if theme changes
-                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-                    if (event.matches) { theme = 'Dark' } 
-                    else { theme = 'Light' }
-
+                // Initiate particle effect for snow, rain, or moon weather
+                if (['rain', 'snow', 'moon'].includes(effect)) {
                     tsParticles.loadJSON(effect, 'js/' + effect + theme + '.json', function() {});
+
+                    // If rain, add splahes
                     if (effect == 'rain') { 
                         tsParticles.loadJSON('splash', 'js/splash' + theme + '.json', function() {}); 
                     }
-                })
+
+                    // Update particle colors if theme changes
+                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                        if (event.matches) { theme = 'Dark' } 
+                        else { theme = 'Light' }
+
+                        tsParticles.loadJSON(effect, 'js/' + effect + theme + '.json', function() {});
+                        if (effect == 'rain') { 
+                            tsParticles.loadJSON('splash', 'js/splash' + theme + '.json', function() {}); 
+                        }
+                    })
+                }
 
             })
             .catch(error => {
