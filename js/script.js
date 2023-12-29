@@ -4,6 +4,21 @@
 let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'Dark' : 'Light'
 
 
+// FAVICON
+// Set favicon depending on theme
+function setFavicon () {
+    document.querySelector('#favicon').setAttribute('href', 'images/zk-favicon-' + theme + '.ico')
+}
+
+// Update particle colors if theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    if (event.matches) { theme = 'Dark' } 
+    else { theme = 'Light' }
+
+    document.querySelector('#favicon').setAttribute('href', 'images/zk-favicon-' + theme + '.ico')
+})
+
+
 // WEATHER
 function getWeather() {
 
