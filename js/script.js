@@ -4,10 +4,14 @@
 let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'Dark' : 'Light'
 
 
-// FAVICON
-// Set favicon depending on theme
-function setFavicon () {
+// META ELEMENTS
+// Set favicon and OG image depending on theme
+function setMetaElements () {
+    theme = theme.toLowerCase()
     document.querySelector('#favicon').setAttribute('href', 'images/zk-favicon-' + theme + '.ico')
+    document.querySelector('#social-image').setAttribute('content', 'https://zainkho.com/images/zk-screenshot-' + theme + '.png')
+    console.log('images/zk-favicon-' + theme + '.ico')
+    console.log('images/zk-screenshot-' + theme + '.png')
 }
 
 // Update particle colors if theme changes
@@ -17,6 +21,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 
     document.querySelector('#favicon').setAttribute('href', 'images/zk-favicon-' + theme + '.ico')
 })
+setInterval(setMetaElements, 1000)
 
 
 // WEATHER
