@@ -333,7 +333,6 @@ main {
     box-shadow: inset 0px -8px 0px 12px var(--darkShade);
 
     padding: 40px;
-    gap: 8px;
 }
 .tl:hover {
     box-shadow: inset 0px -8px 0px 12px var(--darkerShade);
@@ -348,7 +347,6 @@ main {
     box-shadow: inset 0px -4px 0px 8px var(--darkShade);
 
     padding: 24px;
-    gap: 4px;
 }
 .ts:hover {
     box-shadow: inset 0px -4px 0px 8px var(--darkerShade);
@@ -454,7 +452,7 @@ main {
 
 
 /* RESPONSIVE */
-@media screen and (max-width: 1239px) {
+@media screen and (max-width: 1279px) {
     h1 {
         font-size: 72px;
         letter-spacing: -4px;
@@ -477,8 +475,8 @@ main {
     }
 
     .icon-s, .icon-l {
-        width: 24px;
-        height: 24px;
+        width: 32px;
+        height: 32px;
     
         padding: 3px;
     }
@@ -511,8 +509,7 @@ main {
         height: 240px;
         box-shadow: inset 0px -4px 0px 8px var(--darkShade);
     
-        padding: 32px;
-        gap: 6px;
+        padding: 24px;
     }
     .tl:hover {
         box-shadow: inset 0px -4px 0px 8px var(--darkerShade);
@@ -520,9 +517,6 @@ main {
     .ts {
         height: 240px;
         box-shadow: inset 0px -4px 0px 8px var(--darkShade);
-    
-        padding: 32px;
-        gap: 6px;
     }
 
     #bio {
@@ -541,7 +535,7 @@ main {
 
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 623px) {
     h1 {
         font-size: 48px;
         letter-spacing: -3px;
@@ -615,14 +609,10 @@ main {
         box-shadow: inset 0px -4px 0px 8px var(--darkShade);
     
         padding: 24px;
-        gap: 4px;
     }
     .ts {
         height: 160px;
-        box-shadow: inset 0px -4px 0px 8px var(--darkShade);
-    
-        padding: 24px;
-        gap: 4px;      
+        box-shadow: inset 0px -4px 0px 8px var(--darkShade);  
     }
     #spacer {
         height: 0;
