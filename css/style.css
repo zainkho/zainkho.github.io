@@ -442,7 +442,7 @@ main {
     display: none;
     background: var(--bg);
     width: 100%;
-    height: 12px;
+    height: 8px;
 
     position: absolute;
     left: 0;

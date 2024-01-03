@@ -9,7 +9,7 @@ let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'Dark' :
 function setMetaElements () {
     theme = theme.toLowerCase()
     document.querySelector('#favicon').setAttribute('href', 'images/zk-favicon-' + theme + '.ico')
-    document.querySelector('#social-image').setAttribute('content', 'https://zainkho.com/images/zk-screenshot-' + theme + '.png')
+    document.querySelector('.social-image').setAttribute('content', 'https://zainkho.com/images/zk-screenshot-' + theme + '.png')
 }
 
 // Update particle colors if theme changes
