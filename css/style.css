@@ -179,6 +179,8 @@ img, video {
     width: auto;
     height: auto;
     
+    pointer-events: none;
+    -webkit-touch-callout: none;
     -webkit-user-drag: none;
 }
 
