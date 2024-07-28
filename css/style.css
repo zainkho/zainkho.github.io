@@ -430,6 +430,11 @@ main {
 #avi {
     width: 480px;
     height: 480px;
+
+    background-color: var(--darkerShade);
+    box-shadow: inset 0px -2px 0px 4px var(--darkerShade);
+
+    padding: 12px 12px 72px 12px;
 }
 
 
