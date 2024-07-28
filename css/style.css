@@ -428,8 +428,8 @@ main {
 }
 
 #avi {
-    width: 480px;
-    height: 480px;
+    width: 320px;
+    height: 320px;
 
     background-color: var(--darkerShade);
     box-shadow: inset 0px -2px 0px 4px var(--darkerShade);
@@ -718,7 +718,7 @@ img {
     }
 
     #avi {
-        width: 100%;
+        width: 94%;
         height: auto;
     }
 
