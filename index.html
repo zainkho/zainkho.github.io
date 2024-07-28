@@ -4,6 +4,7 @@
 <html lang='en'>
 
 <!-- Head -->
+
 <head>
     <meta charset='UTF-8'>
     <title>Home · Zain Khoja</title>
@@ -21,11 +22,11 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src='https://www.googletagmanager.com/gtag/js?id=UA-89012104-2'></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'UA-89012104-2');
+        gtag('config', 'UA-89012104-2');
     </script>
 
     <!-- Open Graph preview -->
@@ -59,34 +60,42 @@
         <!-- Actions -->
         <nav class='row'>
             <a class='row button' id='selected'>
-                <svg><use href='images/sprites.svg#home'></use></svg>
+                <svg>
+                    <use href='images/sprites.svg#home'></use>
+                </svg>
                 <span class='sh2'>Home</span>
             </a>
             <a href='about.html' class='row button'>
-                <svg><use href='images/sprites.svg#bookmark'></use></svg>
+                <svg>
+                    <use href='images/sprites.svg#bookmark'></use>
+                </svg>
                 <span class='sh2'>About</span>
             </a>
             <a href='magic.html' class='row button'>
-                <svg><use href='images/sprites.svg#magic'></use></svg>
+                <svg>
+                    <use href='images/sprites.svg#magic'></use>
+                </svg>
             </a>
 
             <!-- Logo -->
             <a href='/' aria-label='Go to homepage' class='row'><svg class='icon-m' id='zk-logo'>
-                <defs>
-                    <!-- Definition for inset shadow that is used for zk-logo above -->
-                    <filter id='inset' x='0' y='0' width='32' height='32' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
-                        <feFlood flood-opacity='0' result='BackgroundImageFix'/>
-                        <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/>
-                        <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/>
-                        <feOffset dy='1'/>
-                        <feGaussianBlur stdDeviation='0.5'/>
-                        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/>
-                        <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/>
-                        <feBlend mode='normal' in2='shape' result='effect1_innerShadow_946_14435'/>
-                    </filter>
-                </defs>
-                <use href='images/sprites.svg#zk-logo' filter='url(#inset)'></use>
-            </svg></a>
+                    <defs>
+                        <!-- Definition for inset shadow that is used for zk-logo above -->
+                        <filter id='inset' x='0' y='0' width='32' height='32' filterUnits='userSpaceOnUse'
+                            color-interpolation-filters='sRGB'>
+                            <feFlood flood-opacity='0' result='BackgroundImageFix' />
+                            <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
+                            <feColorMatrix in='SourceAlpha' type='matrix'
+                                values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha' />
+                            <feOffset dy='1' />
+                            <feGaussianBlur stdDeviation='0.5' />
+                            <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+                            <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0' />
+                            <feBlend mode='normal' in2='shape' result='effect1_innerShadow_946_14435' />
+                        </filter>
+                    </defs>
+                    <use href='images/sprites.svg#zk-logo' filter='url(#inset)'></use>
+                </svg></a>
         </nav>
     </header>
 
@@ -94,7 +103,8 @@
         <!-- Title -->
         <div class='column' id='title'>
             <h1>Zain Khoja</h1>
-            <p class='sh1' id='subtitle'>Software (but also sometimes <a href='magic.html' id='secret'>other stuff</a>) designer</p>
+            <p class='sh1' id='subtitle'>Software (but also sometimes <a href='magic.html' id='secret'>other stuff</a>)
+                designer</p>
         </div>
 
         <!-- Tiles -->
@@ -102,7 +112,9 @@
             <!-- Headliners -->
             <a href='https://ramp.com' target='_blank' rel='noopener' class='column tile tl'>
                 <div class='column top'>
-                    <svg class='icon-l'><use href='images/sprites.svg#Ramp'></use></svg> 
+                    <svg class='icon-l'>
+                        <use href='images/sprites.svg#Ramp'></use>
+                    </svg>
                     <h2>Ramp</h2>
                 </div>
                 <div class='row bottom'>
@@ -112,7 +124,9 @@
 
             <a href='https://creators.instagram.com' target='_blank' rel='noopener' class='column tile tl web-only'>
                 <div class='column top'>
-                    <svg class='icon-l'><use href='images/sprites.svg#Instagram'></use></svg> 
+                    <svg class='icon-l'>
+                        <use href='images/sprites.svg#Instagram'></use>
+                    </svg>
                     <h2>Instagram</h2>
                 </div>
                 <div class='row bottom'>
@@ -123,9 +137,12 @@
             <!-- Tile stack -->
             <div class='column' id='tile-stack'>
 
-                <a href='https://creators.instagram.com' target='_blank' rel='noopener' class='column tile ts mobile-only'>
+                <a href='https://creators.instagram.com' target='_blank' rel='noopener'
+                    class='column tile ts mobile-only'>
                     <div class='column top'>
-                        <svg class='icon-s'><use href='images/sprites.svg#Instagram'></use></svg> 
+                        <svg class='icon-s'>
+                            <use href='images/sprites.svg#Instagram'></use>
+                        </svg>
                         <h3>Instagram</h3>
                     </div>
                     <div class='row bottom'>
@@ -135,7 +152,9 @@
 
                 <a href='https://www.patchrx.io' target='_blank' rel='noopener' class='column tile ts'>
                     <div class='column top'>
-                        <svg class='icon-s'><use href='images/sprites.svg#PatchRx'></use></svg> 
+                        <svg class='icon-s'>
+                            <use href='images/sprites.svg#PatchRx'></use>
+                        </svg>
                         <h3>PatchRx</h3>
                     </div>
                     <div class='row bottom'>
@@ -145,7 +164,9 @@
 
                 <a href='https://primer.style' target='_blank' rel='noopener' class='column tile ts'>
                     <div class='column top'>
-                        <svg class='icon-s'><use href='images/sprites.svg#GitHub'></use></svg> 
+                        <svg class='icon-s'>
+                            <use href='images/sprites.svg#GitHub'></use>
+                        </svg>
                         <h3>GitHub</h3>
                     </div>
                     <div class='row bottom'>
@@ -153,9 +174,12 @@
                     </div>
                 </a>
 
-                <a href='https://blog.prototypr.io/starbucks-for-people-not-machines-92e6651c2af7' target='_blank' rel='noopener' class='column tile ts'>
+                <a href='https://blog.prototypr.io/starbucks-for-people-not-machines-92e6651c2af7' target='_blank'
+                    rel='noopener' class='column tile ts'>
                     <div class='column top'>
-                        <svg class='icon-s'><use href='images/sprites.svg#Starbucks'></use></svg> 
+                        <svg class='icon-s'>
+                            <use href='images/sprites.svg#Starbucks'></use>
+                        </svg>
                         <h3>Starbucks</h3>
                     </div>
                     <div class='row bottom'>
@@ -164,37 +188,45 @@
                 </a>
 
             </div>
-            
+
         </div>
 
         <div class='row' id='spacer'></div>
 
     </main>
 
-    
+
     <!-- Footer -->
     <footer class='row'>
         <!-- Weather -->
         <div class='row' id='weather'>
-            <svg id='weather-icon'></svg> 
+            <svg id='weather-icon'></svg>
             <span class='sh3' id='weather_description'></span>
         </div>
 
         <!-- Links -->
         <nav class='row'>
-            <a href='https://twitter.com/zainkho' aria-label='@zainkho on Twitter' target='_blank' rel='noopener' class='row button'>
-                <svg><use href='images/sprites.svg#twitter'></use></svg>
+            <a href='https://twitter.com/zainkho' aria-label='@zainkho on Twitter' target='_blank' rel='noopener'
+                class='row button'>
+                <svg>
+                    <use href='images/sprites.svg#twitter'></use>
+                </svg>
             </a>
-            <a href='https://linkedin.com/in/zainkho' aria-label='Zain Khoja on Linkedin' target='_blank' rel='noopener' class='row button'>
-                <svg><use href='images/sprites.svg#linkedin'></use></svg>   
+            <a href='https://linkedin.com/in/zainkho' aria-label='Zain Khoja on Linkedin' target='_blank' rel='noopener'
+                class='row button'>
+                <svg>
+                    <use href='images/sprites.svg#linkedin'></use>
+                </svg>
             </a>
             <a href='zainkho-resume.pdf' aria-label='View my resume' target='_blank' rel='noopener' class='row button'>
-                <svg><use href='images/sprites.svg#briefcase'></use></svg>
+                <svg>
+                    <use href='images/sprites.svg#briefcase'></use>
+                </svg>
             </a>
         </nav>
     </footer>
 
-    
+
     <!-- Weather effects -->
     <div class='weather-effect'></div>
     <div id='splash'></div>

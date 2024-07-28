@@ -4,6 +4,7 @@
 <html lang='en'>
 
 <!-- Head -->
+
 <head>
     <meta charset='UTF-8'>
     <title>Other stuff · Zain Khoja</title>
@@ -22,11 +23,11 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src='https://www.googletagmanager.com/gtag/js?id=UA-89012104-2'></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'UA-89012104-2');
+        gtag('config', 'UA-89012104-2');
     </script>
 
     <!-- Open Graph preview -->
@@ -60,34 +61,42 @@
         <!-- Actions -->
         <nav class='row'>
             <a href='/' class='row button'>
-                <svg><use href='images/sprites.svg#home'></use></svg>
+                <svg>
+                    <use href='images/sprites.svg#home'></use>
+                </svg>
                 <span class='sh2'>Home</span>
             </a>
             <a href='about.html' class='row button'>
-                <svg><use href='images/sprites.svg#bookmark'></use></svg>
+                <svg>
+                    <use href='images/sprites.svg#bookmark'></use>
+                </svg>
                 <span class='sh2'>About</span>
             </a>
             <a class='row button' id='selected'>
-                <svg><use href='images/sprites.svg#magic'></use></svg>
+                <svg>
+                    <use href='images/sprites.svg#magic'></use>
+                </svg>
             </a>
 
             <!-- Logo -->
             <a href='/' aria-label='Go to homepage' class='row'><svg class='icon-m' id='zk-logo'>
-                <defs>
-                    <!-- Definition for inset shadow that is used for zk-logo above -->
-                    <filter id='inset' x='0' y='0' width='32' height='32' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'>
-                        <feFlood flood-opacity='0' result='BackgroundImageFix'/>
-                        <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/>
-                        <feColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/>
-                        <feOffset dy='1'/>
-                        <feGaussianBlur stdDeviation='0.5'/>
-                        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/>
-                        <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/>
-                        <feBlend mode='normal' in2='shape' result='effect1_innerShadow_946_14435'/>
-                    </filter>
-                </defs>
-                <use href='images/sprites.svg#zk-logo' filter='url(#inset)'></use>
-            </svg></a>
+                    <defs>
+                        <!-- Definition for inset shadow that is used for zk-logo above -->
+                        <filter id='inset' x='0' y='0' width='32' height='32' filterUnits='userSpaceOnUse'
+                            color-interpolation-filters='sRGB'>
+                            <feFlood flood-opacity='0' result='BackgroundImageFix' />
+                            <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
+                            <feColorMatrix in='SourceAlpha' type='matrix'
+                                values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha' />
+                            <feOffset dy='1' />
+                            <feGaussianBlur stdDeviation='0.5' />
+                            <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+                            <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0' />
+                            <feBlend mode='normal' in2='shape' result='effect1_innerShadow_946_14435' />
+                        </filter>
+                    </defs>
+                    <use href='images/sprites.svg#zk-logo' filter='url(#inset)'></use>
+                </svg></a>
         </nav>
     </header>
 
@@ -111,7 +120,8 @@
                 <div class='row media'>
                     <video autoplay loop muted playsinline src='images/magic/magic-qr-code.mp4'></video>
                 </div>
-                <a href='https://x.com/benjitaylor/status/1641811921417695232?s=20' target='_blank' rel='noopener' class='row sh3 caption'>
+                <a href='https://x.com/benjitaylor/status/1641811921417695232?s=20' target='_blank' rel='noopener'
+                    class='row sh3 caption'>
                     See inspiration →
                 </a>
             </div>
@@ -133,7 +143,8 @@
                 <div class='row media'>
                     <video autoplay loop muted playsinline src='images/magic/metal-card.mp4'></video>
                 </div>
-                <a href='https://x.com/alexwidua/status/1630998774247030786?s=20' target='_blank' rel='noopener' class='row sh3 caption'>
+                <a href='https://x.com/alexwidua/status/1630998774247030786?s=20' target='_blank' rel='noopener'
+                    class='row sh3 caption'>
                     See inspiration →
                 </a>
             </div>
@@ -150,25 +161,33 @@
     <footer class='row'>
         <!-- Weather -->
         <div class='row' id='weather'>
-            <svg id='weather-icon'></svg> 
+            <svg id='weather-icon'></svg>
             <span class='sh3' id='weather_description'></span>
         </div>
 
         <!-- Links -->
         <nav class='row'>
-            <a href='https://twitter.com/zainkho' aria-label='@zainkho on Twitter' target='_blank' rel='noopener' class='row button'>
-                <svg><use href='images/sprites.svg#twitter'></use></svg>
+            <a href='https://twitter.com/zainkho' aria-label='@zainkho on Twitter' target='_blank' rel='noopener'
+                class='row button'>
+                <svg>
+                    <use href='images/sprites.svg#twitter'></use>
+                </svg>
             </a>
-            <a href='https://linkedin.com/in/zainkho' aria-label='Zain Khoja on Linkedin' target='_blank' rel='noopener' class='row button'>
-                <svg><use href='images/sprites.svg#linkedin'></use></svg>   
+            <a href='https://linkedin.com/in/zainkho' aria-label='Zain Khoja on Linkedin' target='_blank' rel='noopener'
+                class='row button'>
+                <svg>
+                    <use href='images/sprites.svg#linkedin'></use>
+                </svg>
             </a>
             <a href='zainkho-resume.pdf' aria-label='View my resume' target='_blank' rel='noopener' class='row button'>
-                <svg><use href='images/sprites.svg#briefcase'></use></svg>
+                <svg>
+                    <use href='images/sprites.svg#briefcase'></use>
+                </svg>
             </a>
         </nav>
     </footer>
 
-    
+
     <!-- Weather effects -->
     <div class='weather-effect'></div>
     <div id='splash'></div>
