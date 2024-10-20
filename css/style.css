@@ -151,7 +151,6 @@ html::selection {
 }
 
 .column {
-    flex: 1;
     display: flex;
     flex-direction: column;
 }
@@ -161,6 +160,7 @@ html::selection {
 html {
     color: var(--darkerShade);
     background: var(--bg);
+    width: 100vw;
     height: 100vh;
 }
 
@@ -210,11 +210,6 @@ video {
     pointer-events: none;
     -webkit-touch-callout: none;
     -webkit-user-drag: none;
-}
-
-canvas {
-    width: 100%;
-    height: 100%;
 }
 
 .button {
@@ -427,10 +422,18 @@ main {
 
 
 /* ABOUT */
+#bio {
+    gap: 120px;
+}
 
 #avi {
-    width: 560px;
-    height: 560px;
+    width: 320px;
+    height: 320px;
+
+    background-color: var(--darkerShade);
+    box-shadow: inset 0px -2px 0px 4px var(--darkerShade);
+
+    padding: 12px 12px 72px 12px;
 }
 
 
@@ -596,9 +599,8 @@ img {
         box-shadow: inset 0px -4px 0px 8px var(--darkShade);
     }
 
-    #avi {
-        width: 77vw;
-        height: 77vw;
+    #bio {
+        gap: 0;
     }
 
     .media-grid {
@@ -710,13 +712,13 @@ img {
         box-shadow: inset 0px -4px 0px 8px var(--darkShade);
     }
 
-    #avi {
-        width: 100vw;
-        height: 100vw;
-    }
-
     #spacer {
         height: 0;
+    }
+
+    #avi {
+        width: 94%;
+        height: auto;
     }
 
     .media-grid {
