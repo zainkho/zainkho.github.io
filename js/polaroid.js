@@ -83,8 +83,8 @@ texture.flipY = false; // Disable vertical flip
 const material = new THREE.ShaderMaterial({
     uniforms: {
         uTexture: { value: texture },
-        uMousePosition: { value: new THREE.Vector2(0.5, 0.5) }, // Added uniform for mouse position
-        uIsHovering: { value: false }, // Added uniform for hover state
+        uMousePosition: { value: new THREE.Vector2(0.5, 0.5) },
+        uIsHovering: { value: 0 },
     },
     vertexShader: `
         varying vec2 vUv;
@@ -146,10 +146,10 @@ const material = new THREE.ShaderMaterial({
             sheen *= uIsHovering;
             color.rgb += vec3(1.0) * sheen * 0.15;
 
-            gl_FragColor = color;
+            gl_FragColor = texColor; // Use the texture color
         } else {
-            // White border with a slight off-white tint
-            gl_FragColor = vec4(0.98, 0.98, 0.98, 1.0);
+            // Set the color of the polaroid card to #2F363D
+            gl_FragColor = vec4(0.18, 0.21, 0.24, 1.0); // RGB for #2F363D
         }
     }
 `,
