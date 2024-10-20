@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { Vector2, Raycaster } from 'three';
 
 // ESSENTIALS
 // Set up the scene and camera
@@ -29,9 +30,30 @@ window.addEventListener('resize', resizeCanvasToContainer);
 // Ensure initial size calculation
 document.addEventListener('DOMContentLoaded', resizeCanvasToContainer);
 
+// Add these variables for mouse interactivity and animation
+const raycaster = new Raycaster();
+const mouse = new Vector2();
+let isHovering = false;
+let targetRotationY = 0;
+let targetRotationX = 0;
+const maxRotation = Math.PI / 64; // Reduced from Math.PI / 24 for a more subtle effect
+const animationSpeed = 0.1; // Adjust this value to change the animation speed
 
+// Add this function to handle mouse movement
+function onMouseMove(event) {
+    // Calculate mouse position in normalized device coordinates
+    const rect = renderer.domElement.getBoundingClientRect();
+    mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+}
 
+// Add event listener for mouse movement
+window.addEventListener('mousemove', onMouseMove);
 
+// Add this lerp function for smooth animation
+function lerp(start, end, t) {
+    return start * (1 - t) + end * t;
+}
 
 // GEOMETRIES
 // Create a plane geometry for the photo with a Polaroid aspect ratio
@@ -61,6 +83,8 @@ texture.flipY = false; // Disable vertical flip
 const material = new THREE.ShaderMaterial({
     uniforms: {
         uTexture: { value: texture },
+        uMousePosition: { value: new THREE.Vector2(0.5, 0.5) }, // Added uniform for mouse position
+        uIsHovering: { value: false }, // Added uniform for hover state
     },
     vertexShader: `
         varying vec2 vUv;
@@ -72,6 +96,8 @@ const material = new THREE.ShaderMaterial({
     `,
     fragmentShader: `
     uniform sampler2D uTexture;
+    uniform vec2 uMousePosition;
+    uniform float uIsHovering;
     varying vec2 vUv;
 
     void main() {
@@ -101,17 +127,29 @@ const material = new THREE.ShaderMaterial({
             );
 
             // Sample the texture using the adjusted UV coordinates
-            vec4 texture = texture2D(uTexture, adjustedUv);
+            vec4 texColor = texture2D(uTexture, adjustedUv);
 
             // Calculate the distance to the closest edge
             float edgeDist = min(min(vUv.x - imageLeft, imageRight - vUv.x), min(vUv.y - imageBottom, imageTop - vUv.y));
-            float shadowStrength = 1.0 - smoothstep(0.0, 0.016, edgeDist); // Invert the gradient direction
+            float shadowStrength = 1.0 - smoothstep(0.0, 0.01, edgeDist);
 
-            // Apply the shadow effect with the gradient reversed
-            vec4 shadowColor = vec4(0.0, 0.0, 0.0, shadowStrength * 0.55); // Darker near the edges
-            gl_FragColor = mix(texture, shadowColor, shadowStrength);
+            // Apply a darker inner shadow
+            vec4 shadowColor = vec4(0.0, 0.0, 0.0, shadowStrength * 0.6); // Increased from 0.4 to 0.6
+            vec4 color = mix(texColor, shadowColor, shadowStrength);
+
+            // Add reactive diagonal sheen effect with adjusted offset
+            vec2 sheenDirection = normalize(vec2(1.0, 1.0));
+            vec2 adjustedMousePosition = (uMousePosition - vec2(border, bottomBorder)) / vec2(1.0 - 2.0 * border, 1.0 - bottomBorder - topBorder);
+            vec2 sheenOffset = vec2(0.3, 0.3); // Adjusted to move sheen up and left by half as much
+            float sheenPosition = dot(adjustedUv - (vec2(1.0) - adjustedMousePosition) + sheenOffset, sheenDirection);
+            float sheen = smoothstep(-0.2, 0.8, sheenPosition) * smoothstep(1.0, 0.0, sheenPosition);
+            sheen *= uIsHovering;
+            color.rgb += vec3(1.0) * sheen * 0.15;
+
+            gl_FragColor = color;
         } else {
-            gl_FragColor = vec4(vec3(1.0), 1.0); // White border
+            // White border with a slight off-white tint
+            gl_FragColor = vec4(0.98, 0.98, 0.98, 1.0);
         }
     }
 `,
@@ -188,9 +226,35 @@ sceneGroup.position.set(0, 0.1, 0);
 // Position the camera
 camera.position.z = 0.9;
 
-// Render the scene
+// Modify your render function
+let sheenIntensity = 0;
+
 function render() {
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObject(polaroid);
+
+    if (intersects.length > 0) {
+        const uv = intersects[0].uv;
+        material.uniforms.uMousePosition.value.set(uv.x, 1 - uv.y);
+        targetRotationY = mouse.x * maxRotation;
+        targetRotationX = -mouse.y * maxRotation;
+        sheenIntensity = lerp(sheenIntensity, 1, animationSpeed);
+    } else {
+        targetRotationY = 0;
+        targetRotationX = 0;
+        sheenIntensity = lerp(sheenIntensity, 0, animationSpeed);
+    }
+
+    material.uniforms.uIsHovering.value = sheenIntensity;
+
+    sceneGroup.rotation.y = lerp(sceneGroup.rotation.y, targetRotationY, animationSpeed);
+    sceneGroup.rotation.x = lerp(sceneGroup.rotation.x, targetRotationX, animationSpeed);
+
     renderer.render(scene, camera);
     requestAnimationFrame(render);
 }
+
+// Start the render loop
 render();
+
+// ... (keep any remaining code you had at the end of your file)
