@@ -126,3 +126,39 @@ function getWeather() {
 
 }
 getWeather()
+
+// Project filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('#project-filters .button');
+    const yearGroups = document.querySelectorAll('.year-group');
+
+    function filterProjects(year) {
+        // Update button states
+        filterButtons.forEach(button => {
+            if (button.dataset.filter === year) {
+                button.id = 'selected';
+            } else {
+                button.id = '';
+            }
+        });
+
+        // Show/hide year groups
+        yearGroups.forEach(group => {
+            if (year === 'all' || group.dataset.year === year) {
+                group.style.display = '';
+            } else {
+                group.style.display = 'none';
+            }
+        });
+    }
+
+    // Add click handlers to filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterProjects(button.dataset.filter);
+        });
+    });
+
+    // Initialize with "all" filter
+    filterProjects('all');
+});
