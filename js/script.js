@@ -4,6 +4,32 @@
 // VARIABLES
 let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'Dark' : 'Light'
 
+// Update year label color based on scroll position
+function updateYearLabelColor() {
+    const yearLabels = document.querySelectorAll('.year-label');
+    
+    function handleScroll() {
+        yearLabels.forEach(label => {
+            const rect = label.getBoundingClientRect();
+            // When the element is at the top of the viewport (accounting for padding)
+            if (rect.top <= 0 && rect.bottom > 0) {
+                label.style.color = 'var(--darkerShade)';
+            } else {
+                label.style.color = 'var(--darkShade)';
+            }
+        });
+    }
+
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll);
+    // Initial check
+    handleScroll();
+}
+
+// Call the function when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    updateYearLabelColor();
+});
 
 // META ELEMENTS
 // Set favicon and OG image depending on theme
@@ -126,3 +152,39 @@ function getWeather() {
 
 }
 getWeather()
+
+// Project filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('#project-filters .button');
+    const yearGroups = document.querySelectorAll('.year-group');
+
+    function filterProjects(year) {
+        // Update button states
+        filterButtons.forEach(button => {
+            if (button.dataset.filter === year) {
+                button.id = 'selected';
+            } else {
+                button.id = '';
+            }
+        });
+
+        // Show/hide year groups
+        yearGroups.forEach(group => {
+            if (year === 'all' || group.dataset.year === year) {
+                group.style.display = '';
+            } else {
+                group.style.display = 'none';
+            }
+        });
+    }
+
+    // Add click handlers to filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterProjects(button.dataset.filter);
+        });
+    });
+
+    // Initialize with "all" filter
+    filterProjects('all');
+});
