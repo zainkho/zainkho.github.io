@@ -1,208 +1,363 @@
 <!-- Playground -->
 
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
+  <!-- Head -->
 
-<!-- Head -->
-
-<head>
-    <meta charset='UTF-8'>
+  <head>
+    <meta charset="UTF-8" />
     <title>My playground · Zain Khoja</title>
-    <meta name='description' content='Zain Khoja is a software (but also sometimes other stuff) designer'>
+    <meta
+      name="description"
+      content="Zain Khoja is a software (but also sometimes other stuff) designer"
+    />
 
     <!-- Viewport -->
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
-    <link rel='stylesheet' href='css/style.css' type='text/css'>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 
     <!-- Favicons -->
-    <link href='images/zk-favicon-light.ico' rel='icon' id='favicon'>
-
+    <link href="images/zk-favicon-light.ico" rel="icon" id="favicon" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-89012104-2'></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-89012104-2"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-        gtag('config', 'UA-89012104-2');
+      gtag('config', 'UA-89012104-2');
     </script>
 
     <!-- Open Graph preview -->
-    <meta property='og:url' content='https://zainkho.com'>
-    <meta property='og:type' content='website'>
-    <meta property='og:title' content='Zain Khoja'>
-    <meta property='og:description' content='Zain Khoja is a software (but also sometimes other stuff) designer'>
-    <meta property='og:image' content='https://zainkho.com/images/zk-screenshot-light.png' class='social-image'>
+    <meta property="og:url" content="https://zainkho.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Zain Khoja" />
+    <meta
+      property="og:description"
+      content="Zain Khoja is a software (but also sometimes other stuff) designer"
+    />
+    <meta
+      property="og:image"
+      content="https://zainkho.com/images/zk-screenshot-light.png"
+      class="social-image"
+    />
 
     <!-- Twitter preview -->
-    <meta name='twitter:card' content='summary_large_image'>
-    <meta property='twitter:domain' content='zainkho.com'>
-    <meta property='twitter:url' content='https://zainkho.com'>
-    <meta name='twitter:title' content='Zain Khoja'>
-    <meta name='twitter:description' content='Zain Khoja is a software (but also sometimes other stuff) designer'>
-    <meta name='twitter:image' content='https://zainkho.com/images/zk-screenshot-light.png' class='social-image'>
-</head>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="zainkho.com" />
+    <meta property="twitter:url" content="https://zainkho.com" />
+    <meta name="twitter:title" content="Zain Khoja" />
+    <meta
+      name="twitter:description"
+      content="Zain Khoja is a software (but also sometimes other stuff) designer"
+    />
+    <meta
+      name="twitter:image"
+      content="https://zainkho.com/images/zk-screenshot-light.png"
+      class="social-image"
+    />
+  </head>
 
-
-<body class='column'>
+  <body class="column">
     <!-- Header -->
-    <header class='row'>
-        <!-- Line -->
-        <div class='column line-container'>
-            <div class='line' id='line-1'></div>
-            <div class='line' id='line-2'></div>
-            <div class='line' id='line-3'></div>
-            <div class='line' id='line-4'></div>
-        </div>
+    <header class="row">
+      <!-- Line -->
+      <div class="column line-container">
+        <div class="line" id="line-1"></div>
+        <div class="line" id="line-2"></div>
+        <div class="line" id="line-3"></div>
+        <div class="line" id="line-4"></div>
+      </div>
 
-        <!-- Actions -->
-        <nav class='row'>
-            <a href='/' class='row button'>
-                <svg>
-                    <use href='images/sprites.svg#home'></use>
-                </svg>
-                <span class='sh2'>Home</span>
-            </a>
-            <a href='about.html' class='row button'>
-                <svg>
-                    <use href='images/sprites.svg#bookmark'></use>
-                </svg>
-                <span class='sh2'>About</span>
-            </a>
-            <a class='row button' id='selected'>
-                <svg>
-                    <use href='images/sprites.svg#play'></use>
-                </svg>
-            </a>
+      <!-- Actions -->
+      <nav class="row">
+        <a href="/" class="row button">
+          <svg>
+            <use href="images/sprites.svg#home"></use>
+          </svg>
+          <span class="sh2">Home</span>
+        </a>
+        <a href="about.html" class="row button">
+          <svg>
+            <use href="images/sprites.svg#bookmark"></use>
+          </svg>
+          <span class="sh2">About</span>
+        </a>
+        <a class="row button" id="selected">
+          <svg>
+            <use href="images/sprites.svg#play"></use>
+          </svg>
+        </a>
 
-            <!-- Logo -->
-            <a href='/' aria-label='Go to homepage' class='row'><svg class='icon-m' id='zk-logo'>
-                    <defs>
-                        <!-- Definition for inset shadow that is used for zk-logo above -->
-                        <filter id='inset' x='0' y='0' width='32' height='32' filterUnits='userSpaceOnUse'
-                            color-interpolation-filters='sRGB'>
-                            <feFlood flood-opacity='0' result='BackgroundImageFix' />
-                            <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
-                            <feColorMatrix in='SourceAlpha' type='matrix'
-                                values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha' />
-                            <feOffset dy='1' />
-                            <feGaussianBlur stdDeviation='0.5' />
-                            <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
-                            <feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0' />
-                            <feBlend mode='normal' in2='shape' result='effect1_innerShadow_946_14435' />
-                        </filter>
-                    </defs>
-                    <use href='images/sprites.svg#zk-logo' filter='url(#inset)'></use>
-                </svg></a>
-        </nav>
+        <!-- Logo -->
+        <a href="/" aria-label="Go to homepage" class="row"
+          ><svg class="icon-m" id="zk-logo">
+            <defs>
+              <!-- Definition for inset shadow that is used for zk-logo above -->
+              <filter
+                id="inset"
+                x="0"
+                y="0"
+                width="32"
+                height="32"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="1" />
+                <feGaussianBlur stdDeviation="0.5" />
+                <feComposite
+                  in2="hardAlpha"
+                  operator="arithmetic"
+                  k2="-1"
+                  k3="1"
+                />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="shape"
+                  result="effect1_innerShadow_946_14435"
+                />
+              </filter>
+            </defs>
+            <use
+              href="images/sprites.svg#zk-logo"
+              filter="url(#inset)"
+            ></use></svg
+        ></a>
+      </nav>
     </header>
 
-    <main class='column'>
-        <!-- Title -->
-        <div class='column' id='title'>
-            <h1>Other stuff</h1>
-            <p class='sh1' id='subtitle'>Digital and physical nonsense I've made</p>
-        </div>
+    <main class="column">
+      <!-- Title -->
+      <div class="column" id="title">
+        <h1>Other stuff</h1>
+        <p class="sh1" id="subtitle">Digital and physical nonsense I've made</p>
+      </div>
 
-        <!-- Content -->
-        <div class='media-grid'>
-            <div class='row media'>
-                <video autoplay loop muted playsinline src='images/play/3d-anvil.mp4'></video>
-            </div>
-            <img alt='nasties thrasher sticker' src='images/play/nasties-thrasher-sticker.png' class='media graphic'>
-            <div class='row media'>
-                <video autoplay loop muted playsinline src='images/play/record-player.mp4'></video>
-            </div>
-            <div class='column'>
-                <div class='row media'>
-                    <video autoplay loop muted playsinline src='images/play/play-qr-code.mp4'></video>
-                </div>
-                <a href='https://x.com/benjitaylor/status/1641811921417695232?s=20' target='_blank' rel='noopener'
-                    class='row sh3 caption'>
-                    See inspiration →
-                </a>
-            </div>
-            <div class='row media'>
-                <video autoplay loop muted playsinline src='images/play/ramp-mobile-loading.mp4'></video>
-            </div>
-            <img alt='imessage ehub sticker' src='images/play/imessage-ehub-sticker.png' class='media graphic'>
-            <div class='row media'>
-                <video autoplay loop muted playsinline src='images/play/eatery-blue-refresh.mp4'></video>
-            </div>
-            <img alt='ramp coasters' src='images/play/ramp-coasters.jpg' class='media'>
-            <div class='row media'>
-                <video autoplay loop muted playsinline src='images/play/3d-ice-cream.mp4'></video>
-            </div>
-            <img alt='appdev retro hoodie' src='images/play/appdev-retro-hoodie.png' class='media graphic'>
-            <img alt='college ave sticker' src='images/play/college-ave-sticker.png' class='media graphic'>
-            <img alt='appdev gimme sticker' src='images/play/appdev-gimme-sticker.png' class='media graphic'>
-            <div class='column'>
-                <div class='row media'>
-                    <video autoplay loop muted playsinline src='images/play/metal-card.mp4'></video>
-                </div>
-                <a href='https://x.com/alexwidua/status/1630998774247030786?s=20' target='_blank' rel='noopener'
-                    class='row sh3 caption'>
-                    See inspiration →
-                </a>
-            </div>
-            <img alt='collegetown bagels sticker' src='images/play/CTB-sticker.png' class='media graphic'>
-            <div class='row media'>
-                <video autoplay loop muted playsinline src='images/play/3d-card.mp4'></video>
-            </div>
-            <img alt='theta tau crewneck' src='images/play/tt-crewneck.png' class='media graphic'>
+      <!-- Content -->
+      <div class="media-grid">
+        <div class="row media">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="images/play/3d-anvil.mp4"
+          ></video>
         </div>
+        <img
+          alt="nasties thrasher sticker"
+          src="images/play/nasties-thrasher-sticker.png"
+          class="media graphic"
+        />
+        <div class="row media">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="images/play/record-player.mp4"
+          ></video>
+        </div>
+        <div class="column">
+          <div class="row media">
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              src="images/play/play-qr-code.mp4"
+            ></video>
+          </div>
+          <a
+            href="https://x.com/benjitaylor/status/1641811921417695232?s=20"
+            target="_blank"
+            rel="noopener"
+            class="row sh3 caption"
+          >
+            See inspiration →
+          </a>
+        </div>
+        <div class="row media">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="images/play/ramp-mobile-loading.mp4"
+          ></video>
+        </div>
+        <img
+          alt="imessage ehub sticker"
+          src="images/play/imessage-ehub-sticker.png"
+          class="media graphic"
+        />
+        <div class="row media">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="images/play/eatery-blue-refresh.mp4"
+          ></video>
+        </div>
+        <img
+          alt="ramp coasters"
+          src="images/play/ramp-coasters.jpg"
+          class="media"
+        />
+        <div class="row media">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="images/play/3d-ice-cream.mp4"
+          ></video>
+        </div>
+        <img
+          alt="appdev retro hoodie"
+          src="images/play/appdev-retro-hoodie.png"
+          class="media graphic"
+        />
+        <img
+          alt="college ave sticker"
+          src="images/play/college-ave-sticker.png"
+          class="media graphic"
+        />
+        <img
+          alt="appdev gimme sticker"
+          src="images/play/appdev-gimme-sticker.png"
+          class="media graphic"
+        />
+        <div class="column">
+          <div class="row media">
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              src="images/play/metal-card.mp4"
+            ></video>
+          </div>
+          <a
+            href="https://x.com/alexwidua/status/1630998774247030786?s=20"
+            target="_blank"
+            rel="noopener"
+            class="row sh3 caption"
+          >
+            See inspiration →
+          </a>
+        </div>
+        <img
+          alt="collegetown bagels sticker"
+          src="images/play/CTB-sticker.png"
+          class="media graphic"
+        />
+        <div class="row media">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            src="images/play/3d-card.mp4"
+          ></video>
+        </div>
+        <img
+          alt="theta tau crewneck"
+          src="images/play/tt-crewneck.png"
+          class="media graphic"
+        />
+      </div>
     </main>
 
-
     <!-- Footer -->
-    <footer class='row'>
-        <!-- Weather -->
-        <div class='row' id='weather'>
-            <svg id='weather-icon'></svg>
-            <span class='sh3' id='weather_description'></span>
-        </div>
+    <footer class="row">
+      <!-- Weather -->
+      <div class="row" id="weather">
+        <svg id="weather-icon"></svg>
+        <span class="sh3" id="weather_description"></span>
+      </div>
 
-        <!-- Links -->
-        <nav class='row'>
-            <a href='https://twitter.com/zainkho' aria-label='@zainkho on Twitter' target='_blank' rel='noopener'
-                class='row button'>
-                <svg>
-                    <use href='images/sprites.svg#twitter'></use>
-                </svg>
-            </a>
-            <a href='https://linkedin.com/in/zainkho' aria-label='Zain Khoja on Linkedin' target='_blank' rel='noopener'
-                class='row button'>
-                <svg>
-                    <use href='images/sprites.svg#linkedin'></use>
-                </svg>
-            </a>
-            <a href='https://drinkingsweettea.substack.com' aria-label='Drinking Sweet Tea newsletter on Substack'
-                target='_blank' rel='noopener' class='row button'>
-                <svg>
-                    <use href='images/sprites.svg#bookmark'></use>
-                </svg>
-            </a>
-            <a href='zainkho-resume.pdf' aria-label='View my resume' target='_blank' rel='noopener' class='row button'>
-                <svg>
-                    <use href='images/sprites.svg#briefcase'></use>
-                </svg>
-            </a>
-        </nav>
+      <!-- Links -->
+      <nav class="row">
+        <a
+          href="https://twitter.com/zainkho"
+          aria-label="@zainkho on Twitter"
+          target="_blank"
+          rel="noopener"
+          class="row button"
+        >
+          <svg>
+            <use href="images/sprites.svg#twitter"></use>
+          </svg>
+        </a>
+        <a
+          href="https://linkedin.com/in/zainkho"
+          aria-label="Zain Khoja on Linkedin"
+          target="_blank"
+          rel="noopener"
+          class="row button"
+        >
+          <svg>
+            <use href="images/sprites.svg#linkedin"></use>
+          </svg>
+        </a>
+        <a
+          href="https://drinkingsweettea.substack.com"
+          aria-label="Drinking Sweet Tea newsletter on Substack"
+          target="_blank"
+          rel="noopener"
+          class="row button"
+        >
+          <svg>
+            <use href="images/sprites.svg#bookmark"></use>
+          </svg>
+        </a>
+        <a
+          href="zainkho-resume.pdf"
+          aria-label="View my resume"
+          target="_blank"
+          rel="noopener"
+          class="row button"
+        >
+          <svg>
+            <use href="images/sprites.svg#briefcase"></use>
+          </svg>
+        </a>
+      </nav>
     </footer>
 
-
     <!-- Weather effects -->
-    <div class='weather-effect'></div>
-    <div id='splash'></div>
-
+    <div class="weather-effect"></div>
+    <div id="splash"></div>
 
     <!-- JS -->
-    <script src='js/tsparticles.min.js'></script>
-    <script src='js/script.js'></script>
-
-</body>
-
+    <script src="js/tsparticles.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
