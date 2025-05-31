@@ -51,7 +51,6 @@ setInterval(setMetaElements, 1000)
 
 // WEATHER
 function getWeather() {
-
     // Get visitor location
     fetch('https://ipapi.co/json/')
         .then(response => response.json())
@@ -123,7 +122,7 @@ function getWeather() {
 
                     // If rain, add splahes
                     if (effect == 'rain') { 
-                        tsParticles.loadJSON('splash', 'js/splash' + theme + '.json', function() {}); 
+                        tsParticles.loadJSON('splash', 'js/splash' + theme + '.json', function() {});
                     }
 
                     // Update particle colors if theme changes
@@ -134,7 +133,7 @@ function getWeather() {
                         if (!(theme == 'Light' & effect == 'stars')) {
                             tsParticles.loadJSON(effect, 'js/' + effect + theme + '.json', function() {});
                             if (effect == 'rain') { 
-                                tsParticles.loadJSON('splash', 'js/splash' + theme + '.json', function() {}); 
+                                tsParticles.loadJSON('splash', 'js/splash' + theme + '.json', function() {});
                             }
                         }
                     })
