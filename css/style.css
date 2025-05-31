@@ -8,6 +8,7 @@
     --lightShade: #959DA5;
     --darkShade: #586069;
     --darkerShade: #2F363D;
+    --year-label-color: var(--darkShade);
 
     --bg: #F1EDE5;
 }
@@ -123,6 +124,7 @@ a {
     color: var(--darkShade);
 
     transition: 0.16s;
+    text-decoration: none;
 }
 
 a:hover {
@@ -453,11 +455,12 @@ main {
 }
 
 .project {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     color: var(--darkShade);
-
-    gap: 4px;
+    gap: 16px;
     padding: 40px 0 24px 0;
-
     transition: 0.08s;
 }
 
@@ -475,6 +478,17 @@ main {
     border-bottom: 1px solid var(--darkShade);
 }
 
+.project-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.project-arrow {
+    flex-shrink: 0;
+}
+
 .year-row {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -488,7 +502,7 @@ main {
     justify-content: flex-start;
     padding-top: 40px;
     min-width: 0;
-    color: var(--darkShade);
+    color: var(--year-label-color);
     position: sticky;
     top: 0;
     background: var(--bg);
