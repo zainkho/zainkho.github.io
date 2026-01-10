@@ -23,10 +23,10 @@
     "size": {
       "value": 6,
       "random": true,
-      "anim": {
+      "animation": {
         "enable": true,
         "speed": 1,
-        "size_min": 4,
+        "minimumValue": 4,
         "sync": false
       }
     },
