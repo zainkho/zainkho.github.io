@@ -294,6 +294,22 @@ footer {
   gap: 8px;
 }
 
+#weather-icon {
+  flex-shrink: 0;
+}
+
+#weather-icon .weather-icon-anim {
+  opacity: 0;
+}
+
+#weather-icon.is-animated .weather-icon-base {
+  opacity: 0;
+}
+
+#weather-icon.is-animated .weather-icon-anim {
+  opacity: 1;
+}
+
 /* BODY */
 main {
   flex-grow: 1;
@@ -581,9 +597,9 @@ img {
   display: block;
 }
 
-/* Thin strip at viewport bottom — reverse rain reads as splash/bounce */
+/* Thin strip at viewport bottom — gravity arcs read as splash/bounce */
 #splash {
-  --splash-height: 16px;
+  --splash-height: 28px;
 
   display: none;
   width: 100vw;

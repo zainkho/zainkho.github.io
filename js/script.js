@@ -65,6 +65,33 @@ window
 setInterval(setMetaElements, 1000);
 
 // WEATHER
+const SVG_NS = 'http://www.w3.org/2000/svg';
+let weatherIconTimer = null;
+
+function setupWeatherIcon(svg, iconName) {
+  svg.replaceChildren();
+  svg.setAttribute('viewBox', '0 0 16 16');
+
+  const base = document.createElementNS(SVG_NS, 'use');
+  base.setAttribute('href', 'images/sprites.svg#' + iconName);
+  base.classList.add('weather-icon-base');
+
+  const anim = document.createElementNS(SVG_NS, 'use');
+  anim.setAttribute('href', 'images/sprites.svg#' + iconName + '-animated');
+  anim.classList.add('weather-icon-anim');
+
+  svg.appendChild(base);
+  svg.appendChild(anim);
+  svg.classList.remove('is-animated');
+}
+
+function startWeatherIconCycle(svg) {
+  if (weatherIconTimer) clearInterval(weatherIconTimer);
+  weatherIconTimer = setInterval(() => {
+    svg.classList.toggle('is-animated');
+  }, 1000);
+}
+
 function isLocalDev() {
   const host = window.location.hostname;
   return (
@@ -204,36 +231,21 @@ function showWeather(temp, openweather_weather, sunsetUnix) {
     }
   }
 
-  weatherIcon.innerHTML = "<use href='images/sprites.svg#" + icon + "'></use>";
+  setupWeatherIcon(weatherIcon, icon);
+  startWeatherIconCycle(weatherIcon);
   weatherDescription.innerHTML = temp + '° & ' + openweather_weather;
 
-  let currentIcon = icon;
-  setInterval(() => {
-    currentIcon = currentIcon == icon ? icon + '-animated' : icon;
-    weatherIcon.innerHTML =
-      "<use href='images/sprites.svg#" + currentIcon + "'></use>";
-  }, 1000);
-
   if (['rain', 'snow', 'stars'].includes(effect)) {
-        console.log('Loading tsParticles for effect:', effect);
-        
         tsParticles.loadJSON(
           effect,
           'js/' + effect + theme + '.json',
           function (container) {
-            console.log('tsParticles callback fired for:', effect, container);
-            
-            // Function to resize canvas to viewport
             const resizeCanvasToViewport = function(canvasElement) {
-              if (!canvasElement) {
-                console.warn('Canvas element not found for effect:', effect);
-                return;
-              }
+              if (!canvasElement) return;
               
               const vw = window.innerWidth;
               const vh = window.innerHeight;
               
-              // Set CSS display size
               canvasElement.style.width = vw + 'px';
               canvasElement.style.height = vh + 'px';
               canvasElement.style.maxWidth = 'none';
@@ -241,19 +253,8 @@ function showWeather(temp, openweather_weather, sunsetUnix) {
               canvasElement.style.top = '0';
               canvasElement.style.left = '0';
               
-              // Set canvas internal resolution (width/height attributes)
               canvasElement.width = vw;
               canvasElement.height = vh;
-              
-              console.log('Canvas resized:', {
-                effect: effect,
-                cssWidth: canvasElement.style.width,
-                cssHeight: canvasElement.style.height,
-                canvasWidth: canvasElement.width,
-                canvasHeight: canvasElement.height,
-                viewportWidth: vw,
-                viewportHeight: vh
-              });
             };
             
             // Try multiple approaches to find and resize the canvas
@@ -277,7 +278,6 @@ function showWeather(temp, openweather_weather, sunsetUnix) {
               if (canvas) {
                 resizeCanvasToViewport(canvas);
               } else {
-                console.warn('Canvas not found, retrying...');
                 setTimeout(tryResize, 50);
               }
             };
@@ -297,7 +297,7 @@ function showWeather(temp, openweather_weather, sunsetUnix) {
           }
         );
 
-        // If rain, add splashes (thin reverse-rain strip at bottom)
+        // If rain, add splashes (gravity arcs in thin strip at bottom)
         if (effect == 'rain') {
           tsParticles.loadJSON(
             'splash',
