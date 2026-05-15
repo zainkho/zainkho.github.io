@@ -306,7 +306,7 @@ main {
 }
 
 .section-header {
-  gap: 8px;
+  gap: 16px;
 }
 
 .section {
@@ -389,6 +389,10 @@ main {
 }
 
 /* Projects */
+#projects-section {
+  display: none;
+}
+
 #project-filters {
   gap: 16px;
   overflow-x: auto;
