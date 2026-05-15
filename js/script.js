@@ -119,6 +119,68 @@ function resizeSplashCanvas() {
   splashCanvas.height = height;
 }
 
+function loadWeatherParticles(tagId, jsonPath, onReady) {
+  const loaded = tsParticles.loadJSON(tagId, jsonPath);
+
+  if (loaded && typeof loaded.then === 'function') {
+    loaded
+      .then(function (container) {
+        if (onReady) onReady(container);
+      })
+      .catch(function (err) {
+        console.error('Error loading particles for', tagId, err);
+      });
+  }
+}
+
+function resizeWeatherCanvas(canvasElement) {
+  if (!canvasElement) return;
+
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+
+  canvasElement.style.width = vw + 'px';
+  canvasElement.style.height = vh + 'px';
+  canvasElement.style.maxWidth = 'none';
+  canvasElement.style.position = 'absolute';
+  canvasElement.style.top = '0';
+  canvasElement.style.left = '0';
+
+  canvasElement.width = vw;
+  canvasElement.height = vh;
+}
+
+function onWeatherParticlesReady(effect, container) {
+  const tryResize = function () {
+    let canvas =
+      (container && container.canvas && container.canvas.element) ||
+      document.querySelector('#' + effect + ' canvas');
+
+    if (!canvas) {
+      const weatherEffect = document.querySelector('.weather-effect');
+      if (weatherEffect) {
+        canvas = weatherEffect.querySelector('canvas');
+      }
+    }
+
+    if (canvas) {
+      resizeWeatherCanvas(canvas);
+    } else {
+      setTimeout(tryResize, 50);
+    }
+  };
+
+  tryResize();
+  setTimeout(tryResize, 100);
+  setTimeout(tryResize, 300);
+}
+
+function onSplashParticlesReady() {
+  resizeSplashCanvas();
+  setTimeout(resizeSplashCanvas, 50);
+  setTimeout(resizeSplashCanvas, 200);
+}
+
 function getWeather() {
   // Local dev: skip IP geolocation (often blocked) and call OpenWeather directly
   if (isLocalDev()) {
@@ -236,82 +298,23 @@ function showWeather(temp, openweather_weather, sunsetUnix) {
   weatherDescription.innerHTML = temp + '° & ' + openweather_weather;
 
   if (['rain', 'snow', 'stars'].includes(effect)) {
-        tsParticles.loadJSON(
+        loadWeatherParticles(
           effect,
           'js/' + effect + theme + '.json',
           function (container) {
-            const resizeCanvasToViewport = function(canvasElement) {
-              if (!canvasElement) return;
-              
-              const vw = window.innerWidth;
-              const vh = window.innerHeight;
-              
-              canvasElement.style.width = vw + 'px';
-              canvasElement.style.height = vh + 'px';
-              canvasElement.style.maxWidth = 'none';
-              canvasElement.style.position = 'absolute';
-              canvasElement.style.top = '0';
-              canvasElement.style.left = '0';
-              
-              canvasElement.width = vw;
-              canvasElement.height = vh;
-            };
-            
-            // Try multiple approaches to find and resize the canvas
-            const tryResize = function() {
-              // Method 1: Query by ID
-              let canvas = document.querySelector('#' + effect + ' canvas');
-              
-              // Method 2: Query from container if provided
-              if (!canvas && container) {
-                canvas = container.querySelector('canvas');
-              }
-              
-              // Method 3: Query from weather-effect
-              if (!canvas) {
-                const weatherEffect = document.querySelector('.weather-effect');
-                if (weatherEffect) {
-                  canvas = weatherEffect.querySelector('canvas');
-                }
-              }
-              
-              if (canvas) {
-                resizeCanvasToViewport(canvas);
-              } else {
-                setTimeout(tryResize, 50);
-              }
-            };
-            
-            // Try immediately and with delays
-            tryResize();
-            setTimeout(tryResize, 100);
-            setTimeout(tryResize, 300);
-            
-            // Handle window resize
-            const resizeHandler = function() {
-              const canvas = document.querySelector('#' + effect + ' canvas') || 
-                            document.querySelector('.weather-effect canvas');
-              resizeCanvasToViewport(canvas);
-            };
-            window.addEventListener('resize', resizeHandler);
+            onWeatherParticlesReady(effect, container);
           }
         );
 
-        // If rain, add splashes (gravity arcs in thin strip at bottom)
         if (effect == 'rain') {
-          tsParticles.loadJSON(
+          loadWeatherParticles(
             'splash',
             'js/splash' + theme + '.json',
-            function () {
-              resizeSplashCanvas();
-              setTimeout(resizeSplashCanvas, 50);
-              setTimeout(resizeSplashCanvas, 200);
-            }
+            onSplashParticlesReady
           );
           window.addEventListener('resize', resizeSplashCanvas);
         }
 
-        // Update particle colors if theme changes
         window
           .matchMedia('(prefers-color-scheme: dark)')
           .addEventListener('change', (event) => {
@@ -322,18 +325,18 @@ function showWeather(temp, openweather_weather, sunsetUnix) {
             }
 
             if (!((theme == 'Light') & (effect == 'stars'))) {
-              tsParticles.loadJSON(
+              loadWeatherParticles(
                 effect,
                 'js/' + effect + theme + '.json',
-                function () {}
+                function (container) {
+                  onWeatherParticlesReady(effect, container);
+                }
               );
               if (effect == 'rain') {
-                tsParticles.loadJSON(
+                loadWeatherParticles(
                   'splash',
                   'js/splash' + theme + '.json',
-                  function () {
-                    resizeSplashCanvas();
-                  }
+                  onSplashParticlesReady
                 );
               }
             }
@@ -350,6 +353,11 @@ if (document.readyState === 'loading') {
 } else {
   initWeather();
 }
+
+window.addEventListener('resize', function () {
+  const rainCanvas = document.querySelector('#rain canvas');
+  if (rainCanvas) resizeWeatherCanvas(rainCanvas);
+});
 
 // Project filtering
 document.addEventListener('DOMContentLoaded', function () {

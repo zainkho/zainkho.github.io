@@ -35,15 +35,15 @@
     },
     "move": {
       "enable": true,
-      "speed": 30,
+      "speed": 10,
       "direction": "bottom",
-      "random": true,
+      "random": false,
       "straight": true,
       "outMode": "out",
       "bounce": false,
       "gravity": {
         "enable": true,
-        "acceleration": 5
+        "acceleration": 1.2
       }
     },
     "life": {
