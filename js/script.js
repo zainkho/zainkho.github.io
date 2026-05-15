@@ -92,17 +92,6 @@ function startWeatherIconCycle(svg) {
   }, 1000);
 }
 
-function isLocalDev() {
-  const host = window.location.hostname;
-  return (
-    !host ||
-    host === 'localhost' ||
-    host === '127.0.0.1' ||
-    host === '[::1]' ||
-    host === '::1'
-  );
-}
-
 function resizeSplashCanvas() {
   const splash = document.querySelector('#splash');
   const splashCanvas = splash && splash.querySelector('canvas');
@@ -182,36 +171,21 @@ function onSplashParticlesReady() {
 }
 
 function getWeather() {
-  // Local dev: skip IP geolocation (often blocked) and call OpenWeather directly
-  if (isLocalDev()) {
-    fetchWeatherForCity('New York', 'United States');
-    return;
-  }
-  
-  // Get visitor location - using ip-api.com which has better CORS support
   fetch('https://ip-api.com/json/?fields=status,message,country,city')
     .then((response) => response.json())
     .then((data) => {
-      // Check if API returned an error
       if (data.status === 'fail') {
         throw new Error(data.message || 'Failed to get location');
       }
-      
-      let country = data.country;
-      let city = data.city;
-      
-      // Fallback if city is not available
-      if (!city) {
-        city = 'New York';
-        country = 'United States';
+
+      if (!data.city || !data.country) {
+        throw new Error('Location missing city or country');
       }
-      
-      fetchWeatherForCity(city, country);
+
+      fetchWeatherForCity(data.city, data.country);
     })
     .catch((error) => {
       console.error('Error fetching IP-based location:', error);
-      // Fallback to default city on error
-      fetchWeatherForCity('New York', 'United States');
     });
 }
 
