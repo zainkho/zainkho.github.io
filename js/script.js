@@ -35,16 +35,17 @@ document.addEventListener('DOMContentLoaded', function () {
 // META ELEMENTS
 // Set favicon and OG image depending on theme
 function setMetaElements() {
-  theme = theme.toLowerCase();
-  document
-    .querySelector('#favicon')
-    .setAttribute('href', 'images/zk-favicon-' + theme + '.ico');
-  document
-    .querySelector('.social-image')
-    .setAttribute(
+  const themeSlug = theme === 'Dark' ? 'dark' : 'light';
+  const favicon = document.querySelector('#favicon');
+  if (favicon) {
+    favicon.setAttribute('href', 'images/zk-favicon-' + themeSlug + '.ico');
+  }
+  document.querySelectorAll('.social-image').forEach((el) => {
+    el.setAttribute(
       'content',
-      'https://zainkho.com/images/zk-screenshot-' + theme + '.png'
+      'https://zainkho.com/images/zk-screenshot-' + themeSlug + '.png'
     );
+  });
 }
 
 // Update particle colors if theme changes
@@ -64,17 +65,37 @@ window
 setInterval(setMetaElements, 1000);
 
 // WEATHER
+function isLocalDev() {
+  const host = window.location.hostname;
+  return (
+    !host ||
+    host === 'localhost' ||
+    host === '127.0.0.1' ||
+    host === '[::1]' ||
+    host === '::1'
+  );
+}
+
+function resizeSplashCanvas() {
+  const splash = document.querySelector('#splash');
+  const splashCanvas = splash && splash.querySelector('canvas');
+  if (!splash || !splashCanvas) return;
+
+  const width = splash.clientWidth || window.innerWidth;
+  const height = splash.clientHeight;
+
+  splashCanvas.style.width = width + 'px';
+  splashCanvas.style.height = height + 'px';
+  splashCanvas.style.top = '0';
+  splashCanvas.style.left = '0';
+  splashCanvas.width = width;
+  splashCanvas.height = height;
+}
+
 function getWeather() {
-  // Check if we're on localhost - skip API call and use default city
-  const isLocalhost = window.location.hostname === 'localhost' || 
-                      window.location.hostname === '127.0.0.1' ||
-                      window.location.hostname === '';
-  
-  if (isLocalhost) {
-    // Use default city for localhost testing
-    const city = 'New York';
-    const country = 'United States';
-    fetchWeatherForCity(city, country);
+  // Local dev: skip IP geolocation (often blocked) and call OpenWeather directly
+  if (isLocalDev()) {
+    fetchWeatherForCity('New York', 'United States');
     return;
   }
   
@@ -106,84 +127,94 @@ function getWeather() {
 }
 
 function fetchWeatherForCity(city, country) {
-  // Get weather by visitor city
-  fetch(
+  const units = country == 'United States' ? 'imperial' : 'metric';
+  const url =
     'https://api.openweathermap.org/data/2.5/weather?q=' +
-      city +
-      '&units=' +
-      (country == 'United States' ? 'imperial' : 'metric') +
-      '&appid=d7c645ac37d857bc38af8edc24727a66'
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      // Returned API call
-      // console.log(data)
+    encodeURIComponent(city) +
+    '&units=' +
+    units +
+    '&appid=d7c645ac37d857bc38af8edc24727a66';
 
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('OpenWeather HTTP ' + response.status);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (!data.main || !data.weather) {
+        throw new Error(data.message || 'Invalid weather response');
+      }
       let temp = Math.round(data.main.temp);
       let openweather_weather = data.weather[0].main;
-      let sunset = data.sys.sunset + '000';
-      let effect = '';
+      showWeather(temp, openweather_weather, data.sys.sunset);
+    })
+    .catch((error) => {
+      console.error('Error fetching weather data:', error);
+    });
+}
 
-      // Show weather div
-      document.querySelector('.weather-effect').style.display = 'block';
+function showWeather(temp, openweather_weather, sunsetUnix) {
+  const weatherEffect = document.querySelector('.weather-effect');
+  const weatherIcon = document.querySelector('#weather-icon');
+  const weatherDescription = document.querySelector('#weather_description');
+  if (!weatherEffect || !weatherIcon || !weatherDescription) return;
 
-      // Set icon + copy + effect depending on weather
-      if (
-        ['Thunderstorm', 'Drizzle', 'Rain'].includes(openweather_weather)
-      ) {
-        icon = 'umbrella';
-        effect = 'rain';
-        document.querySelector('.weather-effect').id = effect;
-        document.querySelector('#splash').style.display = 'block';
-      } else if (openweather_weather == 'Snow') {
-        icon = 'snowflake';
-        effect = 'snow';
-        document.querySelector('.weather-effect').id = effect;
-      } else if (
-        [
-          'Mist',
-          'Smoke',
-          'Haze',
-          'Dust',
-          'Fog',
-          'Sand',
-          'Ash',
-          'Squall',
-          'Tornado',
-          'Clouds',
-        ].includes(openweather_weather)
-      ) {
-        icon = 'cloud';
-        document.querySelector('.weather-effect').id = effect;
-      } else {
-        if (new Date().getTime() > sunset) {
-          icon = 'moon';
-          if (theme == 'Dark') {
-            effect = 'stars';
-          }
-          document.querySelector('.weather-effect').id = effect;
-        } else {
-          icon = 'sun';
-          document.querySelector('.weather-effect').id = effect;
-        }
-      }
+  let sunset = sunsetUnix + '000';
+  let effect = '';
+  let icon;
 
-      // Data for weather badge
-      document.querySelector('#weather-icon').innerHTML =
-        "<use href='images/sprites.svg#" + icon + "'></use>";
-      document.querySelector('#weather_description').innerHTML =
-        temp + '° & ' + openweather_weather;
+  weatherEffect.style.display = 'block';
 
-      // Weather icon animation
-      currentIcon = icon;
-      setInterval(() => {
-        currentIcon = currentIcon == icon ? icon + '-animated' : icon;
-        document.querySelector('#weather-icon').innerHTML =
-          "<use href='images/sprites.svg#" + currentIcon + "'></use>";
-      }, 1000);
+  if (['Thunderstorm', 'Drizzle', 'Rain'].includes(openweather_weather)) {
+    icon = 'umbrella';
+    effect = 'rain';
+    weatherEffect.id = effect;
+    const splash = document.querySelector('#splash');
+    if (splash) splash.style.display = 'block';
+  } else if (openweather_weather == 'Snow') {
+    icon = 'snowflake';
+    effect = 'snow';
+    weatherEffect.id = effect;
+  } else if (
+    [
+      'Mist',
+      'Smoke',
+      'Haze',
+      'Dust',
+      'Fog',
+      'Sand',
+      'Ash',
+      'Squall',
+      'Tornado',
+      'Clouds',
+    ].includes(openweather_weather)
+  ) {
+    icon = 'cloud';
+    weatherEffect.id = effect;
+  } else {
+    if (new Date().getTime() > sunset) {
+      icon = 'moon';
+      if (theme == 'Dark') effect = 'stars';
+      weatherEffect.id = effect;
+    } else {
+      icon = 'sun';
+      weatherEffect.id = effect;
+    }
+  }
 
-      // Initiate particle effect for snow, rain, or moon weather
-      if (['rain', 'snow', 'stars'].includes(effect)) {
+  weatherIcon.innerHTML = "<use href='images/sprites.svg#" + icon + "'></use>";
+  weatherDescription.innerHTML = temp + '° & ' + openweather_weather;
+
+  let currentIcon = icon;
+  setInterval(() => {
+    currentIcon = currentIcon == icon ? icon + '-animated' : icon;
+    weatherIcon.innerHTML =
+      "<use href='images/sprites.svg#" + currentIcon + "'></use>";
+  }, 1000);
+
+  if (['rain', 'snow', 'stars'].includes(effect)) {
         console.log('Loading tsParticles for effect:', effect);
         
         tsParticles.loadJSON(
@@ -266,37 +297,18 @@ function fetchWeatherForCity(city, country) {
           }
         );
 
-        // If rain, add splahes
+        // If rain, add splashes (thin reverse-rain strip at bottom)
         if (effect == 'rain') {
           tsParticles.loadJSON(
             'splash',
             'js/splash' + theme + '.json',
             function () {
-              // Resize splash canvas to viewport
-              setTimeout(function() {
-                const splashCanvas = document.querySelector('#splash canvas');
-                if (splashCanvas) {
-                  const vw = window.innerWidth;
-                  const vh = window.innerHeight;
-                  splashCanvas.style.width = vw + 'px';
-                  splashCanvas.style.height = vh + 'px';
-                  splashCanvas.style.maxWidth = 'none';
-                  splashCanvas.style.position = 'absolute';
-                  splashCanvas.style.top = '0';
-                  splashCanvas.style.left = '0';
-                  splashCanvas.width = vw;
-                  splashCanvas.height = vh;
-                  
-                  console.log('Splash canvas resized:', {
-                    cssWidth: splashCanvas.style.width,
-                    cssHeight: splashCanvas.style.height,
-                    canvasWidth: splashCanvas.width,
-                    canvasHeight: splashCanvas.height
-                  });
-                }
-              }, 100);
+              resizeSplashCanvas();
+              setTimeout(resizeSplashCanvas, 50);
+              setTimeout(resizeSplashCanvas, 200);
             }
           );
+          window.addEventListener('resize', resizeSplashCanvas);
         }
 
         // Update particle colors if theme changes
@@ -319,18 +331,25 @@ function fetchWeatherForCity(city, country) {
                 tsParticles.loadJSON(
                   'splash',
                   'js/splash' + theme + '.json',
-                  function () {}
+                  function () {
+                    resizeSplashCanvas();
+                  }
                 );
               }
             }
           });
-      }
-    })
-    .catch((error) => {
-      console.error('Error fetching weather data', error);
-    });
+  }
 }
-getWeather();
+
+function initWeather() {
+  getWeather();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initWeather);
+} else {
+  initWeather();
+}
 
 // Project filtering
 document.addEventListener('DOMContentLoaded', function () {

@@ -569,8 +569,7 @@ img {
 .weather-effect canvas,
 #rain canvas,
 #snow canvas,
-#stars canvas,
-#splash canvas {
+#stars canvas {
   width: 100vw !important;
   height: 100vh !important;
   max-width: none !important;
@@ -582,18 +581,33 @@ img {
   display: block;
 }
 
+/* Thin strip at viewport bottom — reverse rain reads as splash/bounce */
 #splash {
-  display: none;
-  background: var(--bg);
-  width: 100%;
-  height: 8px;
+  --splash-height: 16px;
 
-  position: absolute;
+  display: none;
+  width: 100vw;
+  height: var(--splash-height);
+  overflow: hidden;
+
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: auto;
   z-index: -1;
+  pointer-events: none;
+}
+
+#splash canvas {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
 }
 
 /* RESPONSIVE */
