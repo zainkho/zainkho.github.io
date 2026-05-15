@@ -321,8 +321,14 @@ main {
   gap: 40px;
 }
 
-.section-header {
-  gap: 16px;
+.section-header,
+#title {
+  gap: 8px;
+}
+
+.section-header h1,
+#title h1 {
+  line-height: 1;
 }
 
 .section {
